@@ -1,0 +1,1484 @@
+<!DOCTYPE HTML>
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="progettostile.css"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script><script type="text/javascript" src="progetto.js"></script><title>La Rassegna Settimanale - Progetto Codifica di Testi</title>
+   </head>
+   <body>
+      <div class="main_menu">
+         <div class="main_menu_item" data-id="popup-rassegna">LA RASSEGNA</div><a class="logo-home" href="La_Rassegna.html"><img src="logoRS.JPG" alt="Logo" width="50"></a><div class="main_menu_item" data-id="popup-progetto">IL PROGETTO</div>
+      </div>
+      <div id="popup-rassegna" class="menu_content menu_content_hide">
+         <div id="logo" class="text-center mb-4"><img src="logo_rassegna.jpg" alt="La_Rassegna_Settimanale" style="max-width: 600px; display: block; margin: 0 auto;"></div>
+         <div id="tit1" class="text-center">
+            <h2>LA RASSEGNA SETTIMANALE</h2>
+            <h3>DI POLITICA, SCIENZE, LETTERE ED ARTI</h3>
+            <p class="mt-3"><b>Fondata da: </b>
+               <span class="persone">
+                  Sidney Sonnino
+                  (
+                  <span class="epithet_rolenames">Direttore Proprietario</span>
+                  )
+                  </span>
+               <span class="persone">
+                  Pietro Pampaloni
+                  (
+                  <span class="epithet_rolenames">Gerente Responsabile</span>
+                  )
+                  </span>
+               </p>
+            <p>
+               Edizione digitale a carattere didattico -
+               Luglio 2025
+                <br>Responsabili di codifica: Sara Risaliti e Elisa Pratelli.<br>Referente universitario di coordinazione: Angelo Mario Del Grosso.<br></p>
+         </div>
+      </div>
+      <div id="popup-progetto" class="menu_content menu_content_hide">
+         <div id="logo" class="text-center mb-4"><img src="logounipi.png" alt="Logo" style="max-width: 400px; display: block; margin: 0 auto;"></div>
+         <div id="descrizioni" class="text-left">
+            <h2 class="text-center mb-4">Descrizione del progetto:</h2>
+            <div id="profile_desc" class="mb-4">
+               <p>Il documento contiene la codifica di alcune sezioni testuali di vario genere dalla
+                  'Rivista Settimanale', fondata nel 1878 per aprire un campo nel quale possano essere
+                  discusse e studiate le questioni principali di ordine politico e sociale che interessavano
+                  l’Italia.</p>
+            </div>
+            <div id="encoding_desc" class="mb-4">
+               <p>La creazione del documento digitale è funzionale alla codifica di sei testi tratti
+                  dal fascicolo n. 141 del 1880 della rivista "La Rassegna Settimanale".
+                  I segmenti testuali selezionati comprendono due articoli principali, due voci della
+                  sezione "Bibliografia" e due notizie dalla rubrica finale. I titoli dei testi codificati
+                  sono:</p>
+               <p>
+                  IL TRATTATO DI COMMERCIO ITALO-AUSTRIACO.
+                  </p>
+               <p>
+                  CORRISPONDENZA DA PRATO. A PROPOSITO DELLA LEGGE SUL LAVORO DEI FANCIULLI
+                  </p>
+               <p>
+                  LE ORIGINI DELLA FILOSOFIA DI ARTURO SCHOPENHAUER.
+                  </p>
+               <p>
+                  JUVENILIA; edizione definitiva (G. Carducci)
+                  </p>
+               <p>
+                  DOCUMENTI STORICI FABRIANESI — Statuta artis lanae terrae Fabriani (A. Zonghi)
+                  </p>
+               <p>
+                  NOTIZIE
+                  </p>
+               <p>
+                  I segni di punteggiatura particolari (come apostrofi, trattini, virgolette e puntini
+                  di sospensione) sono stati codificati utilizzando i relativi codici numerici (Unicode),
+                  ad esempio <b>’</b> per l’apostrofo o <b>«</b> per le virgolette angolari. Le citazioni sono state racchiuse nell’elemento <b>quote</b>, mentre la segmentazione delle frasi è stata resa esplicita attraverso l’uso dell’elemento
+                  <b>s</b>.
+                  Le note indicate nella Rassegna Settimanale con un asterisco (*) sono state gestite
+                  utilizzando l'elemento <b>ref</b>, che contiene un riferimento all'ID della nota corrispondente. Quando l'utente interagisce
+                  con la nota, questa viene visualizzata in un popup.
+                  </p>
+               <p>
+                  Gli errori ortografici, di accentazione o di punteggiatura presenti nel testo a stampa
+                  sono stati codificati tramite l'elemento <b>choice</b>, combinando <b>sic</b> (forma errata) e <b>corr</b> (forma corretta). Le regolarizzazioni di forme arcaiche, abbreviate o linguisticamente
+                  instabili sono state codificate anch'esse con <b>choice</b>, utilizzando le coppie <b>orig</b> + <b>reg</b> oppure <b>abbr</b> + <b>expan</b>, a seconda dei casi. La forma originale viene mantenuta visibile, mentre la versione
+                  regolarizzata può essere visualizzata dinamicamente attraverso un'interazione dell'utente.
+                  </p>
+            </div>
+         </div>
+      </div>
+      <div class="logo-decorativo my-4 text-center"><img src="logo_rassegna.jpg" alt="Logo La Rassegna" style="max-width: 900px; margin-top:80px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></div>
+      <div id="fenomeni-container">
+         <h2 class="fenomeni-titolo">Fenomeni Notevoli</h2>
+         <p class="fenomeni-sottotitolo">Clicca sui bottoni ed evidenzia gli elementi di codifica che più ti interessano</p>
+      </div>
+      <div id="bottoni-container">
+         <div id="bottoni"><button id="persone">Persone</button><button id="personaggi">Personaggi</button><button id="Luoghi_countries">Paesi e Regioni</button><button id="Luoghi_settlements">Città</button><button id="Luoghi_n">Luoghi naturali e Aree</button><button id="ref_bibl">Opere</button><button id="CasaEd">Casa editrice</button><button id="Date">Date</button><button id="testo_lingua">Testo in lingua straniera</button><button id="quotes">Citazioni</button><button id="org">Organizzazioni</button><button id="epithet_rolenames">Epiteti, Apposizioni e Ruoli</button><button id="termini_filosofici">Termini filosofici</button><button id="termini_legali">Termini legali e economici</button><button id="espressioni_metaforiche">Espressioni metaforiche</button><button id="termini_sociali">Termini sociali e Temi</button><button id="verbum">Verbum</button><button id="correzioni">Errori e correzioni</button><button id="regolarizzazioni">Originali e Regolarizzate</button></div>
+      </div>
+      <div id="all_articles">
+         <div class="articolo">
+            <div class="titolo-articolo">
+               <h2 id="tit_primobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>IL TRATTATO DI COMMERCIO
+                  </h2>
+               <h3 id="subtit_primobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>ITALO-AUSTRIACO.
+                  </h3>
+            </div>
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo1_trattato">
+                     
+                     <br>Il <span class="org">Ministero del commercio austriaco</span> ha pubblicato il
+                     <br>suo <i class="ref_bibl">Annuario</i> del <span class="Date">1879</span>, nel quale consacra alcune pagine
+                     <br>all’esame delle <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">quistioni</span><span class="regolarizzazioni-expan"> questioni</span></span>  sorte intorno all’applicazione del
+                     <br><span class="termini_legali">trattato di commercio e di navigazione</span>, concluso con l’<span class="Luoghi_countries">Italia</span>
+                     <br>il <span class="Date">27 dicembre 1878</span>.
+                     
+                     
+                     Noi non sappiamo se sia prudente ed
+                     <br> utile il <span class="espressioni_metaforiche">dare in pascolo al pubblico</span> argomenti di questa
+                     <br> natura, che <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">dai più</span><span class="regolarizzazioni-expan"> dalla maggioranza</span></span> non sono capiti, ma <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">ne’</span><span class="regolarizzazioni-expan">  nè </span></span> più infiammano
+                     <br> le passioni e fanno dubitare della lealtà delle  <span class="termini_legali">parti con-
+                        <br> traenti</span>.
+                     
+                     
+                     <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">Nondimeno</span><span class="regolarizzazioni-expan"> Nonostante</span></span>, poiché il <span class="org">Governo</span> <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> paesi al di qua
+                     <br> della <span class="Luoghi_n">Leitha</span> ha reputato opportuno di suscitare <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">codesta</span><span class="regolarizzazioni-expan"> questa</span></span>
+                     <br> tenzone, noi teniamo ben volentieri l’invito, lieti di poter
+                     <br> dimostrare che l’<span class="Luoghi_countries">Italia</span> ha mantenuto i suoi obblighi, forse
+                     <br>più scrupolosamente che non l’abbia fatto l’<span class="Luoghi_countries">Austria-Ungheria</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo2_trattato">
+                     
+                     <br>Il primo e più importante dei punti di divergenza, toc-
+                     <br>cati dall’<i class="ref_bibl">Annuario</i>, si riferisce alla <span class="termini_legali">tassa</span> sugli spiriti.
+                     
+                     
+                     Nel 
+                     <br>protocollo finale del <span class="termini_legali">trattato</span>, all’<span class="termini_legali">articolo XII</span>, si legge che
+                     <br>l’<span class="Luoghi_countries">Italia</span> riscuoter la <span class="termini_legali">tassa sulle fabbriche di spiriti</span> sulle  che
+                     <br>trattano i cereali, i <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">melazzi</span><span class="regolarizzazioni-expan"> melasse</span></span> e le barbabietole, mediante la
+                     <br>sorveglianza permanente <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">od</span><span class="regolarizzazioni-expan"> o di</span></span> un misuratore meccanico, e
+                     <br>che la <span class="termini_legali">tassa</span>  sarà ragguagliata alla quantità reale ed alla 
+                     <br>ricchezza <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">alcoolica</span><span class="regolarizzazioni-expan"> alcolica</span></span> del prodotto.
+                     
+                     
+                     In omaggio a tale patto 
+                     <br> la <span class="termini_legali">legge italiana</span> del <span class="Date">31 luglio 1879</span> sottopose gli <span class="termini_sociali">opifìci</span> <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">an-
+                           <br>zidetti</span><span class="regolarizzazioni-expan"> sopracitati</span></span> alla vigilanza continua degli <span class="epithet_rolenames"><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">uffiziali</span><span class="regolarizzazioni-expan"> ufficiali</span></span> finanziari</span>; e
+                     <br>poco dopo, in virtù di esso, fu adottato, e sarà presto in uso
+                     <br>in tutte le <span class="termini_sociali">fabbriche</span>, il misuratore Siemens, che è il più
+                     <br> perfetto tra gli apparecchi conosciuti.
+                     
+                     
+                     <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">Or</span><span class="regolarizzazioni-expan"> Ora</span></span> di che cosa si
+                     <br> può <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">lamentare</span><span class="regolarizzazioni-expan"> lagnare</span></span> il <span class="org">ministero austriaco</span>?
+                     
+                     
+                     Esso dichiara contrario
+                     <br> alle disposizioni del <span class="termini_legali">trattato</span> l’<span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">abbono</span><span class="regolarizzazioni-expan"> abbuono</span></span> del 10 per cento, che
+                     <br> la <span class="termini_legali">legge</span> suddetta concede ai fabbricanti, per il calo e i 
+                     <br>disperdimenti degli spiriti.
+                     
+                     
+                     Veramente è <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cagione</span><span class="regolarizzazioni-expan"> motivo</span></span> di grande 
+                     <br>meraviglia quest’affermazione, <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">messa innanzi</span><span class="regolarizzazioni-expan"> presentata</span></span> con tanta fran-
+                     <br>chezza, a chi consideri che l’idea di quest’<span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">abbono</span><span class="regolarizzazioni-expan"> abbuono</span></span> fu ispi-
+                     <br>rata dalla legge austriaca del <span class="Date">28 giugno 1878</span>.
+                     
+                     
+                     La quale 
+                     <br>alle <span class="termini_sociali">fabbriche</span>, cui fosse applicato il misuratore Dolainski, 
+                     <br>concede una deduzione del 5 per cento.
+                     
+                     
+                     Che la misura della 
+                     <br>deduzione debba essere maggiore presso di noi, appar
+                     <br>chiaro, <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">ponendo mente</span><span class="regolarizzazioni-expan"> prestando attenzione</span></span> che le fabbriche italiane sono meno
+                     <br>innanzi negli avvedimenti tecnici, che il clima nostro de-
+                     <br>termina maggiori perdite di prodotto, che infine il misura-
+                     <br>tore Dolainski favorisce il <span class="termini_sociali">fabbricante</span> con le sue incompiute
+                     <br>indicazioni, mentre l’apparecchio Siemens è d’una fiscalità,
+                     <br>che <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">taluno</span><span class="regolarizzazioni-expan"> qualcuno</span></span> suppone oltrepassi i confini del giusto.
+                     
+                     
+                     Ad ogni
+                     <br>modo la misura del 10 per cento, fissata quando manca-
+                     <br>vano i <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">dettami dell’esperienza</span><span class="regolarizzazioni-expan"> indicazioni esperte</span></span>, può essere modificata, e anzi
+                     <br>sappiamo che il <span class="org">ministero delle finanze</span> ha ordinato  a tal
+                     <br>riguardo opportuni studi; ma è strano che un <span class="termini_legali">documento
+                        <br>ufficiale viennese</span> metta in dubbio la <span class="termini_legali">legalità</span> di un prov-
+                     <br> vedimento, che l’<span class="Luoghi_countries">Italia</span>  ha preso in prestito da una <span class="termini_legali">legge</span>
+                     <br>vigente nell’Austria.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo3_1_trattato">
+                     
+                     <br>Quindi l’<span class="Luoghi_countries">Austria</span> deplora che nella riscossione della <span class="termini_legali">tassa</span>  
+                     <br>sulla birra si accordi al <span class="termini_sociali">fabbricante</span> una deduzione del 12 
+                     <br> per cento, dopo che il liquido è stato misurato nel rinfre-
+                     <br>scatoio.
+                     
+                     
+                     Erano antichi e giusti i reclami <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span>birrai, che do-
+                     <br>vevano pagare la <span class="termini_legali">tassa</span> sulla quantità trovata nei rinfrescatoi, 
+                     <br><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">colla</span><span class="regolarizzazioni-expan"> con la</span></span>  sottrazione insufficiente del 5 per cento.
+                     
+                     
+                     E siccome le 
+                     <br>prove istituite chiarirono che la perdita batte intorno al 12 
+                     <br>per cento, così la stessa <span class="termini_legali">legge</span> del <span class="Date">31 luglio 1879</span> stabilì la 
+                     <br>deduzione <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">nova</span><span class="regolarizzazioni-expan"> nuova</span></span>.
+                     
+                     
+                     E l’<span class="Luoghi_countries">Austria</span>, dopo aver reclamato contro
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="paragrafo3_2_trattato">
+                     
+                     <br>questa <span class="termini_legali">riforma</span>, si <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">acchetò</span><span class="regolarizzazioni-expan"> acquietò</span></span> alle ragioni persuasive che le  
+                     <br>furono <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">pòrte</span></span><span class="correzioni-corr"> porte</span></span>, e poichè la desistenza sua rimonta ad alcuni 
+                     <br>mesi, è spiacevole che un <span class="termini_legali">documento ufficiale</span>, parlando di 
+                     <br>questa controversia, trascuri di dire che è stata felicemente 
+                     <br><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">sopita</span><span class="regolarizzazioni-expan"> sedata</span></span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo4_trattato">
+                     
+                     <br>Uguale rincrescimento si deve manifestare rispetto alle 
+                     <br>considerazioni fatte dall’<i class="ref_bibl">Annuario</i> di cui si discorre sul <span class="termini_sociali">com-
+                        <br>mercio</span> di perfezionamento della ghisa tra l’<span class="Luoghi_countries">Italia</span> e il <span class="Luoghi_countries">Tren-
+                        <br>tino</span>.
+                     
+                     
+                     Giova sapere che nei distretti di Tione, Condino e 
+                     <br>Val di Ledro era, un tempo, abbastanza fiorente l’<span class="termini_sociali">industria 
+                        <br>del ferro</span>, esercitata in piccole fucine, che traevano dal 
+                     <br><span class="Luoghi_n">Bresciano</span> la ghisa (loro materia prima), l’affinavano e poi 
+                     <br>spedivano in <span class="Luoghi_countries">Lombardia</span> i prodotti ottenuti, cioè i chiodi, 
+                     <br>le spranghe, i vomeri, le falci e via dicendo.
+                     
+                     
+                     Dopo il <span class="Date">1859</span>
+                     <br>quelle fucine tacquero quasi interamente, parte perchè per 
+                     <br>trarre dall’<span class="Luoghi_countries">Italia</span> la ghisa dovevano sottostare al pagamento 
+                     <br>dei <span class="termini_legali">dazi</span>, e più perchè i ferri e gli strumenti non potevano 
+                     <br>essere introdotti nel nostro <span class="termini_sociali">mercato</span>, senza il pagamento di 
+                     <br><span class="termini_legali">diritti d’entrata</span> alquanto elevati.
+                     
+                     
+                     Ma forse la rovina di 
+                     <br>quelle <span class="termini_sociali">officine</span> deve attribuirsi principalmente alla trasfor-
+                     <br>mazione avvenuta nella <span class="termini_sociali">siderurgia</span> e che ebbe per conse-
+                     <br>guenza di concentrarla in colossali <span class="termini_sociali">opifici</span> a danno <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span><span class="termini_sociali">pic-
+                        <br>coli</span>, che prima prosperavano.
+                     
+                     
+                     Questo non era però il parere 
+                     <br>del <span class="org">governo Austro-Ungarico</span>: il quale, <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">ne’</span><span class="regolarizzazioni-expan">  nei </span></span> laboriosi nego-
+                     <br>ziati che precedettero la stipulazione del <span class="termini_legali">trattato</span> del <span class="Date">1878</span>,
+                     <br>insistè vivamente perché alle <span class="termini_sociali">ferriere</span> del <span class="Luoghi_countries">Trentino</span> fossero 
+                     <br>accordati favori eccezionali, quasi a compenso delle age-
+                     <br>volezze invocate da noi per i pescatori di <span class="Luoghi_settlements">Chioggia</span>.
+                     
+                     
+                     E
+                     <br>ottenne l’intento; <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">imperocchè</span><span class="regolarizzazioni-expan"> poichè</span></span> il primo degli articoli ad-
+                     <br>dizionali al <span class="termini_legali">trattato</span>  pattuisse che le officine anzidette po-
+                     <br>tessero liberamente estrarre dall’<span class="Luoghi_countries">Italia</span> 15 mila quintali me-
+                     <br>trici di ghisa, per trasformarla in ferri, che sarebbero poi 
+                     <br>ricevuti dal nostro paese in franchigia <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span><span class="termini_legali">dazi di confine</span>.
+                     
+                     
+                     <br>Naturalmente occorreva <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">di determinare</span></span><span class="correzioni-corr"> determinare</span></span> le formalità oppor-
+                     <br>tune per la pratica esecuzione di questi accordi, e qui nac-
+                     <br>quero le difficoltà.
+                     
+                     
+                     Il <span class="org">governo italiano</span> desiderava che gli 
+                     <br>fosse riservata la facoltà dèispezione sopra le fucine am-
+                     <br>messe a questo eccezionale reggimento <span class="termini_legali">doganale</span>, al fine di 
+                     <br>accertarsi che, <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">sotto colore</span></span><span class="correzioni-corr"> con il pretesto</span></span> di ferri ottenuti da ghise bre-
+                     <br>sciane, non sè introducessero in <span class="Luoghi_countries">Italia</span> i prodotti delle <span class="termini_sociali">ferriere</span> 
+                     <br>della <span class="Luoghi_n">Stiria</span> o di altri luoghi dell’Impero.
+                     
+                     
+                     La <span class="org">cancelleria</span> di 
+                     <br><span class="Luoghi_settlements">Vienna</span> non volle accettare questa nostra ingerenza e fu 
+                     <br>così poco sollecita in <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">siffatte</span><span class="regolarizzazioni-expan"> tali</span></span> pratiche, che solo nell’estate 
+                     <br>di quest’anno si poté condurre a termine il <span class="termini_legali">componimento</span>,
+                     <br>nel quale il <span class="org">Gabinetto di Roma</span> <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">dìe</span><span class="regolarizzazioni-expan">  diede </span></span>e più di una prova del più vivo de-
+                     <br>siderio di conciliazione.
+                     
+                     
+                     Ora che il <span class="org">governo austriaco</span> ha
+                     <br>ottenuto pienamente l’intenso suo (e del ritardo può acca-
+                     <br>gionare soltanto la lentezza che accompagna il complicato 
+                     <br>suo organismo politico e amministrativo) era <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">opportuno di
+                              <br>toccare</span></span><span class="correzioni-corr"> opportuno toccare</span></span> questo tasto?
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo5_1_trattato">
+                     
+                     <br>Anche le <span class="termini_legali">leggi</span> sugli zuccheri erano destinate a dar ma-
+                     <br>teria alle osservazioni <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span>compilatori dell’<i class="ref_bibl">Annuario</i>.
+                     
+                     
+                     Il <span class="org">trat-
+                        <br>tato</span> aveva detto che la <span class="termini_legali">tassa di produzione</span> degli zuccheri 
+                     <br>indigeni doveva essere assolutamente egualeuguale alla differenza 
+                     <br>tra i vecchi e i nuovi <span class="termini_legali">dazi</span> riscossi al confine sugli zuc-
+                     <br>cheri esteri, e la legge del <span class="Date">25 luglio 1879</span> diede piena e 
+                     <br>perfetta esecuzione a questo patto.
+                     
+                     
+                     Ma il <span class="termini_legali">progetto di legge</span> 
+                     <br>presentato alla <span class="org">Camera</span> aveva dimenticato di prescrivere 
+                     <br>che la <span class="termini_legali">tassa interna</span> fosse pagata in oro, come in oro sono 
+                     <br>soddisfatti i <span class="termini_legali">dazi doganali</span>.
+                     
+                     
+                     Alla giusta nota, fatta dal <span class="org">go-</span>
+                     
+                     </p>
+               </div>
+            </div>
+            <hr class="separatore-pagina">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo5_2_trattato">
+                     
+                     <br><span class="org">verno austro-ungarico</span>, fu dato sollecito appagamento.
+                     
+                     
+                     Era
+                     <br>
+                     utile di rianndare adesso su quell’incidente?
+                     
+                     
+                     Il pubblico sarà
+                     <br>condotto a credere che si tratti di un caso grosso; invece 
+                     <br>la <span class="termini_legali">produzione di zucchero indigeno</span> in <span class="Luoghi_countries">Italia</span> essendo insi-
+                     <br>gnificante, la differenza tra la riscossione in carta <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">od</span><span class="regolarizzazioni-expan"> o</span></span> in 
+                     <br>oro della <span class="termini_legali">tassa interna</span> non sarebbe giunta a un migliaio 
+                     <br>di lire.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo6_trattato">
+                     
+                     <br>Nella pubblicazione che abbiamo sott’occhio si parla 
+                     <br><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">eziandio</span><span class="regolarizzazioni-expan"> anche</span></span> del <span class="termini_legali">dazio</span> sui tessuti di cotone graticolati (mussole 
+                     <br>e altri simili prodotti) e, meno male, si dichiara che l’<span class="Luoghi_countries">Italia</span>
+                     <br>ha assecondato i <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">desiderii</span></span><span class="correzioni-corr"> desideri</span></span> del <span class="org">governo austro-ungarico</span>.
+                     
+                     
+                     Ma 
+                     <br>il lettore sospetta che, in questo caso <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">altresì</span><span class="regolarizzazioni-expan"> anche</span></span>, si sia discusso 
+                     <br>sulla interpretazione del <span class="termini_legali">trattato</span>, mentre questo tace inte-
+                     <br>ramente <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> filati e <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> tessuti di cotone.
+                     
+                     
+                     Il <span class="org">governo italiano</span>, 
+                     <br>per fare atto di buon vicinato e anche perchè altre conside-
+                     <br>razioni lo confortavano, ha modificato la <span class="termini_legali">tariffa</span> in una 
+                     <br>parte in cui è libero di applicarla <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">a suo talento</span><span class="regolarizzazioni-expan"> come meglio crede</span></span>; ed ecco 
+                     <br>che la cosa è esposta in modo da far dubitare che dapprima 
+                     <br>avesse offeso il buon <span class="termini_legali">diritto</span> nascente<span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">da’</span><span class="regolarizzazioni-expan"> dai</span></span> <span class="termini_legali">trattati</span>..
+                     
+                     
+                     Un favore 
+                     <br>diventa il pagamento di un <span class="termini_legali">debito</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo7_trattato">
+                     
+                     <br>Meno fondati ancora sono i lamenti mossi contro le re-
+                     <br>strizioni del <span class="termini_legali">commercio</span>, che hanno radice nel dovere di im-
+                     <br>pedire o almeno di ritardare l’invasione della <i><span class="testo_lingua">philloxera</span></i> e  
+                     <br>della <i><span class="testo_lingua">doriphora</span></i>.
+                     
+                     
+                     Il <span class="org">governo austriaco</span> vorrebbe che gli agrumi 
+                     <br>siciliani giunti sul <span class="termini_legali">mercato</span> di <span class="Luoghi_settlements">Trieste</span> e colà divisi in varie 
+                     <br>categorie, alcune delle quali vanno sui <span class="termini_legali">mercati</span> dell’<span class="Luoghi_countries">Austria</span>, 
+                     <br>della <span class="Luoghi_countries">Germania</span> e della <span class="Luoghi_countries">Russia</span>, mentre altre (le più cattive) 
+                     <br>tornano in <span class="Luoghi_countries">Italia</span>, vorrebbe almeno che questi agrumi non 
+                     <br>fossero respinti.
+                     
+                     
+                     Invano le fu detto che le <span class="termini_legali">merci</span>, la quale 
+                     <br>è stata manipolata in un porto estero, perde la nazionalità e 
+                     <br>che le <span class="termini_legali">leggi austriache</span> sono, a tal riguardo, molto più se-
+                     <br>vere delle nostre; invano si avvertì che, per togliere ogni 
+                     <br>dubbio sulla efficacia delle riserve fatte intorno ai casi <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">ne’</span><span class="regolarizzazioni-expan">  nei </span></span>  quali 
+                     <br>la libertà del <span class="termini_legali">commercio</span> può esser ristretta, nel <span class="termini_legali">protocollo</span>  
+                     <br>finale del <span class="termini_legali">trattato</span> fu detto che <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">coteste</span><span class="regolarizzazioni-expan"> quelle</span></span> riserve si estendono 
+                     <br><span class="quotes">« egualmenteugualmente alle <span class="termini_legali">misure proibitive</span> prese allo scopo d’im-
+                        <br>pedire nell’interesse dell’agricoltura la propagazione di in-
+                        <br>setti o di altri organismi nocivi. »</span>
+                     
+                     
+                     Ma ora che la <i><span class="testo_lingua">philloxera</span></i> 
+                     <br>infierisce nell’<span class="Luoghi_countries">Italia</span> stessa e il <span class="org">governo austriaco</span>, dopo lungo 
+                     <br>e dannoso temporeggiamento, s’è finalmente deciso ad imi-
+                     <br>tare il <span class="org">governo italiano</span> nella severità delle cautele rivolte a 
+                     <br><span class="espressioni_metaforiche">distruggere il male</span> dove si manifesta e a impedirne la pro-
+                     <br>pagazione, non pare sia conveniente mantenere un reclamo 
+                     <br>di tal natura.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo8_trattato">
+                     
+                     <br>Ecco esposte brevemente le ragioni per le quali sembra 
+                     <br>a noi che l’<i class="ref_bibl">Annuario</i> austriaco avrebbe dovuto lasciare in 
+                     <br>disparte il tema delle difficoltà che s’incontrarono nell’ap-
+                     <br>plicazione del <span class="termini_legali">trattato</span> del <span class="Date">1878</span>. 
+                     
+                     
+                     Se la stampa austriaca, 
+                     <br>come fa la <i class="ref_bibl">Deutsche Zeitung</i>, ne prenderà argomento per 
+                     <br>accusarci di non avere rettamente adempiuto gli obblighi 
+                     <br>assunti, mostreremo alla stregua <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> fatti che tale <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">rampo-
+                           <br>gna</span><span class="regolarizzazioni-expan"> rimprovero</span></span> può giustamente ritorcersi contro l’<span class="Luoghi_countries">Austria-Ungheria</span>.
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <div style="min-height: 300px;"></div>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="Il_tratt_comm_1.jpg">
+                        <div class="pagina"><img class="small" src="Il_tratt_comm_1.jpg" usemap="#pagina161"><map name="pagina161"><area shape="rect" coords="206,476,912,535" href="#tit_primobrano" id="tit_primobrano" style="cursor: pointer;"><area shape="rect" coords="388,535,671,568" href="#subtit_primobrano" id="subtit_primobrano" style="cursor: pointer;"><area shape="rect" coords="39,567,1074,1132" href="#paragrafo1_trattato" id="paragrafo1_trattato" style="cursor: pointer;"><area shape="rect" coords="44,1130,1071,2674" href="#paragrafo2_trattato" id="paragrafo2_trattato" style="cursor: pointer;"><area shape="rect" coords="34,2678,1075,3086" href="#paragrafo3_1_trattato" id="paragrafo3_1_trattato" style="cursor: pointer;"><area shape="rect" coords="1096,471,2114,701" href="#paragrafo3_2_trattato" id="paragrafo3_2_trattato" style="cursor: pointer;"><area shape="rect" coords="1088,702,2145,2625" href="#paragrafo4_trattato" id="paragrafo4_trattato" style="cursor: pointer;"><area shape="rect" coords="1081,2628,2128,3066" href="#paragrafo5_1_trattato" id="paragrafo5_1_trattato" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image" id="Il_tratt_comm_2.jpg">
+                        <div class="pagina"><img class="small" src="Il_tratt_comm_2.jpg" usemap="#pagina162"><map name="pagina162"><area shape="rect" coords="130,134,1194,445" href="#paragrafo5_2_trattato" id="paragrafo5_2_trattato" style="cursor: pointer;"><area shape="rect" coords="133,456,1204,1010" href="#paragrafo6_trattato" id="paragrafo6_trattato" style="cursor: pointer;"><area shape="rect" coords="137,1014,1194,2046" href="#paragrafo7_trattato" id="paragrafo7_trattato" style="cursor: pointer;"><area shape="rect" coords="150,2042,1204,2393" href="#paragrafo8_trattato" id="paragrafo8_trattato" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="articolo">
+            <div class="titolo-articolo">
+               <h2 id="tit_secondobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>CORRISPONDENZA DA PRATO.
+                  </h2>
+               <h3 id="subtit_secondobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>A PROPOSITO DELLA LEGGE SUL LAVORO DEI FANCIULLI.
+                  </h3>
+            </div>
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end"></div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="paragrafo1_corrispondenza">
+                     
+                     <br>Fra tutti gli argomenti addotti per combattere la <span class="termini_legali">legge</span>
+                     <br>sul lavoro dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span>, quello sul quale si è fatto più chiasso
+                     <br>è che in <span class="Luoghi_countries">Italia</span> non esistono quei <span class="verbum">mali</span> che con la <span class="termini_legali">legge</span> si
+                     <br>vorrebbero impedire.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo2_corrispondenza">
+                     
+                     <br>Questo argomento, a vero dire, non mi fece mai grande
+                     <br>impressione, perchè lo <span class="verbum">strazio</span> che si fa dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> nelle
+                     <br><span class="termini_sociali">zolfare</span> di <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="Luoghi_settlements">Girgenti</span></span><span class="regolarizzazioni-expan"> <span class="Luoghi_settlements">Agrigento</span></span></span> e di <span class="Luoghi_settlements">Caltanissetta</span>, e il lavoro este-
+                     <br>nuante cui nelle <span class="termini_sociali">filature</span> lombarde sono condannati oltre
+                     <br>56 mila <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span>, dei quali non pochi <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">al disotto</span><span class="regolarizzazioni-expan"> al di sotto</span></span> di 9 anni, <span class="note-hover" onmouseover="showNote(this)" onmouseout="hideNote(this)">*<span class="popup-note">
+                           Vedi
+                           <i class="ref_bibl">Rassegna</i>
+                           , vol. III, pag. 198.
+                           </span></span>
+                     <br>mi sono sempre sembrati due fatti che giustificano piena-
+                     <br>mente l’intervento diretto ed efficace dello <span class="org">Stato</span> a tutela
+                     <br>delle <span class="termini_sociali">giovani generazioni lavoratrici</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo3_corrispondenza">
+                     
+                     <br>Ma poiché sempre si insiste sulla inutilità di una <span class="termini_legali">legge</span>
+                     <br>che regoli il lavoro dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> e si vuole che <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">codesti</span><span class="regolarizzazioni-expan"> questi</span></span> due
+                     <br>fatti non siano sufficienti a giustificarla, così penso che sia
+                     <br>dovere di tutti coloro che sentono il bisogno di una simile
+                     <br><span class="termini_legali">legge</span>, di raccogliere, ognuno nella propria cerchia, dati e
+                     <br>notizie sul <span class="termini_sociali">lavoro dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span></span> e di renderli di pubblica ra-
+                     <br>gione.
+                     
+                     
+                     In tal modo si verrebbe a formare una specie di
+                     <br>inchiesta che sarebbe ben altrimenti autorevole di quella
+                     <br>del <span class="Date">1877</span> eseguita per mezzo delle <span class="org">Prefetture</span> e di quella
+                     <br>del <span class="Date">1879</span> eseguita per mezzo delle <span class="org">Deputazioni Provinciali</span>,
+                     <br>dei <span class="org">Consigli Sanitari</span>, delle <span class="org">Camere di Commercio</span>, degli
+                     <br><span class="org">Industriali</span> e degli Ingegneri di miniere.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo4_corrispondenza">
+                     
+                     <br>Per parte mia, che sono fra i <span class="epithet_rolenames">fautori della legge</span>, poiché
+                     <br><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">veggo</span><span class="regolarizzazioni-expan"> vedo</span></span>  il <span class="verbum">male</span> e non comprendo la ragione per la quale lo
+                     <br><span class="org">Stato</span> non debba moversi per guarirlo, sento vivamente <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">co-
+                           <br>desto</span><span class="regolarizzazioni-expan"> questo</span></span> dovere, e in soddisfazione del medesimo credo di do-
+                     <br>ver portare a notizia del pubblico ciò che, <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">non son</span><span class="regolarizzazioni-expan"> non sono</span></span> molti
+                     <br>giorni, ho potuto constatare in quel di <span class="Luoghi_settlements">Prato</span>. <span class="note-hover" onmouseover="showNote(this)" onmouseout="hideNote(this)">**<span class="popup-note">
+                           Nelle
+                           <i class="ref_bibl">Notizie Statistiche sopra alcune industrie</i>
+                           ,  pubblicato per cura del Comm. V. Ellena nul 1878 dal Ministero d1 Agricoltura,
+                           Industria e Commercio, abbiamo por l’industria della filatura o tessitura della lana
+                           a Prato le seguenti cifre. In 84 stabilimenti, il numero degli operai adulti addetti
+                           alla filatura era di 533, oltre 280 fanciulli al di sotto di 14 anni ; e quello degli
+                           adulti addetti alla tessitura era di 510 uomini e 55 donne, con 422 fanciulli al di
+                           sotto dei 14 anni. Ma dal 1877 a oggi queste cifre saranno probabilmente cresciute.
+                           </span></span>
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo5_corrispondenza">
+                     
+                     <br>Nei pressi di questa florida città, esempio alle altre di
+                     <br><span class="Luoghi_countries">Toscana</span> per <span class="termini_sociali"><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">attività produttrice</span><span class="regolarizzazioni-expan"> attività produttiva</span></span></span>, scorrono, discendendo dal
+                     <br>prossimo Appennino, frequenti <span class="Luoghi_n">corsi d’acqua</span>, che alimentano
+                     <br>la forza motrice a molti <span class="termini_sociali">opifici</span> nei quali si esercita l’<span class="termini_sociali">in-
+                        <br>dustria della lana</span>.
+                     
+                     
+                     Da qualche tempo questi <span class="termini_sociali">lanifici</span> hanno
+                     <br>assunto per numero vaste proporzioni. 
+                     
+                        
+                     Non sono in grado
+                     <br>di indicare, nemmeno approssimativamente, il numero dei
+                     <br>fusi che contengono.
+                     
+                     
+                     Ma che questo sia rilevante e vada
+                     <br>di continuo crescendo <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">apparisce</span></span><span class="correzioni-corr"> appare</span></span> dal fatto che molti pro-
+                     <br>prietari hanno convertito in <span class="termini_sociali">lanifici</span> i loro mulini!
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo6_corrispondenza">
+                     
+                     <br>In questi <span class="termini_sociali">lanifici</span> la lavorazione è continua di settimana
+                     <br>in settimana.
+                     
+                     
+                     Il <span class="termini_sociali">lavoro</span> è diviso fra due <span class="termini_sociali">mute</span> di operai,
+                     <br>delle quali una lavora di giorno e l’altra di notte; ogni
+                     <br>lunedì, dopo un giorno di riposo, le due <span class="termini_sociali">mute</span> si danno il
+                     <br>cambio, alternandosi settimanalmente al <span class="termini_sociali">lavoro</span> notturno.
+                     
+                     
+                     <br>Ogni operaio presiede a una filatrice che mette in moto
+                     <br>dai 100 ai 300 fusi; o ognuno di questi operai è coadiu-
+                     <br>vato da 2 o da 4 <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> che hanno l’incombenza di riat-
+                     <br>taccare i fili che si strappano.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo7_corrispondenza">
+                     
+                     <br>Fin qui, come si vede, nulla di male; ma invece argo-
+                     <br>mento di lode a quegli avveduti proprietari, a quegli arditi
+                     <br>capitalisti, a quei forti lavoratori.
+                     
+                     
+                     Qui però comincia il <span class="verbum">male</span>;
+                     <br>e il <span class="verbum">male</span>, come il lettore si è già immaginato, sta tutto
+                     <br>nel modo col quale quei <span class="verbum">fanciulli</span> sono impiegati.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo8_1_corrispondenza">
+                     
+                     <br>
+                     L’impiego di quei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> si fa senza alcun riguardo
+                     <br>
+                     alla loro <span class="verbum">tenera età</span>, ai bisogni dell’animo loro.
+                     
+                     
+                     Nessuna
+                     
+                     </p>
+               </div>
+            </div>
+            <hr class="separatore-pagina">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo8_2_corrispondenza">
+                     
+                     <br><span class="termini_legali">norma</span> presiede alla loro scelta: ve ne sono di 12 anni,
+                     <br>di 10, e non pochi anche di 7 anni.
+                     
+                     
+                     Nessuna <span class="termini_legali">norma</span> pre-
+                     <br>siede al modo del loro <span class="termini_sociali">lavoro</span>: hanno lo stesso orario degli
+                     <br>adulti, per cui, senza contare le ore di riposo, hanno un
+                     <br>lavoro che varia dalle 10 e mezzo alle 12 ore, giungendo
+                     <br>nell’estate anche alle 14 ore.
+                     
+                     
+                     Nessuna <span class="termini_legali">norma</span> infine tutela
+                     <br>il loro riposo notturno: seguono la <span class="termini_sociali">muta</span> degli adulti e
+                     <br>lavorano alternativamente una settimana di giorno e una
+                     <br>di notte.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo9_corrispondenza">
+                     
+                     <br>Queste cifre e queste notizie non hanno bisogno di com-
+                     <br>menti; come non hanno bisogno di enumerazione i danni
+                     <br>che in quelle <span class="verbum">povere creature</span>, che hanno il <span class="verbum">corpo teneris-
+                        <br>simo e l’animo aperto</span> ad ogni più lieve impressione, de-
+                     <br>vono produrre il lavoro prolungato, e intenso, il contatto
+                     <br>continuo con adulti, l’abbandono della vita di famiglia e
+                     <br>della scuola.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo10_corrispondenza">
+                     
+                     <br>Il <span class="verbum">male</span> del modo di impiego dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> non è limi-
+                     <br>tato, come si vede, ai casi ormai classici delle <span class="termini_sociali">zolfare</span> e
+                     <br>delle <span class="termini_sociali">filature</span> lombarde.
+                     
+                     
+                     Il <span class="verbum">male</span>, anche in <span class="Luoghi_countries">Italia</span>, esiste
+                     <br>ovunque la <span class="termini_sociali">vita industriale</span> tende a manifestarsi.
+                     
+                     
+                     La sua
+                     <br>entità non è, nemmeno da noi, così lieve da poter essere
+                     <br>trascurato.
+                     
+                     
+                     Lo <span class="org">Stato</span> ha i modi per poterlo guarire o, al-
+                     <br>meno, ridurlo alle minime proporzioni: dunque ha il dovere
+                     <br>di farlo.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo11_corrispondenza">
+                     
+                     <br>So che contro la <span class="termini_legali">legge</span> sul lavoro dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span> è stata
+                     <br>una gara nel trovare argomenti.
+                     
+                     
+                     Ma questi argomenti mi
+                     <br>sono apparsi tutti di tal natura che ho sempre pensato
+                     <br>che nella fretta di architettarli si è badato più alla quan-
+                     <br>tità che alla qualità, e che furono escogitati più presto
+                     <br>dall’interesse dei fabbricanti e dallo spirito di scuola che dal
+                     <br>desiderio sincero o spregiudicato di giovare alle nostre
+                     <br><span class="termini_sociali">classi lavoratrici</span>.
+                     
+                     
+                     Infatti chi ha seguito lo svolgimento della
+                     <br>questione sa che di tutti questi argomenti, sia che fossero
+                     <br>forniti dal vecchio arsenale della <span class="termini_sociali">economia dottrinaria</span>, sia
+                     <br>che fossero proposti nel nome del <span class="termini_sociali">tecnicismo industriale</span>,
+                     <br>neppure uno è rimasto in piedi, neppure uno potè resistere
+                     <br>all’analisi dell’osservatore spassionato.
+                     
+                     
+                     Per cui, dopo tanta
+                     <br><span class="termini_sociali">guerra</span>, ciò che è rimasto è questo: la certezza che anche
+                     <br>in <span class="Luoghi_countries">Italia</span> esiste il male del lavoro eccessivo dei <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">fanciulli</span><span class="regolarizzazioni-expan"> bambini</span></span>;
+                     <br>che il solo rimedio, poiché non ne sono stati suggeriti altri,
+                     <br>è l’intervento dello <span class="org">Stato</span>; che una strana coalizione di in-
+                     <br>teressi materiali e di pregiudizi scientifici impedisce tut-
+                     <br>tavia che a quel <span class="verbum">male</span> questo rimedio venga applicato.
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <div style="min-height: 300px;"></div>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="corr_prato_1.jpg">
+                        <div class="pagina"><img class="small" src="corr_prato_1.jpg" usemap="#pagina167"><map name="pagina167"><area shape="rect" coords="1433,166,1922,229" href="#tit_secondobrano" id="tit_secondobrano" style="cursor: pointer;"><area shape="rect" coords="1279,233,2072,278" href="#subtit_secondobrano" id="subtit_secondobrano" style="cursor: pointer;"><area shape="rect" coords="1168,271,2191,449" href="#paragrafo1_corrispondenza" id="paragrafo1_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1171,446,2194,791" href="#paragrafo2_corrispondenza" id="paragrafo2_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1171,791,2215,1308" href="#paragrafo3_corrispondenza" id="paragrafo3_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1168,1304,2226,1563" href="#paragrafo4_corrispondenza" id="paragrafo4_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1182,1566,2201,1992" href="#paragrafo5_corrispondenza" id="paragrafo5_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1171,1992,2243,2379" href="#paragrafo6_corrispondenza" id="paragrafo6_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1161,2377,2229,2587" href="#paragrafo7_corrispondenza" id="paragrafo7_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="1171,2594,2229,2691" href="#paragrafo8_1_corrispondenza" id="paragrafo8_1_corrispondenza" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image" id="corr_prato_2.jpg">
+                        <div class="pagina"><img class="small" src="corr_prato_2.jpg" usemap="#pagina168"><map name="pagina168"><area shape="rect" coords="148,180,1203,570" href="#paragrafo8_2_corrispondenza" id="paragrafo8_2_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="155,567,1207,870" href="#paragrafo9_corrispondenza" id="paragrafo9_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="155,875,1213,1216" href="#paragrafo10_corrispondenza" id="paragrafo10_corrispondenza" style="cursor: pointer;"><area shape="rect" coords="176,1216,1220,2052" href="#paragrafo11_corrispondenza" id="paragrafo11_corrispondenza" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="articolo">
+            <div class="titolo-articolo">
+               <h2 id="tit_terzobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>
+                  LE ORIGINI DELLA FILOSOFIA
+                  </h2>
+               <h3 id="subtit_terzobrano" class="zone" style="text-align: center; text-transform: uppercase;">
+                  <br>
+                  DI ARTURO SCHOPENHAUER.
+                  </h3>
+            </div>
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo1_schopenhauer">
+                     
+                     <br>Ai lettori della <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Rassegna</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Rassegna Settimanale</span></span></span> è <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">occorso</span><span class="regolarizzazioni-expan"> capitato</span></span>  già più volte <span class="note-hover" onmouseover="showNote(this)" onmouseout="hideNote(this)">*<span class="popup-note">
+                           V.
+                           <i class="ref_bibl">Rassegna</i>
+                           , vol. 1° pag. 114 : Il
+                           <i>pessimismo dello Schopenhauer</i>
+                           .
+                           </span></span> in
+                     <br>queste stesse pagine il nome di <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Arturo Schopenhauer</a></span> e
+                     <br>della <span class="verbum">sua filosofia</span>, che <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">a pena</span><span class="regolarizzazioni-expan"> appena</span></span>  nota trent’anni fa anche in
+                     <br><span class="Luoghi_countries">Germania</span>, poco prima della morte del filosofo (<span class="Date">1860</span>) vi si
+                     <br>propagò da un piccolo cerchio di lettori e d’ammiratori
+                     <br>alla parte più colta della società tedesca, e oggi ha <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">un’</span></span><span class="correzioni-corr"> un</span></span>
+                     <br>sempre crescente per tutta l’Europa.
+                     
+                      
+                     Questo rivolgersi che
+                     <br>fa ovunque l’attenzione del pubblico all’ultimo di tempo tra i
+                     <br>grandi <span class="termini_filosofici">sistemi metafisici</span> del secolo, che nelle scuole parevano
+                     <br>ormai condannati per sempre dalla <span class="termini_filosofici">critica</span> e dalle <span class="termini_filosofici">dottrine</span>
+                     <br>positive, è un fatto dei più notevoli, e ha, secondo me, due
+                     <br>motivi principali: uno; comune al <span class="termini_filosofici">pensiero filosofico</span> e scien-
+                     <br>tifico di tutti i tempi, ed è la curiosità, innata inestingui-
+                     <br>bile in noi, di tentare gli ultimi perché delle cose; l’altro
+                     <br>più proprio di quelle età, come la nostra, in cui col pre-
+                     <br>valere dello <span class="termini_filosofici">spirito critico</span> la fede religiosa va mancando
+                     <br>ogni giorno più ai fondamenti e alle norme della <span class="termini_filosofici">condotta
+                        <br>morale</span>, ed è l’intimo bisogno di cercare queste norme in
+                     <br>un <span class="termini_filosofici">concetto filosofico</span> del valore e dei fini della vita e di
+                     <br>fare della <span class="termini_filosofici">filosofia</span> e della scienza quasi una religione.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo2_schopenhauer">
+                     
+                     <br>Ora, la <span class="termini_filosofici">dottrina</span> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  è tra quelle, che,
+                     <br>ricercando intimamente l’animo umano, vi aprono spiragli
+                     <br>profondi all’occhio del pensatore e del moralista,
+                     <br>e se non soddisfa del tutto a <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesto</span><span class="regolarizzazioni-expan"> questo</span></span> grande bisogno dei nostri tempi,
+                     <br>ha però sulle altre il vantaggio di rendere intera in sé
+                     <br>l’ispirazione geniale della mente d’uno scrittore che ne fu
+                     <br>dominato per tutta la vita, e a cui il <span class="termini_filosofici">pensiero filosofico</span>
+                     <br>era, come ai più grandi tra gli antichi, non un mero arti-
+                     <br>fizio di scuola, ma una <span class="termini_sociali">vocazione</span>, e, sto per dire, un’<span class="termini_sociali">azione</span>
+                     <br>di tutto l’uomo.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo3_schopenhauer">
+                     
+                     <br>Qui sta, a parer mio, la causa vera di questa efficacia cre-
+                     <br>scente che lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span> ha sui lettori contemporanei.
+                     
+                     
+                     <br>Noi siamo stanchi fino alla nausea di tutto ciò che è con-
+                     <br>venzione, maniera, forma senza sostanza, così del pensiero
+                     <br>come dell’arte.
+                     
+                     
+                     Ora, nel linguaggio che la filosofia dello
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  parla alla mente e al cuore di chi <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">da vero</span><span class="regolarizzazioni-expan"> davvero</span></span>
+                     <br>la comprende, ricorrono spesso idee, parole, e (ben più di
+                     <br>rado, però, che in ogni altro filosofo tedesco) termini tec-
+                     <br>nici presi dalle scuole dei suoi tempi, in specie da quella
+                     <br>del <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>; ma l’accento che ci dà quasi l’intimo senso, indi-
+                     <br>viduale, a un tempo, ed umano, di <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesto</span><span class="regolarizzazioni-expan"> questo</span></span> linguaggio del
+                     <br>pensiero, autore ce lo mette tutto di suo, perché lo deriva
+                     <br>da sentimenti e da motivi propri della nostra mente in
+                     <br>tutte le età e in tutti i luoghi.
+                     
+                     
+                     <span class="verbum">Idealista critico</span>, e <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> più
+                     <br>rigorosi, egli sta col <span class="persone"><a href="https://www.treccani.it/enciclopedia/george-berkeley/">Berkeley</a></span> e col <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span> nell’aftermare la
+                     <br><span class="verbum">natura relativa</span> d’ogni nostra cognizione e nell’attribuirla
+                     <br>all’apparirci che fanno le cose quali le apprendono, <i>secondo
+                        <br>le proprie leggi</i>, il senso e il pensiero, e non quali esse sono
+                     <br>nella loro essenza; mentre, procedendo oltre il <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span> per
+                     <br>la sola via che la sua <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Critica</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Critica della ragion pura</span></span></span> aveva lasciata aperta alla
+                     <br>ricerca di <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesta</span><span class="regolarizzazioni-expan"> questa</span></span> essenza delle cose, lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  la
+                     <br>vuol ravvisare in una <span class="termini_filosofici"><i>Volontà assoluta</i></span>, non però cosciente,
+                     <br>razionale e benefica, come l’aveano concepita il <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span> e lo
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/schelling/">Schelling</a></span>, ma inconsapevole, cieca, fatalmente autrice del
+                     <br><span class="verbum">male</span> e del dolore, inerente all’essere della natura e della
+                     <br><span class="verbum">Vita</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo4_1_schopenhauer">
+                     
+                     <br>In ciascuno dei punti principali, a cui può ridursi il
+                     <br>sistema de <i class="ref_bibl">Mondo come volontà e come rappresentazione</i>, noi
+                     <br>troviamo, dunque, un elemento storico, un principio che gli
+                     <br>viene dalla filosofia contemporanea, e ch’è, per dir così, la
+                     <br>forma, in cui si stampa di proprio moto il getto originale
+                     <br>del pensiero del filosofo.
+                     
+                     
+                     Ma appunto per ciò, a voler ben
+                     <br>misurarne l’originalità, bisogna aver l’occhio all’intima vita
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="paragrafo4_2_schopenhauer">
+                     
+                     <br>di <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesto</span><span class="regolarizzazioni-expan"> questo</span></span> pensiero e cercare com’esso sappia far suo e muti
+                     <br>in proprio <span class="espressioni_metaforiche">sugo e sangue</span> ciò che gli presta l’ambiente in-
+                     <br>tellettuale e morale in cui vive.
+                     
+                     
+                     Poiché, filosofo e scrittore
+                     <br>nato, egli è, al tempo stesso, un grande <span class="epithet_rolenames">grande artista</span>.
+                     
+                     
+                     La filoso-
+                     <br>fia è per lui (così la definisce egli stesso) arte, non scienza,
+                     <br>è <span class="verbum">l’interpretazione geniale</span> dell’<span class="verbum"><i>enimma delle cose</i></span>, e non sta
+                     <br>nel ridurlo a una <span class="verbum">fredda algebra di concetti astratti</span>, ma
+                     <br>nel porsi in vivo contatto con esse, nell’intuirle e nel me-
+                     <br>ditarle, lasciandole parlare alla mente nel loro linguaggio
+                     <br>più <i>immediato</i>: è la vera <span class="testo_lingua">philosophia</span>, quale la voleva <span class="persone"><a href="https://www.treccani.it/enciclopedia/francesco-bacone/">Bacone</a></span>,
+                     <br><i><span class="testo_lingua">quae mundi totius voces fidelissime reddit et, veluti dictante
+                           <br>mundo, conscripta est.</span></i>
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo5_schopenhauer">
+                     
+                     <br>Con queste disposizioni d’ingegno, già deste in lui fino
+                     <br>nella prima gioventù, egli ideò e compose il suo sistema
+                     <br>tra il <span class="Date">1813</span> e il <span class="Date">1818</span>, proprio in quegli anni, in cui l’idea-
+                     <br>lismo assoluto astrattissimo iniziato dal <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span>, era al colmo,
+                     <br>e lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/schelling/">Schelling</a></span> già regnava, e l’<span class="persone"><a href="https://www.treccani.it/enciclopedia/georg-wilhelm-friedrich-hegel/">Hegel</a></span> stava per succedergli.
+                     
+                     
+                     <br>A <span class="Luoghi_settlements">Gottinga</span>, il più celebre tra gli avversari del <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>, lo
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/gottlob-ernst-schulze_(Enciclopedia-Italiana)/">Schulze</a></span>, lo aveva educato al culto di <span class="persone"><a href="https://www.treccani.it/enciclopedia/platone/">Platone</a></span> e del grande
+                     <br>filosofo di <span class="Luoghi_settlements">Königsberg</span>, la cui <span class="termini_filosofici"><i>dottrina della conoscenza</i></span> egli
+                     <br>professò poi sempre, e cercò di trarre alle sue conseguenze
+                     <br>estreme nel primo dei suoi lavori, nella Tesi <i>sulla quadru-
+                        <br>plice radice del principio di ragion sufficiente</i> 
+                     
+                     
+                     Questa disserta-
+                     <br>zione, scritta nel <span class="Date">1813</span> nel suo esame di dottorato, divenne
+                     <br>poi, come dice egli stesso, la base del suo sistema, e n’e-
+                     <br>sprime la parte <span class="verbum">critica</span> e <span class="verbum"> idealistica</span>, che può riassumersi
+                     <br>tutta così: il mondo, in quanto noi lo conosciamo per via
+                     <br>dei sensi e del pensiero, non è che un ordine di fenomeni,
+                     <br>una rappresentazione, un <i><span class="termini_filosofici">obbietto</span> per il <span class="termini_filosofici">subbietto</span></i>.
+                     
+                     
+                     Ma già
+                     <br>negli anni <span class="Date">1812</span> e <span class="Date">1813</span>, passati a <span class="Luoghi_settlements">Berlino</span>, ove udì il <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span>,
+                     <br>che esponeva la seconda forma della sua <i class="ref_bibl">Dottrina della
+                        <br>scienza</i>, o ove allora la <span class="termini_filosofici">Metafisica</span> dominava assoluta, il
+                     <br>bisogno di affrontarne gli alti problemi gli s’era fatto sen-
+                     <br>tire sempre più vivo, e aveva dato ai primi tentativi del suo
+                     <br>pensiero, che ci son noti dai Manoscritti pubblicati poi dai
+                     <br>suoi <span class="epithet_rolenames">biografi</span>, un che di quel Platonismo <span class="verbum">vago e un po’
+                        <br> mistico</span>, a cui s’ispiravano i <i>Romantici</i>.
+                     
+                     
+                     Il <span class="verbum">principio</span>, del resto,
+                     <br>divenuto quasi un assioma in tutta la scuola del <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>, che
+                     <br>cioè, il passaggio dalla <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Critica</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Critica della ragion pura</span></span></span> alla <span class="termini_filosofici">Metafisica</span>, dal <span class="termini_filosofici">fenomeno</span>
+                     <br><span class="verbum">intimo essere delle cose</span> potesse cercarsi solo in noi, nella
+                     <br>coscienza che l’uomo ha di sé, non come pensante, ma come
+                     <br><span class="verbum">agente morale</span> e come <span class="verbum">volontà libera</span>, <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">apparisce</span></span><span class="correzioni-corr"> appare</span></span> già chiaro
+                     <br>fin da principio nella mente del <span class="epithet_rolenames">giovino filosofo</span>, insieme
+                     <br>coll’altro, da cui poi moveranno, come da loro punto co-
+                     <br>mune, la sua <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Estetica</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Critica del giudizio</span></span></span>, e la sua <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Morale</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Critica della ragion pratica</span></span></span>, e che consiste nel
+                     <br>porre il supremo dell’<span class="verbum">arte</span> e della <span class="verbum">virtù</span>, il <span class="verbum">genio</span> e la <span class="verbum">san-
+                        <br>tità</span>, in una <span class="verbum">liberazione dell’intelletto e del volere</span> dalle con-
+                     <br>dizioni <span class="termini_filosofici">subiettive della conoscenza</span> e dai fini e dai motivi
+                     <br>individuali, quasi in un <span class="verbum">pieno avveramento dell’ideale</span> nel
+                     <br>pensiero e nella vita.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo6_1_schopenhauer">
+                     
+                     <br>Questa <span class="verbum">materia prima</span>, ancora informe del sistema, da
+                     <br>cui lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  trasse poi le più belle pagine della
+                     <br>sua opera principale, è già tutta ne’ suoi <i class="ref_bibl">Manoscritti</i> e <i class="ref_bibl">Ap-
+                        <br>punti</i> di studente e prende un disegno sempre più definito
+                     <br>man mano ch’egli la vien facendo sempre più propria ed
+                     <br>intima al suo pensiero.
+                     
+                     
+                     <span class="termini_filosofici"> concetto kantiano</span> d’una <span class="termini_filosofici"><i>libertà
+                           <br>assoluta e intelligibile</i></span>, pensata com’essenziale all’esser nostro,
+                     <br>egli l’ha comune col <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span> o, al pari di lui, vi cerca un
+                     <br>primo sostegno alla sua <span class="termini_filosofici">Metafisica</span>.
+                     
+                     
+                     Ma nel <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span> <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesto</span><span class="regolarizzazioni-expan"> questo</span></span>
+                     <br>concetto è sin da principio e rimane poi sempre quel ch’era
+                     <br>nel <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>, un prodotto della <span class="termini_filosofici">coscienza morale</span> sottentrata,
+                     <br>per opera dei due grandi idealisti, in luogo di quel <span class="verbum">mondo
+                        <br>d’entità oltrasensibili</span> che la fede religiosa avea creato e che
+                     <br>la critica distruggeva.
+                     
+                     
+                     Nello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  quel <span class="termini_filosofici">concetto</span>
+                     <br><span class="verbum">diviene subito tutt’altro</span>.
+                     
+                     
+                     Egli vi presuppone un che essen-
+                     <br>zialmente opposto all’<span class="termini_filosofici">intelligenza</span> e alla <span class="termini_filosofici">ragione</span>, e dopo
+                     <br>aver voluto ravvisare in ciò ch’egli chiama volontà il primo
+                     
+                     </p>
+               </div>
+            </div>
+            <hr class="separatore-pagina">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo6_2_schopenhauer">
+                     
+                     <br><span class="verbum">impulso generatore d’ogni nostro atto interno</span>, persino d’o-
+                     <br>gni moto spontaneo, ne fa tutt’una cosa con quell’intima
+                     <br>forza che opera in mille forme nei fenomeni della natura
+                     <br>sensibile esterna, dal gravitare di tutti i corpi intorno ai
+                     <br>loro centri d’attrazione sino alle affinità chimiche, all’elet-
+                     <br>tricità, al magnetismo e alle manifestazioni più alte della
+                     <br>vita nelle piante e negli animali.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo7_schopenhauer">
+                     
+                     <br>L’aver così dato a tutte le forze dell’universo il nome
+                     <br>di <span class="termini_filosofici"><i>volontà</i></span>, proprio di una sola e della più alta tra le specie
+                     <br>che le comprendono in sé, è, però, nello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  qual-
+                     <br>cosa più che un eccesso, una temerità d’argomentazione
+                     <br>per analogia; è l’ultimo estremo, a cui giunge con lui l’idea-
+                     <br>lismo metafisico posteriore al <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>, costretto, per esser
+                     <br>fedele alle conclusioni della <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig"><span class="regolarizzazioni">Critica</span></span><span class="regolarizzazioni-expan"> <span class="regolarizzazioni"> Critica della ragion pura</span></span></span>, a tentare di aprirsi una
+                     <br>via da noi stessi all’intimo essere delle cose, interpretan-
+                     <br>done il senso arcano coi soli dati della coscienza e dell’os-
+                     <br>servazione interiore.
+                     
+                     
+                     Questo audace <span class="verbum">audace moto speculativo</span> del
+                     <br>pensiero tedesco non è altro che una sublime traduzione
+                     <br>del <span class="verbum"><i>gran libro dell’universo</i></span> nel linguaggio dello spirito umano,
+                     <br>e procede per due direzioni e quasi per due correnti op-
+                     <br>poste tra loro: una, dalla <i class="ref_bibl">Filosofia elementare</i> del <span class="persone"><a href="https://www.treccani.it/enciclopedia/karl-leonhard-reinhold/">Reinhold</a></span>
+                     <br>e dalla <i class="ref_bibl">Dottrina della scienza</i> del <span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span> sale alla <i class="ref_bibl">Filosofia
+                        <br>della natura</i> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/schelling/">Schelling</a></span> e fa capo all’<span class="persone"><a href="https://www.treccani.it/enciclopedia/georg-wilhelm-friedrich-hegel/">Hegel</a></span>;l’altra s’ac-
+                     <br>cenna fino dal <span class="Date">1800</span> nella seconda forma del sistema del
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Fichte</a></span>, ed è un’antitesi risoluta al <span class="termini_filosofici">metodo dialettico</span>, di cui
+                     <br>rinnega il principio: <span class="verbum">l’identità del pensiero assoluto e dell’i-
+                        <br>dea coll’essere delle cose</span>.
+                     
+                     
+                     Il punto culminante di questo se-
+                     <br>condo periodo della <span class="termini_filosofici">Metafisica tedesca</span> posteriore al <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>
+                     <br>lo tiene <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Arturo Schopenhauer</a></span> fino dal primo apparire della
+                     <br>sua opera principale: <i class="ref_bibl">Il mondo come volontà e come rappre-
+                        <br>sentazione</i>, edita nel <span class="Date">1818</span>, l’anno in cui l’<span class="persone"><a href="https://www.treccani.it/enciclopedia/georg-wilhelm-friedrich-hegel/">l’Hegel</a></span> dava prin-
+                     <br>cipio alle sue lezioni nell’<span class="org">Università di Berlino</span> e, con esse,
+                     <br>al regno della sua filosofia in <span class="Luoghi_countries">Germania</span>.
+                     
+                     
+                     Tra <span class="epithet_rolenames">il grande idea-
+                        <br>lista</span>, che vedeva nell’universo la <span class="termini_filosofici">manifestazione sensibile</span>
+                     <br>di una <span class="termini_filosofici">ragione eterna, assoluta e quasi una <span class="verbum">Logica divina</span></span>,
+                     <br>e <span class="epithet_rolenames">l’autore del <span class="termini_filosofici">Pessimismo filosofico</span></span>, per cui l’ordine delle
+                     <br>cose è un immenso assurdo, opera del <span class="quotes">« <i>brutto
+                           <br>poter che ascoso a comun danno impera.</i>»</span>
+                     <br>sta, come ben dimostrò <span class="persone"><a href="https://www.treccani.it/enciclopedia/eduard-von-hartmann_(Dizionario-di-filosofia)/">Odoardo Hartmann</a></span>, lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/schelling/">Schelling</a></span>,
+                     <br>autore della <i class="ref_bibl">Filosofia positiva</i>, ove per ispiegare l’esistenza
+                     <br>delle cose finite e del <span class="verbum">male</span> egli ricorre al <span class="termini_sociali">concetto cristiano
+                        <br>di una colpa e di una <i>ca</i> originale</span> ispirandosi alle dot-
+                     <br>trine del <span class="persone"><a href="https://www.treccani.it/enciclopedia/jakob-bohme/">Boehme</a></span> e degli altri Mistici medievali.
+                     
+                     
+                     La <i class="ref_bibl">Filo-
+                        <br>sofia positiva</i> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/schelling/">Schelling</a></span> rimase però a pena un abbozzo
+                     <br>e non altro che un tentativo impotente della vecchiaia del
+                     <br>filosofo.
+                     
+                     
+                     Il sistema dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  non principiò ad
+                     <br>operare sulle menti tedesche se non dopo il <span class="Date">1850</span>, quando
+                     <br>l’esito infelice dei recenti <span class="termini_sociali">moti politici</span> aveva prostrato l’a-
+                     <br>nimo della <span class="termini_sociali">gioventù</span>, l’<span class="termini_filosofici">egelianismo</span> era caduto, e, passata
+                     <br>ormai la voga delle <span class="termini_sociali">grette teorie empiriche</span> che gli erano
+                     <br>succedute, si faceva già sentire vivo il bisogno di una <span class="termini_filosofici">dot-
+                        <br>trina</span> fondata sull’esperienza interna ed esterna e sul mo-
+                     <br>derno concetto della natura e penetrata dalle tendenze
+                     <br>morali e religiose dell’<span class="termini_filosofici">idealismo</span> del <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span>.
+                     
+                     
+                     Tale parve allora
+                     <br>e pare tuttavia a molti il <span class="termini_filosofici">Pessimismo</span> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span> ,
+                     <br>ispirato com’è da un alto sentimento delle cose morali e
+                     <br>dal grande <span class="verbum">problema del male</span>, e volto a cercarne la solu-
+                     <br>zione nel concetto di quella <span class="termini_sociali">natura inesorabile, cieca</span>, (can-
+                     <br>tata dal nostro <span class="persone"><a href="https://www.treccani.it/enciclopedia/giacomo-leopardi/">Leopardi</a></span>), innanzi alla quale il vivente,
+                     <br>l’uomo, travolto da lei in una perpetua <span class="termini_sociali"><i>lotta per l’esistenza</i></span>,
+                     <br>è un nulla, è, per dirlo con <span class="persone"><a href="https://www.treccani.it/enciclopedia/pindaro/">Pindaro</a></span>, <span class="quotes"><i>il sogno d’un’ombra</i></span>;
+                     <br>e la <span class="verbum">ragione</span>, che lo distingue dai bruti, non gli vale che
+                     <br>a riconoscere inutilmente la propria <span class="termini_sociali">miseria</span> e la <span class="termini_sociali">vanità del
+                        <br>tutto</span>, o, al più, a temperare il <span class="termini_sociali">dolore della vita</span> col sopirne
+                     <br>e coll’estinguerne in sé stesso i <span class="verbum">desideri</span> e le <span class="verbum">aspirazioni</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo8_1_schopenhauer">
+                     
+                     <br>è facile il vedere come in tale sistema il luogo e l’uf-
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="paragrafo8_2_schopenhauer">
+                     
+                     <br>ficio, tenuto dalla <span class="verbum">ragione</span> e dalla <span class="verbum">coscienza</span> nell’economia
+                     <br>delle cose, quale essa <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">apparisce</span></span><span class="correzioni-corr"> appare</span></span> alla mente del filosofo, siano,
+                     <br>in certo modo, già dati sin da principio in un sentimento
+                     <br>che lo domina tutto, e ch’è, ce lo dice egli stesso, lo <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Scho-
+                           <br>penhauer</a></span>, il <span class="epithet_rolenames"><i>Musagete</i> della filosofia</span>: nel sentimento, che
+                     <br>certe anime e certe razze, più che certe altre, hanno del
+                     <br><span class="verbum">male</span>, del <span class="verbum">dolore</span> e della <span class="verbum">colpa</span>, quasi d’un’intima disso-
+                     <br>nanza che rompe e turba da cima a fondo l’<span class="verbum">armonia esterna
+                        <br>dell’universo</span>.
+                     
+                     
+                     Qui è l’origine vera d’ogni <span class="termini_filosofici">Pessimismo filosofico</span>.
+                     
+                     
+                     <br>La disposizione d’animo e di mente, che lo ha in sè in
+                     <br>germe, è l’<span class="termini_filosofici">antitesi</span> di quell’altra da cui deriva l’<span class="termini_filosofici">Ottimismo</span>
+                     <br>e, con esso, ogni <span class="termini_filosofici">filosofia</span> e ogni religione regolarmente
+                     <br>teistica.
+                     
+                     
+                     Dio o gli Dei, pensati come <span class="verbum">ragione suprema</span> e
+                     <br><span class="verbum">mente ordinatrice del mondo</span> del mondo, furono il tacito <span class="termini_filosofici">postulato</span>
+                     <br>del primo ragionamento che armeno, il greco, l’italico
+                     <br>fecero inconsapevolmente guardando intorno a sè la natura
+                     <br>bella e fiorente.
+                     
+                     
+                     Dio fu per loro innanzi a tutto una <span class="termini_filosofici">con-
+                        <br>cezione estetica</span>.
+                     
+                     
+                     <span class="quotes">«Tutte queste cose (della natura) sono
+                        <br><i>belle e sacre</i>; »</span> fa dire <span class="persone"><a href="https://www.treccani.it/enciclopedia/bione-di-boristene/">Bione</a></span> ad un suo <span class="personaggi">pastore</span>.
+                     
+                     
+                     <span class="verbum">L’intelli-
+                        <br>genza umana</span>, contemplando così l’ordine e la proporzione
+                     <br>della <span class="termini_filosofici">natura sensibile</span>, vi pensa un che simile o analogo a
+                     <br>sè stessa; e in questo vedere che fa al di fuori di sè riflesse
+                     <br><span class="termini_filosofici">le proprie leggi</span>, e in questo <span class="verbum">sentirsi quasi in intima co-
+                        <br>munione di spirito con ogni cosa bella e benefica</span>, si esalta
+                     <br>e gioisce giovanilmente.
+                     
+                     
+                     Quanto diversa da quella del <span class="personaggi">pa-
+                        <br>store</span> di <span class="persone"><a href="https://www.treccani.it/enciclopedia/bione-di-boristene/">Bione</a></span> la contemplazione notturna del <span class="personaggi"><i>pastore er-
+                           <br>rante</i></span> dell’asia di <span class="persone"><a href="https://www.treccani.it/enciclopedia/giacomo-leopardi/">Giacomo Leopardi</a></span>, ispirata dallo spetta-
+                     <br>colo della miseria della vita, e dal sentimento di una soli-
+                     <br>tudine immensa, in cui la <span class="verbum">mente umana</span> si sente come per-
+                     <br>duta là innanzi alla <span class="verbum">natura sterminata, deserta!</span>
+                     
+                     
+                     In quel
+                     <br><span class="personaggi">pastore</span> ti sembra che parli il <span class="verbum">genio della filosofia e delle
+                        <br>religioni orientali</span>, passato però per la greca fantasia del
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/giacomo-leopardi/">Leopardi</a></span>.
+                     
+                     
+                     A volere sentirne la voce e l’accento originale
+                     <br>bisogna udir parlare <span class="persone"><a href="https://www.treccani.it/enciclopedia/buddha/">Çàkyamuni Buddha</a></span> sulle <i>quattro
+                        <br>grandi verità</i> della religione del dolore fondata da lui e pro-
+                     <br>fessata anche oggi da quattrocento milioni d’uomini.
+                     
+                     
+                     Nel-
+                     <br>l’uomo greco, nel <span class="persone"><a href="https://www.treccani.it/enciclopedia/giacomo-leopardi/">Leopardi</a></span> stesso, la <span class="termini_filosofici">contemplazione este-
+                        <br>tica dell’universo</span>, per sè stessa <span class="verbum">serena</span> e <span class="verbum">pregna di poesia</span>,
+                     <br>è interrotta dal <span class="termini_filosofici">dubbio filosofico</span> e va a finire in una elegia
+                     <br>o in un <span class="termini_filosofici">ragionamento</span>, ove senti ancora <span class="verbum">commuoversi il
+                        <br>cuore del poeta</span>.
+                     
+                     
+                     In <span class="persone"><a href="https://www.treccani.it/enciclopedia/buddha/">Buddha</a></span> essa è impedita o turbata dallo
+                     <br>spettacolo di una natura mostruosa, qual’è <span class="Luoghi_countries">l’asiatica</span>, piena
+                     <br>di pericoli e di minacce per l’uomo, e, sopra tutto, dal-
+                     <br><span class="verbum">l’aprirsi dell’occhio interiore</span> del filosofo sull’<i>altro</i> aspetto
+                     <br>delle cose, sul mondo della coscienza e sul maggiore <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> suoi
+                     <br><span class="termini_filosofici">misteri</span>, sul <span class="termini_filosofici">mistero del male morale</span>, della <span class="termini_filosofici">colpa</span>.
+                     
+                     
+                     Il con-
+                     <br>cetto della divinità, se pure si affaccia a menti così atter-
+                     <br>rite e prostrate sotto il peso del <i>grande arcano delle cose</i>,
+                     <br>è l’opposto di quello <span class="termini_filosofici">essenzialmente estetico</span>, che sorgeva
+                     <br>dalla serena fantasia greca; esprime <span class="verbum">l’ideale del terribile</span>,
+                     <br>del mostruoso fisico e morale, raffigurato nelle immagini o
+                     <br>negli attributi di quasi tutti gli Dei dell’Indostan.
+                     
+                     
+                     Questa,
+                     <br>secondo me, è la ragione <i>più intima</i> per cui <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesti</span><span class="regolarizzazioni-expan"> quei</span></span> popoli,
+                     <br><span class="verbum">maestri di religione e di filosofia</span>, non ebbero vera e pro-
+                     <br>pria arte figurativa.
+                     
+                     
+                     Ma in una religione filosofica, qual’è
+                     <br>il Buddismo, nata nel sesto secolo avanti Cristo, ultimo pro-
+                     <br>dotto di una civiltà e di una <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">riflessione raffinate</span></span><span class="correzioni-corr"> riflessione raffinata</span></span>, il concetto
+                     <br>della divinità manca del tutto; conseguenza estrema che il
+                     <br><span class="termini_filosofici">Pessimismo</span> già presupponeva nelle sue premesse, facendo
+                     <br>del <span class="verbum">male</span>, inerente, per lui, all’<span class="verbum">essere delle cose</span>, un principio
+                     <br>che non lasciava in esse parte alcuna all’opera cosciente
+                     <br>d’un’<span class="verbum">intelligenza ordinatrice</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo9_1_schopenhauer">
+                     
+                     <br>E tale è pure la conseguenza a cui riesce, com’è noto,
+                     <br>la dottrina dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span> . Il suo Ateismo non esprime
+                     <br>se non quell’intima opposizione e separazione, ch’egli, <span class="epithet_rolenames">Pes-
+                        <br>simista assoluto</span>, è costretto a presupporre tra la <span class="termini_filosofici"><i>Volontà</i></span>,
+                     <br>pensata da lui come essenza e <i>forza</i> del mondo, e l’<i>Intelligenza</i>,
+                     
+                     </p>
+               </div>
+            </div>
+            <hr class="separatore-pagina">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo9_2_schopenhauer">
+                     
+                     <br>che vi <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">apparisce</span></span><span class="correzioni-corr"> appare</span></span>,  <span class="verbum">spettatrice del dolore universale</span> e sua
+                     <br><span class="verbum">consolatrice per mezzo dell’arte e della Virtù</span>.
+                     
+                     
+                     Il concetto
+                     <br>di <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">cotesta</span><span class="regolarizzazioni-expan"> quella</span></span> opposizione tra la  <i>Volontà</i> e l’<i>Intelligenza</i> ha,
+                     <br>dunque, la sua vera origine nel <span class="termini_filosofici">Pessimismo</span>; per quanto lo
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span> ci dica d’averne «trovato la conferma psicolo-
+                     <br>gica e fisiologica nella dottrina, con cui il <span class="persone"><a href="https://www.treccani.it/enciclopedia/marie-francois-xavier-bichat_(Dizionario-di-Medicina)/">Bichat</a></span> deri-
+                     <br>vava la distinzione dell’uno dall’altro di quei due fattori dello
+                     <br>spirito umano dal divario profondo ch’egli <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">credè</span></span><span class="correzioni-corr"> credette</span></span> <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">scuoprire</span></span><span class="correzioni-corr"> scoprire</span></span>
+                     <br>tra la <span class="verbum">vita organica</span> e la <span class="verbum">vita animale</span>.
+                     
+                     
+                     Ciò basta a met-
+                     <br>tere fuor di dubbio l’efficacia che il <span class="persone"><a href="https://www.treccani.it/enciclopedia/marie-francois-xavier-bichat_(Dizionario-di-Medicina)/">Bichat</a></span>, e con lui il
+                     <br><span class="persone"><a href="https://www.treccani.it/enciclopedia/pierre-jean-georges-cabanis/">Cabanis</a></span>, ebbero sulla <span class="termini_filosofici">filosofia</span> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span> ; non
+                     <br>basta, mi pare, a provarne le <i>origini francesi</i>, nè anche
+                     <br>sotto quel rispetto e dentro quei limiti in cui le afferma
+                     <br>e vorrebbe dimostrarle <span class="persone"><a href="https://www.treccani.it/enciclopedia/paul-alexandre-rene-janet_(Enciclopedia-Italiana)/">Paolo Janet</a></span> nella <i class="ref_bibl">Revue des deux
+                        <br>Mondes</i> del <span class="Date">1° maggio di quest’anno</span>.
+                     
+                     
+                     Egli dimentica, che
+                     <br>la <span class="termini_filosofici">Metafisica</span> dello <span class="persone"><a href="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Schopenhauer</a></span>  è singolare fra le altre
+                     <br>in ciò, che esce tutta quanta dalla <span class="termini_filosofici">Morale pessimistica</span> del
+                     <br>filosofo, e dall’attitudine che il suo pensiero giovanile vi
+                     <br>prese sin da principio di contro a quello del <span class="persone"><a href="https://www.treccani.it/enciclopedia/immanuel-kant/">Kant</a></span> e alle
+                     <br>altre dottrine tedesche contemporanee.
+                     
+                     </p>
+                  <p class="paragrafo" id="Barzellotti_firma">
+                     <br> <span class="persone">GIACOMO BARZELLOTTI</span>.
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <div style="min-height: 300px;"></div>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="orig_filo_1.jpg">
+                        <div class="pagina"><img class="small" src="orig_filo_1.jpg" usemap="#pagina173"><map name="pagina173"><area shape="rect" coords="293,159,1017,224" href="#tit_terzobrano" id="tit_terzobrano" style="cursor: pointer;"><area shape="rect" coords="410,220,883,264" href="#subtit_terzobrano" id="subtit_terzobrano" style="cursor: pointer;"><area shape="rect" coords="132,255,1171,1118" href="#paragrafo1_schopenhauer" id="paragrafo1_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="132,1124,1171,1553" href="#paragrafo2_schopenhauer" id="paragrafo2_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="118,1550,1188,2672" href="#paragrafo3_schopenhauer" id="paragrafo3_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="121,2666,1178,2986" href="#paragrafo4_1_schopenhauer" id="paragrafo4_1_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="1188,163,2231,691" href="#paragrafo4_2_schopenhauer" id="paragrafo4_2_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="1188,696,2231,2320" href="#paragrafo5_schopenhauer" id="paragrafo5_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="1188,2322,2258,3063" href="#paragrafo6_1_schopenhauer" id="paragrafo6_1_schopenhauer" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image" id="orig_filo_2.jpg">
+                        <div class="pagina"><img class="small" src="orig_filo_2.jpg" usemap="#pagina174"><map name="pagina174"><area shape="rect" coords="119,175,1204,473" href="#paragrafo6_2_schopenhauer" id="paragrafo6_2_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="137,471,1190,2998" href="#paragrafo7_schopenhauer" id="paragrafo7_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="157,3000,1187,3066" href="#paragrafo8_1_schopenhauer" id="paragrafo8_1_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="1208,163,2237,2832" href="#paragrafo8_2_schopenhauer" id="paragrafo8_2_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="1190,2830,2241,3076" href="#paragrafo9_1_schopenhauer" id="paragrafo9_1_schopenhauer" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gx-3 gy-3 mt-3">
+                  <div class="col-md-6">
+                     <div class="image" id="orig_filo_3.jpg">
+                        <div class="pagina"><img class="small" src="orig_filo_3.jpg" usemap="#pagina175"><map name="pagina175"><area shape="rect" coords="92,185,1160,1055" href="#paragrafo9_2_schopenhauer" id="paragrafo9_2_schopenhauer" style="cursor: pointer;"><area shape="rect" coords="679,1057,1127,1108" href="#Barzellotti_firma" id="Barzellotti_firma" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="all_bibliografia" class="all">
+         <h2 class="titolo-sezione">
+            <br>BIBLIOGRAFIA
+            </h2>
+         <div class="articolo mx-auto p-4 m-4 bg-white rounded shadow-sm" style="max-width: 1000px;">
+            <div class="titolo-articolo text-center mb-3"></div>
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo1_bib_carducci">
+                     
+                     <br>
+                     
+                     <span class="persone"><a href="">
+                           Giosuè
+                           Carducci
+                           </a></span>
+                     .
+                     
+                     <i class="ref_bibl">Juvenilia; edizione definitiva</i>
+                     
+                     —
+                     
+                     Bologna
+                     ,
+                     <br>
+                     
+                     <span class="CasaEd">Zanichelli</span>
+                     ,
+                     <span class="Date">1880</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo2_bib_carducci">
+                     
+                     <br>Non esitiamo a dichiarare esagerata la modestia <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">del’</span></span><span class="correzioni-corr"> dell’</span></span><span class="epithet_rolenames"><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">A.</span><span class="regolarizzazioni-expan">  Autore</span></span></span>:
+                     <br>che giudica molto severamente queste prime prove del
+                     <br>suo ingegno, nella <i class="ref_bibl">Prefazione</i>. 
+                     
+                        
+                     Certo, dopo le <i class="ref_bibl">Primavere El-
+                        <br>leniche</i> e le <i class="ref_bibl">Odi Barbare</i>, a voltarsi indietro, si trova aver
+                     <br>percorso un lungo cammino ed essere saliti a grande al-
+                     <br>tezza rispetto <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">a’</span><span class="regolarizzazioni-expan"> ai</span></span> versi per la Croce di Savoia o all’inno a
+                     <br>Febo. 
+                     
+                     
+                     Ma chi vuole rendersi ragione di questo progresso, chi
+                     <br>vuole spiegarsi le qualità presenti della poesia del <span class="persone"><a href="">Carducci</a></span>,
+                     <br>bisogna che cominci dalla lettura e dall’esame <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> <i class="ref_bibl">Decen-
+                        <br>nalia</i> e <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> <i class="ref_bibl">Levia Gravia</i>. 
+                     
+                        
+                     Anzi gli si deve esser grati se,
+                     <br>vincendo la naturale ritrosia, ha raccolto in questo volume
+                     <br>anche alcune composizioni, che a buon diritto avrebbe po-
+                     <br>tuto lasciare da parte, come umili e informi tentativi.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo3_bib_carducci">
+                       
+                     <br><span class="correzioni-group"><span class="correzioni-sic"><span class="sic">Né</span></span><span class="correzioni-corr"> Nè</span></span> il lettore, <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">né</span></span><span class="correzioni-corr"> nè</span></span> il <span class="persone"><a href="">Carducci</a></span>, certo, si aspetteranno da
+                     <br>tutti conoscono. 
+                       
+                     
+                     Diremo solo, che anche a non esser critici
+                     <br>noi un giudizio sopra poesie di data non recente, é che
+                     <br>di professione, si segue con grande interesse in questo vo-
+                     <br>lume l’evoluzione dell’ingegno del poeta e il progresso con-
+                     <br>tinuo della forma.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo4_bib_carducci">
+                     
+                     <br>La <i class="ref_bibl">Prefazione</i>. è una bella pagina autobiografica, alla
+                     <br>quale non scema pregio il tono polemico che assume.
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <div style="min-height: 300px;"></div>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="bibl_carducci.jpg">
+                        <div class="pagina"><img class="small" src="bibl_carducci.jpg" usemap="#pagina176"><map name="pagina176"><area shape="rect" coords="106,1179,1160,1266" href="#paragrafo1_bib_carducci" id="paragrafo1_bib_carducci" style="cursor: pointer;"><area shape="rect" coords="136,1281,1157,1841" href="#paragrafo2_bib_carducci" id="paragrafo2_bib_carducci" style="cursor: pointer;"><area shape="rect" coords="102,1836,1144,2097" href="#paragrafo3_bib_carducci" id="paragrafo3_bib_carducci" style="cursor: pointer;"><area shape="rect" coords="116,2093,1157,2191" href="#paragrafo4_bib_carducci" id="paragrafo4_bib_carducci" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="articolo mx-auto p-4 m-4 bg-white rounded shadow-sm" style="max-width: 1000px;">
+            <div class="titolo-articolo text-center mb-3"></div>
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end"></div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="paragrafo1_bib_zonghi">
+                     
+                     <br>
+                     
+                     <span class="persone"><a href="https://www.piccolabibliotecajesina.it/archivio/Zonghi_Aurelio.pdf">
+                           Aurelio
+                           Zonghi
+                           </a></span>
+                     .
+                     
+                     <i class="ref_bibl">Documenti storici fabrianesi — Statuta artis 
+                        <br>lanae terrae Fabriani</i>
+                     .
+                     —
+                     
+                     Roma
+                     ,
+                     
+                     <span class="CasaEd">Dario Rossi</span>
+                     ,
+                     <span class="Date">1880</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo2_bib_zonghi">
+                     
+                     <br>I <span class="org">comuni</span> cominciano in generale a capire l’importanza 
+                     <br>di aver i loro <span class="org">archivi</span> ben ordinati.
+                     
+                     
+                     L’aver perdute liti per
+                     <br>non aver più trovato i <span class="termini_legali">documenti</span> comprovanti i loro <span class="termini_legali">di-
+                        <br>ritti</span> li consigliò <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">a</span></span><span class="correzioni-corr"> di</span></span> provvedersi di buoni archivisti. 
+                     
+                     
+                     Sfortu-
+                     <br>natamente questi sono molto rari, poiché, oltre molta eru-
+                     <br>dizione e pratica, è necessario nell’archivista l’amore alle
+                     <br><span class="verbum">memorie vetuste</span>. 
+                     
+                     
+                     Il  <span class="org">Municipio di <span class="Luoghi_settlements">Fabriano</span></span> ha trovato un
+                     <br>ottimo archivista nel <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">can.</span><span class="regolarizzazioni-expan">  canonico</span></span> <span class="persone"><a href="https://www.piccolabibliotecajesina.it/archivio/Zonghi_Aurelio.pdf">Zonghi</a></span>, come ne fanno prova le
+                     <br>varie sue pubblicazioni archivistiche e specialmente questa
+                     <br>di cui parliamo, or ora venuta in luce.
+                     
+                     </p>
+                  <p class="paragrafo" id="paragrafo3_1_bib_zonghi">
+                     
+                     <br>L’archivista di <span class="Luoghi_settlements">Fabriano</span> non si contentaaccontenta, come spesso
+                     <br>si verifica negli editori di <span class="termini_legali">statuti</span>, di pubblicare gli <span class="termini_legali">statuti
+                        <br>dell’arte della lana</span> senza alcun commento; ma li fà pre-
+                     <br>cedere da una <span class="verbum">sugosa e pregievole prefazione</span>, e seguire da
+                     <br>un ottimo glossario.
+                     
+                     
+                     <span class="Luoghi_settlements">Fabriano</span> ebbe rinomanza principal-
+                     <br>mente per le <span class="org">arti della carta e della lana</span>; se sfortunata-
+                     <br>mente gli <span class="termini_legali">statuti</span> della prima andarono perduti, restarono
+                     <br>quelli della seconda. 
+                     
+                     
+                     Contengono questi tutte la vicissitu-
+                     <br>dini dell’<span class="org">arte lanifera</span> in <span class="Luoghi_settlements">Fabriano</span>, dando soggetto a più
+                     <br>vasti studi sulla medesima in <span class="Luoghi_countries">Italia</span>.
+                     
+                     
+                     I più antichi <span class="termini_legali">statuti</span>
+                     <br>in discorso datano dal <span class="Date">1369</span>, i più moderni sono del <span class="Date">1674</span>;
+                     <br>così ci presentano un buon periodo storico dell’<span class="org">arte laniera</span>.
+                     
+                     
+                     <br>Sono <span class="termini_legali">documenti</span> preziosi per chi assumesse il compito di ri-
+                     <br>fare la storia della civiltà italiana nel <span class="correzioni-group"><span class="correzioni-sic"><span class="sic">medio-evo</span></span><span class="correzioni-corr"> medioevo</span></span>, che ben
+                     <br>puà esser misurata dallo stato più o meno florido e perfe-
+                     <br>zionato delle <span class="org">arti</span>indispensabili ai primi bisogni della vita.
+                     
+                     
+                     <br>«E fu per questo fine — osserva l’ <span class="epithet_rolenames"><span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">A.</span><span class="regolarizzazioni-expan">  Autore</span></span></span> — che io volli ren-
+                     <br>der noto cià che in gran parte non era, confortato dal pen-
+                     <br>siero che anche il mio paese natale, siccome primeggià
+                     <br>sempre e primeggia tuttora su molti per la industria delle
+                     <br>sue carte a mano, non abbia a tener l’ultimo posto nella
+                     <br>storia generale <span class="regolarizzazioni-group"><span class="regolarizzazioni-orig">de’</span><span class="regolarizzazioni-expan">  dei </span></span> <span class="termini_sociali">lanifici italiani</span> nei secoli di mezzo.»
+                     
+                     
+                     Si
+                     
+                     </p>
+               </div>
+            </div>
+            <hr class="separatore-pagina">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end">
+                  <p class="paragrafo" id="paragrafo3_2_bib_zonghi">
+                     
+                     <br>potrebbe osservare che con tale ultima conclusione rim-
+                     <br>piccolisce lo scopo delle sue pubblicazioni ; ma qualunque
+                     <br>sia il sentimento che ha spinto lo <span class="persone"><a href="https://www.piccolabibliotecajesina.it/archivio/Zonghi_Aurelio.pdf">Zonghi</a></span>, la sua è un’uti-
+                     <br>lissima pubblicazione.
+                     
+                     </p>
+               </div>
+               <div class="colonna-dx w-50 ps-2">
+                  <div style="min-height: 300px;"></div>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="bibl_zonghi.jpg">
+                        <div class="pagina"><img class="small" src="bibl_zonghi.jpg" usemap="#pagina177"><map name="pagina177"><area shape="rect" coords="1164,1609,2218,1700" href="#paragrafo1_bib_zonghi" id="paragrafo1_bib_zonghi" style="cursor: pointer;"><area shape="rect" coords="1154,1714,2198,2135" href="#paragrafo2_bib_zonghi" id="paragrafo2_bib_zonghi" style="cursor: pointer;"><area shape="rect" coords="1174,2137,2191,3102" href="#paragrafo3_1_bib_zonghi" id="paragrafo3_1_bib_zonghi" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image" id="bibl_zonghi_2.jpg">
+                        <div class="pagina"><img class="small" src="bibl_zonghi_2.jpg" usemap="#pagina178"><map name="pagina178"><area shape="rect" coords="119,188,1168,377" href="#paragrafo3_2_bib_zonghi" id="paragrafo3_2_bib_zonghi" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="all_notizie" class="all">
+         <h2 class="titolo-sezione">
+            <br>NOTIZIE
+            </h2>
+         <div class="articolo">
+            <div class="pagina d-flex flex-row justify-content-between mb-4">
+               <div class="colonna-sx w-50 pe-2 border-end"></div>
+               <div class="colonna-dx w-50 ps-2">
+                  <p class="paragrafo" id="primauscita">
+                     
+                     <br>—A <span class="Luoghi_settlements">Washington</span>
+                     <span class="persone"><a href="https://www.treccani.it/enciclopedia/george-bancroft/">Giorgio Bancroft</a></span>
+                     sta per pubblicare la sua «Sto-
+                     <br>ria degli Stati Uniti», che incominciò fin dal <span class="Date">1825</span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="sunday_firma">
+                     
+                     <br> (Sunday Journal)
+                     
+                     </p>
+                  <p class="paragrafo" id="secondauscita">
+                     
+                     <br>—È imminente la pubblicazione di un volumetto di versi di
+                     <span class="persone"><a href="">
+                           Swin-
+                           <br>burne
+                           
+                           </a></span>, tra i quali vi sarà anche un canto per il centenario di
+                     <span class="persone"><a href="">
+                           Walter
+                           <br>
+                           Savage Landor
+                           </a></span>.
+                     
+                     </p>
+                  <p class="paragrafo" id="atheneaum_firma">
+                     
+                     <br>(Athenaeum)
+                     
+                     </p>
+               </div>
+            </div><button class="btn-toggle-immagini">
+               Guarda la corrispondenza sulla Rassegna e clicca un paragrafo
+               </button><div class="immagini-corrispondenza" style="display: none;">
+               <div class="row gx-3 gy-3">
+                  <div class="col-md-6">
+                     <div class="image" id="notizia_1.jpg">
+                        <div class="pagina"><img class="small" src="notizia_1.jpg" usemap="#pagina179"><map name="pagina179"><area shape="rect" coords="1175,1873,2210,1958" href="#primauscita" id="primauscita" style="cursor: pointer;"><area shape="rect" coords="1880,1958,2153,1998" href="#sunday_firma" id="sunday_firma" style="cursor: pointer;"><area shape="rect" coords="1165,1999,2224,2120" href="#secondauscita" id="secondauscita" style="cursor: pointer;"></map></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
