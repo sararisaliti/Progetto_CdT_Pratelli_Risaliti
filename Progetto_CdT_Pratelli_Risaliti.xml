@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformer.xsl"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <!-- <teiHeader>: elemento principale che raccoglie i metadati descrittivi e informativi relativi al documento TEI. In questo caso, è codificato in italiano -->
+   <teiHeader xml:lang="it">
+
+      <!-- <fileDesc>: contiene le informazioni bibliografiche necessarie per descrivere il file digitale.
+            Unico elemento obbligatorio del teiHeader -->
+      <fileDesc>
+         <!-- <titleStmt>: contiene i titoli principali e secondari del documento, inclusi anche volume e fascicolo.
+               Uno dei tre elementi obbligatori dell'elemento fileDesc -->
+
+         <titleStmt>
+            <title type="main" level="j">LA RASSEGNA SETTIMANALE</title>
+            <title type="sub" level="j">DI POLITICA, SCIENZE, LETTERE ED ARTI</title>
+            <title type="sub" level="j">
+               <abbr>Vol.</abbr>
+               <num type="cardinal">6</num>
+               <abbr>Fasc.</abbr>
+               <num type="cardinal">141</num>
+            </title>
+            <!-- <funder>: specifica le persone o le istituzioni che hanno finanziato il progetto. I fondatori sono descritti con il tag <persName> e i loro ruoli con <roleName>.-->
+            <funder>
+               <persName xml:id="persName_SS">
+                  Sidney Sonnino
+                  (
+                  <roleName>Direttore Proprietario</roleName>
+                  )
+               </persName>
+               <persName xml:id="persName_PP">
+                  Pietro Pampaloni
+                  (
+                  <roleName>Gerente Responsabile</roleName>
+                  )
+               </persName>
+            </funder>
+            <!-- <sponsor>: identifica le persone o istituzioni che sono responsabili del lavoro editoriale del progetto. Ogni sponsor è collegato a un ruolo specifico tramite<roleName>. -->
+            <sponsor>
+               <persName xml:id="persName_SS_sponsor">
+                  Sidney Sonnino
+                  <roleName>Responsabile editoriale</roleName>
+               </persName>
+            </sponsor>
+         </titleStmt>
+
+         <!-- <editionStmt>: contiene informazioni sull'edizione digitale del documento, incluse la data e i responsabili della codifica e del coordinamento. -->
+         <editionStmt>
+            <edition>
+               Edizione digitale a carattere didattico -
+               <date when="2025-05">Luglio 2025</date>
+            </edition>
+
+            <!-- <respStmt>:indica i responsabili per l'edizione e la codifica, specificando le persone e i loro ruoli.-->
+            <respStmt>
+               <resp>Responsabili di codifica:</resp>
+               <name xml:id="name_SR">Sara Risaliti</name>
+               <name xml:id="name_EP">Elisa Pratelli</name>
+            </respStmt>
+            <respStmt>
+               <resp>Referente universitario di coordinazione:</resp>
+               <name xml:id="name_AMDG">Angelo Mario Del Grosso</name>
+            </respStmt>
+         </editionStmt>
+
+         <!-- <extent>: indica la dimensione del documento digitale, ad esempio, il numero di pagine. In questo caso, si fa riferimento alle pagine del fascicolo. -->
+         <extent>
+            <measure unit="pages" quantity="16">pp. 161–176</measure>
+         </extent>
+
+         <!-- <publicationStmt>: elemento obbligatorio di fileDesc. Fornisce informazioni sull'ente che ha pubblicato il documento e sulle licenze di accesso. -->
+         <publicationStmt>
+            <publisher>Università di Pisa</publisher>
+            <pubPlace>Pisa</pubPlace>
+            <availability status="free">
+               <p>Documento con disponibilità di accesso libero</p>
+            </availability>
+         </publicationStmt>
+
+         <!-- <seriesStmt>: contiene informazioni sulla serie editoriale a cui appartiene il documento, comprese le responsabilità editoriali e i riferimenti alla tipografia. -->
+         <seriesStmt>
+            <title>La Rassegna Settimanale di politica, scienze, lettere ed arti</title>
+            <respStmt>
+               <resp>Direttore proprietario</resp>
+               <persName ref="#persName_SS">Sidney Sonnino</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Gerente responsabile</resp>
+               <persName ref="#persName_PP">Pietro Pampaloni</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Tipografi-editori</resp>
+               <orgName xml:id="org_Treves">Fratelli Treves</orgName>
+            </respStmt>
+            <biblScope unit="volume">6</biblScope>
+            <biblScope unit="issue">141</biblScope>
+         </seriesStmt>
+
+         <!-- <notesStmt>: contiene note aggiuntive che riguardano persone o riferimenti bibliografici. Le note sono organizzate in gruppi per facilitare la gestione. -->
+         <notesStmt>
+            <noteGrp>
+               <!-- Questa nota raccoglie le informazioni biografiche e di riferimento su persone menzionate nel testo. I nomi sono collegati a risorse esterne tramite il tag <persName> con l'attributo `ref` che indica un URL per una biografia o una fonte aggiuntiva. -->
+               <note xml:id="persone">
+                  <persName xml:id="Arturo_Schopenhauer" ref="https://www.treccani.it/enciclopedia/arthur-schopenhauer/">Arturo Schopenhauer</persName>
+                  <persName xml:id="Immanuel_Kant" ref="https://www.treccani.it/enciclopedia/immanuel-kant/">Immanuel Kant</persName>
+                  <persName xml:id="George_Berkeley" ref="https://www.treccani.it/enciclopedia/george-berkeley/">George Berkeley</persName>
+                  <persName xml:id="Johann_Gottlieb_Fichte" ref="https://www.treccani.it/enciclopedia/johann-gottlieb-fichte/">Johann Gottlieb Fichte</persName>
+                  <persName xml:id="Friedrich_Schelling" ref="https://www.treccani.it/enciclopedia/schelling/">Friedrich Schelling</persName>
+                  <persName xml:id="Francesco_Bacone" ref="https://www.treccani.it/enciclopedia/francesco-bacone/">Francesco Bacone</persName>
+                  <persName xml:id="Georg_Wilhelm_Friedrich_Hegel" ref="https://www.treccani.it/enciclopedia/georg-wilhelm-friedrich-hegel/">Georgilhelm Friedrich Hegel</persName>
+                  <persName xml:id="Gottlob_Schulze" ref="https://www.treccani.it/enciclopedia/gottlob-ernst-schulze_(Enciclopedia-Italiana)/">Gottlob Schulze</persName>
+                  <persName xml:id="Platone" ref="https://www.treccani.it/enciclopedia/platone/">Platone</persName>
+                  <persName xml:id="Karl_Leonhard_Reinhold" ref="https://www.treccani.it/enciclopedia/karl-leonhard-reinhold/">Karl Leonhard Reinhold</persName>
+                  <persName xml:id="Odoardo_Hartmann" ref="https://www.treccani.it/enciclopedia/eduard-von-hartmann_(Dizionario-di-filosofia)/">Odoardo Hartmann</persName>
+                  <persName xml:id="Jakob_Boehme" ref="https://www.treccani.it/enciclopedia/jakob-bohme/">Jakob Boehme</persName>
+                  <persName xml:id="Giacomo_Leopardi" ref="https://www.treccani.it/enciclopedia/giacomo-leopardi/">Giacomo Leopardi</persName>
+                  <persName xml:id="Pindaro" ref="https://www.treccani.it/enciclopedia/pindaro/">Pindaro</persName>
+                  <persName xml:id="Bione_di_Boristene" ref="https://www.treccani.it/enciclopedia/bione-di-boristene/">Bione di Boristene</persName>
+                  <persName xml:id="Buddha" ref="https://www.treccani.it/enciclopedia/buddha/">Buddha</persName>
+                  <persName xml:id="Xavier_Bichat" ref="https://www.treccani.it/enciclopedia/marie-francois-xavier-bichat_(Dizionario-di-Medicina)/">Xavier Bichat</persName>
+                  <persName xml:id="Pierre_Jean_Georges_Cabanis" ref="https://www.treccani.it/enciclopedia/pierre-jean-georges-cabanis/">Pierre Jean Georges Cabanis</persName>
+                  <persName xml:id="Paul_Janet" ref="https://www.treccani.it/enciclopedia/paul-alexandre-rene-janet_(Enciclopedia-Italiana)/">Paul Janet</persName>
+                  <persName xml:id="Giosue_Craducci" ref="https://www.treccani.it/enciclopedia/giosue-carducci/">Giosuè Carducci</persName>
+                  <persName xml:id="AZ" ref="https://www.piccolabibliotecajesina.it/archivio/Zonghi_Aurelio.pdf">Aurelio Zonghi</persName>
+                  <persName xml:id="Giorgio_Bancroft" ref="https://www.treccani.it/enciclopedia/george-bancroft/">Giorgio Bancroft</persName>
+                  <persName xml:id="Swinburne" ref="https://www.treccani.it/enciclopedia/algernon-charles-swinburne/">Swinburne</persName>
+                  <persName xml:id="Walter_Landor" ref="https://www.treccani.it/enciclopedia/walter-savage-landor_(Enciclopedia-Italiana)/">Walter_Landor</persName>
+               </note>
+               
+               <!-- Questa sezione raccoglie le note contrassegnate con * o ** nella Rasssegna.-->
+               <noteGrp xml:id="varie">
+                  <note xml:id="nota1_prato" type="gloss" n="*" resp="#direttore">
+                     Vedi
+                     <title rend="italic">Rassegna</title>
+                     , vol. III, pag. 198.
+                  </note>
+                  <note xml:id="nota2_prato" type="gloss" n="**" resp="#direttore">
+                     Nelle
+                     <title rend="italic">Notizie Statistiche sopra alcune industrie</title>
+                     ,  pubblicato per cura del Comm. V. Ellena nul 1878 dal Ministero d1 Agricoltura, Industria e Commercio, abbiamo por l’industria della filatura o tessitura della lana a Prato le seguenti cifre. In 84 stabilimenti, il numero degli operai adulti addetti alla filatura era di 533, oltre 280 fanciulli al di sotto di 14 anni ; e quello degli adulti addetti alla tessitura era di 510 uomini e 55 donne, con 422 fanciulli al di sotto dei 14 anni. Ma dal 1877 a oggi queste cifre saranno probabilmente cresciute.
+                  </note>
+                  <note xml:id="nota1_shopen" type="gloss" n="*" resp="#direttore">
+                     V.
+                     <title rend="italic">Rassegna</title>
+                     , vol. 1° pag. 114 : Il
+                     <hi rend="italic">pessimismo dello Schopenhauer</hi>
+                     .
+                  </note>
+               </noteGrp>
+            </noteGrp>
+         </notesStmt>
+
+      <!-- <sourceDesc>:contiene informazioni sulle fonti bibliografiche da cui deriva il testo, utilizzando <listBibl> per elencare gli articoli e le pubblicazioni pertinenti. Elemento obbligatorio di fileDesc.-->
+         <sourceDesc>
+            <listBibl>
+               <!-- 1. Primo articolo -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Il trattato di commercio Italo-Austriaco.</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j" type="main">La Rassegna Settimanale</title>
+                     <title level="j" type="sub">di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Fratelli Treves, Tipografi-Editori</publisher>
+                        <date when="1880-03">Marzo 1880</date>
+                     </imprint>
+                     <biblScope unit="volume">6</biblScope>
+                     <biblScope unit="issue">141</biblScope>
+                     <biblScope unit="pag" from="167" to="168">pp. 161–162</biblScope>
+                  </monogr>
+               </biblStruct>
+               <!-- 2. Secondo articolo -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Corrispondenza da Prato. A proposito della legge sul lavoro dei fanciulli.</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j" type="main">La Rassegna Settimanale</title>
+                     <title level="j" type="sub">di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Fratelli Treves, Tipografi-Editori</publisher>
+                        <date when="1880-03">Marzo 1880</date>
+                     </imprint>
+                     <biblScope unit="volume">6</biblScope>
+                     <biblScope unit="issue">141</biblScope>
+                     <biblScope unit="pag" from="167" to="168">pp. 167–168</biblScope>
+                  </monogr>
+               </biblStruct>
+               <!-- 3. Terzo articolo -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Le origini della filosofia di Arturo Schopenhauer.</title>
+                     <author>
+                        <persName xml:id="persName_Barzellotti">G. Barzellotti</persName>
+                     </author>
+                  </analytic>
+                  <monogr>
+                     <title level="j" type="main">La Rassegna Settimanale</title>
+                     <title level="j" type="sub">di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Fratelli Treves, Tipografi-Editori</publisher>
+                        <date when="1880-03">Marzo 1880</date>
+                     </imprint>
+                     <biblScope unit="volume">6</biblScope>
+                     <biblScope unit="issue">141</biblScope>
+                     <biblScope unit="pag" from="173" to="175">pp. 173–175</biblScope>
+                  </monogr>
+               </biblStruct>
+               <!-- 4. Bibliografia: Carducci -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Juvenilia; edizione definitiva</title>
+                     <author>Giosuè Carducci</author>
+                  </analytic>
+                  <monogr>
+                     <imprint>
+                        <pubPlace>Bologna</pubPlace>
+                        <publisher>Zanichelli</publisher>
+                        <date when="1880">1880</date>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <!-- 5. Bibliografia: Zonghi -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Documenti storici fabrianesi — Statuta artis lanae terrae Fabriani</title>
+                     <author>Aurelio Zonghi</author>
+                  </analytic>
+                  <monogr>
+                     <imprint>
+                        <pubPlace>Roma</pubPlace>
+                        <publisher>Dario Rossi</publisher>
+                        <date when="1800">1800</date>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <!-- 6. Notizia: Bancroft -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Notizia sul lavoro di Bancroft</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">La Rassegna Settimanale</title>
+                     <imprint>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Fratelli Treves</publisher>
+                        <date when="1880">1880</date>
+                     </imprint>
+                  </monogr>
+                  <note source="Sunday Journal">
+                     A Washington Giorgio Bancroft sta per pubblicare la sua
+                     <title>Storia degli Stati Uniti</title>
+                     , che incominciò fino dal 1825.
+                  </note>
+               </biblStruct>
+               <!-- 7. Notizia: Swinburne -->
+               <biblStruct>
+                  <analytic>
+                     <title level="a" type="main">Notizia sulla nuova raccolta di Swinburne</title>
+                  </analytic>
+                  <monogr>
+                     <title level="j">La Rassegna Settimanale</title>
+                     <imprint>
+                        <pubPlace>Milano</pubPlace>
+                        <publisher>Fratelli Treves</publisher>
+                        <date when="1880">1880</date>
+                     </imprint>
+                  </monogr>
+                  <note source="Athenaeum">È imminente la pubblicazione di un volumetto di versi di Swinburne, tra i quali vi sarà anche un canto per il centenario di Walter Savage Landor.</note>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+
+      <!-- <encodingDesc>: descrive il processo di digitalizzazione, la codifica dei testi e le scelte editoriali. Include la dichiarazione del progetto e le modifiche ortografiche. é il secondo elemento fondamentale del tei header.-->
+      <encodingDesc>
+         <projectDesc>
+            <p>La creazione del documento digitale è funzionale alla codifica di sei testi tratti dal fascicolo n. 141 del 1880 della rivista "La Rassegna Settimanale".
+            I segmenti testuali selezionati comprendono due articoli principali, due voci della sezione "Bibliografia" e due notizie dalla rubrica finale. I titoli dei testi codificati sono:</p>
+            <p>
+               <title level="a" type="main">IL TRATTATO DI COMMERCIO ITALO-AUSTRIACO.</title>
+            </p>
+            <p>
+               <title level="a" type="main">CORRISPONDENZA DA PRATO. A PROPOSITO DELLA LEGGE SUL LAVORO DEI FANCIULLI</title>
+            </p>
+            <p>
+               <title level="a" type="main">LE ORIGINI DELLA FILOSOFIA DI ARTURO SCHOPENHAUER.</title>
+            </p>
+            <p>
+               <title level="a" type="main">JUVENILIA; edizione definitiva (G. Carducci)</title>
+            </p>
+            <p>
+               <title level="a" type="main">DOCUMENTI STORICI FABRIANESI — Statuta artis lanae terrae Fabriani (A. Zonghi)</title>
+            </p>
+            <p>
+               <title level="a" type="main">NOTIZIE</title>
+            </p>
+         </projectDesc>
+
+         <!-- <editorialDecl>:descrive le scelte editoriali riguardo alla codifica dei segni di punteggiatura e alla gestione delle correzioni ortografiche. -->
+         <editorialDecl>
+            <punctuation marks="some">
+               <p>
+                  I segni di punteggiatura particolari (come apostrofi, trattini, virgolette e puntini di sospensione) sono stati codificati utilizzando i relativi codici numerici (Unicode), ad esempio <gi>’</gi> per l’apostrofo o <gi>«</gi> per le virgolette angolari. Le citazioni sono state racchiuse nell’elemento <gi>quote</gi>, mentre la segmentazione delle frasi è stata resa esplicita attraverso l’uso dell’elemento <gi>s</gi>.
+                  Le note indicate nella Rassegna Settimanale con un asterisco (*) sono state gestite utilizzando l'elemento <gi>ref</gi>, che contiene un riferimento all'ID della nota corrispondente. Quando l'utente interagisce con la nota, questa viene visualizzata in un popup.
+               </p>
+            </punctuation>
+            <correction>
+               <p>
+                  Gli errori ortografici, di accentazione o di punteggiatura presenti nel testo a stampa sono stati codificati tramite l'elemento <gi>choice</gi>, combinando <gi>sic</gi> (forma errata) e <gi>corr</gi> (forma corretta). Le regolarizzazioni di forme arcaiche, abbreviate o linguisticamente instabili sono state codificate anch'esse con <gi>choice</gi>, utilizzando le coppie <gi>orig</gi> + <gi>reg</gi> oppure <gi>abbr</gi> + <gi>expan</gi>, a seconda dei casi. La forma originale viene mantenuta visibile, mentre la versione regolarizzata può essere visualizzata dinamicamente attraverso un'interazione dell'utente.
+               </p>
+            </correction>
+         </editorialDecl>
+      </encodingDesc>
+
+      <!-- <profileDesc>: fornisce informazioni sulla tipologia di testo e sul suo pubblico di destinazione. Terzo elemento fondamentale del tei header.-->
+      <profileDesc>
+         <!-- <abstract>: elemento di <profileDesc>, utilizzato per fornire un estratto significativo del testo e delle motivazioni che hanno portato alla sua creazione. In questo caso, l'elemento <abstract> è impiegato per esplicitare lo scopo della creazione sia del documento digitale che del periodico stesso. -->
+         <abstract>
+            <p>Il documento contiene la codifica di alcune sezioni testuali di vario genere dalla 'Rivista Settimanale', fondata nel 1878 per aprire un campo nel quale possano essere discusse e studiate le questioni principali di ordine politico e sociale che interessavano l’Italia.</p>
+         </abstract>
+
+         <!-- <textDesc>:elemento di <profileDesc> che fornisce dettagli più specifici sulla tipologia e sulle caratteristiche del testo. In particolare:
+            - channel mode="w": Indica che il testo è un periodico, con finalità di comunicazione e diffusione.
+            - constitution type="single": Specifica che il testo ha una costituzione singola, ossia non è una raccolta di testi diversi, ma un'unica pubblicazione.
+            - derivation type="original": Significa che il testo è originale, non derivato da altri documenti.
+            - domain type="public": Indica che il testo è di dominio pubblico, accessibile a chiunque.
+            - factuality type="fact": Specifica che il contenuto del testo è di natura fattuale, cioè riguarda eventi concreti e reali.
+            - interaction passive="world": Il testo ha un'interazione passiva con il mondo, cioè non coinvolge direttamente il lettore in azioni, ma presenta informazioni.
+            - preparedness type="prepared": Indica che il testo è stato preparato in modo completo e formale.
+            - purpose type="inform" degree="high": Lo scopo principale del testo è informare, con un alto grado di dettaglio e precisione.-->
+         <textDesc n="Journal">
+            <channel mode="w">rivista</channel>
+            <constitution type="single" />
+            <derivation type="original" />
+            <domain type="public" />
+            <factuality type="fact" />
+            <interaction passive="world" />
+            <preparedness type="prepared" />
+            <purpose type="inform" degree="high" />
+         </textDesc>
+      </profileDesc>
+
+   </teiHeader>
+
+   <!-- <facsimile>:rappresenta la riproduzione digitale fedele di un documento fisico, utilizzata per allegare immagini delle pagine originali.
+   Ogni <surface> corrisponde a una pagina, con un'immagine definita dal tag <graphic>.
+   Le <zone> identificano aree specifiche del testo, collegandole agli elementi testuali codificati nel documento.
+   Questo approccio è utilizzato per mantenere la struttura visiva originale, pur consentendo l'interazione con il testo digitale.-->
+   <facsimile>
+      <surface xml:id="pagina161">
+         <!--surface - articolo 1-->
+         <graphic url="Il_tratt_comm_1.jpg" width="1170px" height="1731px" />
+         <zone ulx="206" uly="476" lrx="912" lry="535" corresp="tit_primobrano" />
+         <zone ulx="388" uly="535" lrx="671" lry="568" corresp="subtit_primobrano" />
+         <zone ulx="39" uly="567" lrx="1074" lry="1132" corresp="paragrafo1_trattato" />
+         <zone ulx="44" uly="1130" lrx="1071" lry="2674" corresp="paragrafo2_trattato" />
+         <zone ulx="34" uly="2678" lrx="1075" lry="3086" corresp="paragrafo3_1_trattato" />
+         <zone ulx="1096" uly="471" lrx="2114" lry="701" corresp="paragrafo3_2_trattato" />
+         <zone ulx="1088" uly="702" lrx="2145" lry="2625" corresp="paragrafo4_trattato" />
+         <zone ulx="1081" uly="2628" lrx="2128" lry="3066" corresp="paragrafo5_1_trattato" />
+      </surface>
+      <surface xml:id="pagina162">
+         <graphic url="Il_tratt_comm_2.jpg" width="2288.4px" height="3307.4px" />
+         <zone ulx="130" uly="134" lrx="1194" lry="445" corresp="paragrafo5_2_trattato" />
+         <zone ulx="133" uly="456" lrx="1204" lry="1010" corresp="paragrafo6_trattato" />
+         <zone ulx="137" uly="1014" lrx="1194" lry="2046" corresp="paragrafo7_trattato" />
+         <zone ulx="150" uly="2042" lrx="1204" lry="2393" corresp="paragrafo8_trattato" />
+      </surface>
+      <surface xml:id="pagina167">
+         <graphic url="corr_prato_1.jpg" width="2364.4px" height="3331.4px" />
+         <zone ulx="1433" uly="166" lrx="1922" lry="229" corresp="tit_secondobrano" />
+         <zone ulx="1279" uly="233" lrx="2072" lry="278" corresp="subtit_secondobrano" />
+         <zone ulx="1168" uly="271" lrx="2191" lry="449" corresp="paragrafo1_corrispondenza" />
+         <zone ulx="1171" uly="446" lrx="2194" lry="791" corresp="paragrafo2_corrispondenza" />
+         <zone ulx="1171" uly="791" lrx="2215" lry="1308" corresp="paragrafo3_corrispondenza" />
+         <zone ulx="1168" uly="1304" lrx="2226" lry="1563" corresp="paragrafo4_corrispondenza" />
+         <zone ulx="1182" uly="1566" lrx="2201" lry="1992" corresp="paragrafo5_corrispondenza" />
+         <zone ulx="1171" uly="1992" lrx="2243" lry="2379" corresp="paragrafo6_corrispondenza" />
+         <zone ulx="1161" uly="2377" lrx="2229" lry="2587" corresp="paragrafo7_corrispondenza" />
+         <zone ulx="1171" uly="2594" lrx="2229" lry="2691" corresp="paragrafo8_1_corrispondenza" />
+      </surface>
+      <surface xml:id="pagina168">
+         <graphic url="corr_prato_2.jpg" width="2358.4px" height="3323.4px" />
+         <zone ulx="148" uly="180" lrx="1203" lry="570" corresp="paragrafo8_2_corrispondenza" />
+         <zone ulx="155" uly="567" lrx="1207" lry="870" corresp="paragrafo9_corrispondenza" />
+         <zone ulx="155" uly="875" lrx="1213" lry="1216" corresp="paragrafo10_corrispondenza" />
+         <zone ulx="176" uly="1216" lrx="1220" lry="2052" corresp="paragrafo11_corrispondenza" />
+      </surface>
+      <surface xml:id="pagina173">
+         <graphic url="orig_filo_1.jpg" width="2322.4px" height="3350.4px" />
+         <zone ulx="293" uly="159" lrx="1017" lry="224" corresp="tit_terzobrano" />
+         <zone ulx="410" uly="220" lrx="883" lry="264" corresp="subtit_terzobrano" />
+         <zone ulx="132" uly="255" lrx="1171" lry="1118" corresp="paragrafo1_schopenhauer" />
+         <zone ulx="132" uly="1124" lrx="1171" lry="1553" corresp="paragrafo2_schopenhauer" />
+         <zone ulx="118" uly="1550" lrx="1188" lry="2672" corresp="paragrafo3_schopenhauer" />
+         <zone ulx="121" uly="2666" lrx="1178" lry="2986" corresp="paragrafo4_1_schopenhauer" />
+         <zone ulx="1188" uly="163" lrx="2231" lry="691" corresp="paragrafo4_2_schopenhauer" />
+         <zone ulx="1188" uly="696" lrx="2231" lry="2320" corresp="paragrafo5_schopenhauer" />
+         <zone ulx="1188" uly="2322" lrx="2258" lry="3063" corresp="paragrafo6_1_schopenhauer" />
+      </surface>
+      <surface xml:id="pagina174">
+         <graphic url="orig_filo_2.jpg" width="2347.4px" height="3321.4px" />
+         <zone ulx="119" uly="175" lrx="1204" lry="473" corresp="paragrafo6_2_schopenhauer" />
+         <zone ulx="137" uly="471" lrx="1190" lry="2998" corresp="paragrafo7_schopenhauer" />
+         <zone ulx="157" uly="3000" lrx="1187" lry="3066" corresp="paragrafo8_1_schopenhauer" />
+         <zone ulx="1208" uly="163" lrx="2237" lry="2832" corresp="paragrafo8_2_schopenhauer" />
+         <zone ulx="1190" uly="2830" lrx="2241" lry="3076" corresp="paragrafo9_1_schopenhauer" />
+      </surface>
+      <surface xml:id="pagina175">
+         <graphic url="orig_filo_3.jpg" width="2281.4px" height="3324.4px" />
+         <zone ulx="92" uly="185" lrx="1160" lry="1055" corresp="paragrafo9_2_schopenhauer" />
+         <zone ulx="679" uly="1057" lrx="1127" lry="1108" corresp="Barzellotti_firma" />
+      </surface>
+      <surface xml:id="pagina176">
+         <graphic url="bibl_carducci.jpg" width="2281.4px" height="3324.4px" />
+         <zone ulx="106" uly="1179" lrx="1160" lry="1266" corresp="paragrafo1_bib_carducci" />
+         <zone ulx="136" uly="1281" lrx="1157" lry="1841" corresp="paragrafo2_bib_carducci" />
+         <zone ulx="102" uly="1836" lrx="1144" lry="2097" corresp="paragrafo3_bib_carducci" />
+         <zone ulx="116" uly="2093" lrx="1157" lry="2191" corresp="paragrafo4_bib_carducci" />
+      </surface>
+      <surface xml:id="pagina177">
+         <graphic url="bibl_zonghi.jpg" width="2281.4px" height="3324.4px" />
+         <zone ulx="1164" uly="1609" lrx="2218" lry="1700" corresp="paragrafo1_bib_zonghi" />
+         <zone ulx="1154" uly="1714" lrx="2198" lry="2135" corresp="paragrafo2_bib_zonghi" />
+         <zone ulx="1174" uly="2137" lrx="2191" lry="3102" corresp="paragrafo3_1_bib_zonghi" />
+      </surface>
+      <surface xml:id="pagina178">
+         <graphic url="bibl_zonghi_2.jpg" width="2283.4px" height="3327.4px" />
+         <zone ulx="119" uly="188" lrx="1168" lry="377" corresp="paragrafo3_2_bib_zonghi" />
+      </surface>
+      <surface xml:id="pagina179">
+         <graphic url="notizia_1.jpg" width="2283.4px" height="3327.4px" />
+         <zone ulx="1175" uly="1873" lrx="2210" lry="1958" corresp="primauscita" />
+         <zone ulx="1880" uly="1958" lrx="2153" lry="1998" corresp="sunday_firma" />
+         <zone ulx="1165" uly="1999" lrx="2224" lry="2120" corresp="secondauscita" />
+      </surface>
+   </facsimile>
+
+   <text xml:lang="it">
+      <group>
+
+         <!-- Primo articolo -->
+         <text xml:id="IL_TRATTATO_DI_COMMERCIO">
+
+            <front>
+               <div type="main" xml:id="tit_primobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="1" />IL TRATTATO DI COMMERCIO
+                  </head>
+               </div>
+               <div type="subtitle" xml:id="subtit_primobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="2" />ITALO-AUSTRIACO.
+                  </head>
+               </div>
+            </front>
+
+            <body>
+               <div type="section" xml:id="trattato_pg1_colSX">  
+                  <p xml:id="paragrafo1_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="3" />Il <orgName type="role">Ministero del commercio austriaco</orgName> ha pubblicato il
+                        <lb n="4" />suo <title type="main" level="m" rend="italic">Annuario</title> del <date when="1879">1879</date>, nel quale consacra alcune pagine
+                        <lb n="5" />all&#8217;esame delle <choice><orig>quistioni</orig><reg>questioni</reg></choice>  sorte intorno all&#8217;applicazione del
+                        <lb n="6" /><term type="legal">trattato di commercio e di navigazione</term>, concluso con l&#8217;<placeName type="country">Italia</placeName>
+                        <lb n="7" />il <date when="1878-12-27">27 dicembre 1878</date>.
+                     </s>
+                     <s>
+                        Noi non sappiamo se sia prudente ed
+                        <lb n="8"/> utile il <term type="metaphorical">dare in pascolo al pubblico</term> argomenti di questa
+                        <lb n="9"/> natura, che <choice><orig>dai pi&#249;</orig><reg>dalla maggioranza</reg></choice> non sono capiti, ma <choice><orig>ne&#8217;</orig><reg> n&#232; </reg></choice> pi&#249; infiammano
+                        <lb n="10"/> le passioni e fanno dubitare della lealt&#224; delle  <term type="legal">parti con-
+                        <lb n="11" break="no"/> traenti</term>.
+                     </s>
+                     <s>
+                        <choice><orig>Nondimeno</orig><reg>Nonostante</reg></choice>, poich&#233; il <orgName type="role">Governo</orgName> <choice><orig>de&#8217;</orig><reg> dei </reg></choice> paesi al di qua
+                        <lb n="12"/> della <placeName type="natural">Leitha</placeName> ha reputato opportuno di suscitare <choice><orig>codesta</orig><reg>questa</reg></choice>
+                        <lb n="13"/> tenzone, noi teniamo ben volentieri l&#8217;invito, lieti di poter
+                        <lb n="14"/> dimostrare che l&#8217;<placeName type="country">Italia</placeName> ha mantenuto i suoi obblighi, forse
+                        <lb n="15"/>pi&#249; scrupolosamente che non l&#8217;abbia fatto l&#8217;<placeName type="historicalCountry">Austria-Ungheria</placeName>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo2_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="16"/>Il primo e pi&#249; importante dei punti di divergenza, toc-
+                        <lb n="17" break="no"/>cati dall&#8217;<title type="main" level="m" rend="italic">Annuario</title>, si riferisce alla <term type="legal">tassa</term> sugli spiriti.
+                     </s>
+                     <s>
+                        Nel 
+                        <lb n="18"/>protocollo finale del <term type="legal">trattato</term>, all&#8217;<term  type="legal">articolo <num type="rom">XII</num></term>, si legge che
+                        <lb n="19"/>l&#8217;<placeName type="country">Italia</placeName> riscuoter la <term type="economic">tassa sulle fabbriche di spiriti</term> sulle  che
+                        <lb n="20"/>trattano i cereali, i <choice><orig>melazzi</orig><reg>melasse</reg></choice> e le barbabietole, mediante la
+                        <lb n="21"/>sorveglianza permanente <choice><orig>od</orig><reg>o di</reg></choice> un misuratore meccanico, e
+                        <lb n="22"/>che la <term type="economic">tassa</term>  sar&#224; ragguagliata alla quantit&#224; reale ed alla 
+                        <lb n="23"/>ricchezza <choice><orig>alcoolica</orig><reg>alcolica</reg></choice> del prodotto.
+                     </s>
+                     <s>
+                        In omaggio a tale patto 
+                        <lb n="24"/> la <term type="legal">legge italiana</term> del <date when="1879-07-31">31 luglio 1879</date> sottopose gli <term type="theme">opif&#236;ci</term> <choice><orig>an-
+                        <lb n="25" break="no"/>zidetti</orig><reg>sopracitati</reg></choice> alla vigilanza continua degli <rs type="role"><choice><orig>uffiziali</orig><reg>ufficiali</reg></choice> finanziari</rs>; e
+                        <lb n="26"/>poco dopo, in virt&#249; di esso, fu adottato, e sar&#224; presto in uso
+                        <lb n="27"/>in tutte le <term type="theme">fabbriche</term>, il <name type="product">misuratore Siemens</name>, che &#232; il pi&#249;
+                        <lb n="28"/> perfetto tra gli apparecchi conosciuti.
+                     </s>
+                     <s>
+                        <choice><orig>Or</orig><reg>Ora</reg></choice> di che cosa si
+                        <lb n="29"/> pu&#242; <choice><orig>lamentare</orig><reg>lagnare</reg></choice> il <orgName type="role">ministero austriaco</orgName>?
+                     </s>
+                     <s>
+                        Esso dichiara contrario
+                        <lb n="30"/> alle disposizioni del <term type="legal">trattato</term> l&#8217;<choice><orig>abbono</orig><reg>abbuono</reg></choice> del <num type="cardinal">10</num> per cento, che
+                        <lb n="31"/> la <term type="legal">legge</term> suddetta concede ai <rs type="occupation">fabbricanti</rs>, per il calo e i 
+                        <lb n="32"/>disperdimenti degli spiriti.
+                     </s>
+                     <s>
+                        Veramente &#232; <choice><orig>cagione</orig><reg>motivo</reg></choice> di grande 
+                        <lb n="33"/>meraviglia quest&#8217;affermazione, <choice><orig>messa innanzi</orig><reg>presentata</reg></choice> con tanta fran-
+                        <lb n="34" break="no"/>chezza, a chi consideri che l&#8217;idea di quest&#8217;<choice><orig>abbono</orig><reg>abbuono</reg></choice> fu ispi-
+                        <lb n="35" break="no"/>rata dalla <term type="political">legge austriaca</term> del <date when="1878-06-28">28 giugno 1878</date>.
+                     </s>
+                     <s>
+                        La quale 
+                        <lb n="36"/>alle <term type="theme">fabbriche</term>, cui fosse applicato il <name type="product">misuratore Dolainski</name>, 
+                        <lb n="37"/>concede una deduzione del <num type="cardinal">5</num> per cento.
+                     </s>
+                     <s>
+                        Che la misura della 
+                        <lb n="38"/>deduzione debba essere maggiore presso di noi, appar
+                        <lb n="39"/>chiaro, <choice><orig>ponendo mente</orig><reg>prestando attenzione</reg></choice> che le <rs type="theme">fabbriche italiane</rs> sono meno
+                        <lb n="40"/>innanzi negli avvedimenti tecnici, che il clima nostro de-
+                        <lb n="41" break="no"/>termina maggiori perdite di prodotto, che infine il <name type="product">misura-
+                        <lb n="42" break="no"/>tore Dolainski</name> favorisce il <term type="theme">fabbricante</term> con le sue incompiute
+                        <lb n="43"/>indicazioni, mentre l&#8217;<name type="product">apparecchio Siemens</name> &#232; d&#8217;una fiscalit&#224;,
+                        <lb n="44"/>che <choice><orig>taluno</orig><reg>qualcuno</reg></choice> suppone oltrepassi i confini del giusto.
+                     </s>
+                     <s>
+                        Ad ogni
+                        <lb n="45"/>modo la misura del <num type="cardinal">10</num> per cento, fissata quando manca-
+                        <lb n="46" break="no"/>vano i <choice><orig>dettami dell&#8217;esperienza</orig><reg>indicazioni esperte</reg></choice>, pu&#242; essere modificata, e anzi
+                        <lb n="47"/>sappiamo che il <orgName type="role">ministero delle finanze</orgName> ha ordinato  a tal
+                        <lb n="48"/>riguardo opportuni studi; ma &#232; strano che un <term type="legal">documento
+                        <lb n="49"/>ufficiale viennese</term> metta in dubbio la <term type="legal">legalit&#224;</term> di un prov-
+                        <lb n="50" break="no"/> vedimento, che l&#8217;<placeName type="country">Italia</placeName>  ha preso in prestito da una <term type="legal">legge</term>
+                        <lb n="51"/>vigente nell&#8217;Austria.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo3_1_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="52"/>Quindi l&#8217;<placeName type="country">Austria</placeName> deplora che nella riscossione della <term type="economic">tassa</term>  
+                        <lb n="53"/>sulla birra si accordi al <term type="theme">fabbricante</term> una deduzione del <num type="cardinal">12</num> 
+                        <lb n="54"/> per cento, dopo che il liquido &#232; stato misurato nel <term type="facility">rinfre-
+                        <lb n="55" break="no"/>scatoio</term>.
+                     </s>
+                     <s>
+                        Erano antichi e giusti i reclami <choice><orig>de&#8217;</orig><reg> dei </reg></choice>birrai, che do-
+                        <lb n="56" break="no"/>vevano pagare la <term type="economic">tassa</term> sulla quantit&#224; trovata nei <placeName type="facility">rinfrescatoi</placeName>, 
+                        <lb n="57"/><choice><orig>colla</orig><reg>con la</reg></choice>  sottrazione insufficiente del <num type="cardinal">5</num> per cento.
+                     </s>
+                     <s>
+                        E siccome le 
+                        <lb n="58"/>prove istituite chiarirono che la perdita batte intorno al <num type="cardinal">12</num> 
+                        <lb n="59"/>per cento, cos&#236; la stessa <term type="legal">legge</term> del <date when="1879-07-31">31 luglio 1879</date> stabil&#236; la 
+                        <lb n="60"/>deduzione <choice><orig>nova</orig><reg>nuova</reg></choice>.
+                     </s>
+                     <s>
+                        E l&#8217;<placeName type="country">Austria</placeName>, dopo aver reclamato contro
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="trattato_pg1_colDX">
+                  <p xml:id="paragrafo3_2_trattato">
+                     <s>
+                        <lb n="61"/>questa <term type="legal">riforma</term>, si <choice><orig>acchet&#242;</orig><reg>acquiet&#242;</reg></choice> alle ragioni persuasive che le  
+                        <lb n="62"/>furono <choice><sic>p&#242;rte</sic><corr>porte</corr></choice>, e poich&#232; la desistenza sua rimonta ad alcuni 
+                        <lb n="63"/>mesi, &#232; spiacevole che un <term type="legal">documento ufficiale</term>, parlando di 
+                        <lb n="64"/>questa controversia, trascuri di dire che &#232; stata felicemente 
+                        <lb n="65"/><choice><orig>sopita</orig><reg>sedata</reg></choice>.
+                     </s>
+                  </p>
+                  <p rend="first-line-indent justify" xml:id="paragrafo4_trattato">
+                     <s>
+                        <lb n="66"/>Uguale rincrescimento si deve manifestare rispetto alle 
+                        <lb n="67"/>considerazioni fatte dall&#8217;<title type="main" level="m" rend="italic">Annuario</title> di cui si discorre sul <term type="theme">com-
+                        <lb n="68" break="no"/>mercio</term> di perfezionamento della ghisa tra l&#8217;<placeName type="country">Italia</placeName> e il <placeName type="region">Tren-
+                        <lb n="69" break="no"/>tino</placeName>.
+                     </s>
+                     <s>
+                        Giova sapere che nei distretti di <placeName>Tione</placeName>, <placeName>Condino</placeName> e 
+                        <lb n="70"/><placeName>Val di Ledro</placeName> era, un tempo, abbastanza fiorente l&#8217;<term type="theme">industria 
+                        <lb n="71"/>del ferro</term>, esercitata in piccole fucine, che traevano dal 
+                        <lb n="72"/><placeName type="area">Bresciano</placeName> la ghisa (loro materia prima), l&#8217;affinavano e poi 
+                        <lb n="73"/>spedivano in <placeName type="region">Lombardia</placeName> i prodotti ottenuti, cio&#232; i chiodi, 
+                        <lb n="74"/>le spranghe, i vomeri, le falci e via dicendo.
+                     </s>
+                     <s>
+                        Dopo il <date when="1859">1859</date>
+                        <lb n="75"/>quelle fucine tacquero quasi interamente, parte perch&#232; per 
+                        <lb n="76"/>trarre dall&#8217;<placeName type="country">Italia</placeName> la ghisa dovevano sottostare al pagamento 
+                        <lb n="77"/>dei <term type="economic">dazi</term>, e pi&#249; perch&#232; i ferri e gli strumenti non potevano 
+                        <lb n="78"/>essere introdotti nel nostro <term type="theme">mercato</term>, senza il pagamento di 
+                        <lb n="79"/><term type="legal">diritti d&#8217;entrata</term> alquanto elevati.
+                     </s>
+                     <s>
+                        Ma forse la rovina di 
+                        <lb n="80"/>quelle <term type="theme">officine</term> deve attribuirsi principalmente alla trasfor-
+                        <lb n="81" break="no"/>mazione avvenuta nella <term type="theme">siderurgia</term> e che ebbe per conse-
+                        <lb n="82" break="no"/>guenza di concentrarla in colossali <term type="theme">opifici</term> a danno <choice><orig>de&#8217;</orig><reg> dei </reg></choice><term type="theme">pic-
+                        <lb n="83" break="no"/>coli</term>, che prima prosperavano.
+                     </s>
+                     <s>
+                        Questo non era per&#242; il parere 
+                        <lb n="84"/>del <orgName type="political">governo Austro-Ungarico</orgName>: il quale, <choice><orig>ne&#8217;</orig><reg> nei </reg></choice> laboriosi nego-
+                        <lb n="85" break="no"/>ziati che precedettero la stipulazione del <term type="legal">trattato</term> del <date when="1878">1878</date>,
+                        <lb n="86"/>insist&#232; vivamente perch&#233; alle <term type="theme">ferriere</term> del <placeName type="region">Trentino</placeName> fossero 
+                        <lb n="87"/>accordati favori eccezionali, quasi a compenso delle age-
+                        <lb n="88" break="no"/>volezze invocate da noi per i <rs type="occupation">pescatori</rs> di <placeName type="city">Chioggia</placeName>.
+                     </s>
+                     <s>
+                        E
+                        <lb n="89"/>ottenne l&#8217;intento; <choice><orig>imperocch&#232;</orig><reg>poich&#232;</reg></choice> il primo degli articoli ad-
+                        <lb n="90" break="no"/>dizionali al <term type="legal">trattato</term>  pattuisse che le officine anzidette po-
+                        <lb n="91" break="no"/>tessero liberamente estrarre dall&#8217;<placeName type="country">Italia</placeName> <num type="cardinal">15</num> mila quintali me-
+                        <lb n="92" break="no"/>trici di ghisa, per trasformarla in ferri, che sarebbero poi 
+                        <lb n="93"/>ricevuti dal nostro paese in franchigia <choice><orig>de&#8217;</orig><reg> dei </reg></choice><term type="economic">dazi di confine</term>.
+                     </s>
+                     <s>
+                        <lb n="94"/>Naturalmente occorreva <choice><sic>di determinare</sic><corr>determinare</corr></choice> le formalit&#224; oppor-
+                        <lb n="95" break="no"/>tune per la pratica esecuzione di questi accordi, e qui nac-
+                        <lb n="96" break="no"/>quero le difficolt&#224;.
+                     </s>
+                     <s>
+                        Il <orgName type="government">governo italiano</orgName> desiderava che gli 
+                        <lb n="97"/>fosse riservata la facolt&#224; d&#232;ispezione sopra le fucine am-
+                        <lb n="98" break="no"/>messe a questo eccezionale <term type="military">reggimento</term> <term type="economic">doganale</term>, al fine di 
+                        <lb n="99"/>accertarsi che, <choice><sic>sotto colore</sic><corr>con il pretesto</corr></choice> di ferri ottenuti da ghise bre-
+                        <lb n="100" break="no"/>sciane, non s&#232; introducessero in <placeName type="country">Italia</placeName> i prodotti delle <term type="theme">ferriere</term> 
+                        <lb n="101"/>della <placeName type="area">Stiria</placeName> o di altri luoghi dell&#8217;<placeName type="historical">Impero</placeName>.
+                     </s>
+                     <s>
+                        La <orgName type="institution">cancelleria</orgName> di 
+                        <lb n="102"/><placeName type="city">Vienna</placeName> non volle accettare questa nostra ingerenza e fu 
+                        <lb n="103"/>cos&#236; poco sollecita in <choice><orig>siffatte</orig><reg>tali</reg></choice> pratiche, che solo nell&#8217;estate 
+                        <lb n="104"/>di quest&#8217;anno si pot&#233; condurre a termine il <term type="legal">componimento</term>,
+                        <lb n="105"/>nel quale il <orgName type="government">Gabinetto di Roma</orgName> <choice><orig>d&#236;e</orig><reg> diede </reg></choice>e pi&#249; di una prova del pi&#249; vivo de-
+                        <lb n="106" break="no"/>siderio di conciliazione.
+                     </s>
+                     <s>
+                        Ora che il <orgName type="political">governo austriaco</orgName> ha
+                        <lb n="107"/>ottenuto pienamente l&#8217;intenso suo (e del ritardo pu&#242; acca-
+                        <lb n="108" break="no"/>gionare soltanto la lentezza che accompagna il complicato 
+                        <lb n="109"/>suo <term type="organization">organismo politico e amministrativo</term>) era <choice><sic>opportuno di
+                        <lb n="110"/>toccare</sic><corr>opportuno toccare</corr></choice> questo tasto?
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo5_1_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="111"/>Anche le <term type="legal">leggi</term> sugli zuccheri erano destinate a dar ma-
+                        <lb n="112" break="no"/>teria alle osservazioni <choice><orig>de&#8217;</orig><reg> dei </reg></choice>compilatori dell&#8217;<title type="main" level="m" rend="italic">Annuario</title>.
+                     </s>
+                     <s>
+                        Il <orgName type="political">trat-
+                        <lb n="113" break="no"/>tato</orgName> aveva detto che la <term type="legal">tassa di produzione</term> degli zuccheri 
+                        <lb n="114"/>indigeni doveva essere assolutamente <choice><orig>eguale</orig><corr>uguale</corr></choice> alla differenza 
+                        <lb n="115"/>tra i vecchi e i nuovi <term type="economic">dazi</term> riscossi al confine sugli zuc-
+                        <lb n="116" break="no"/>cheri esteri, e la legge del <date when="1879-07-25">25 luglio 1879</date> diede piena e 
+                        <lb n="117"/>perfetta esecuzione a questo patto.
+                     </s>
+                     <s>
+                        Ma il <term type="legal">progetto di legge</term> 
+                        <lb n="118"/>presentato alla <orgName type="political">Camera</orgName> aveva dimenticato di prescrivere 
+                        <lb n="119"/>che la <term type="economic">tassa interna</term> fosse pagata in oro, come in oro sono 
+                        <lb n="120"/>soddisfatti i <term type="economic">dazi doganali</term>.
+                     </s>
+                     <s>
+                        Alla giusta nota, fatta dal <orgName type="political">go-</orgName>
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="trattato_pg2_colSX">
+                  <p xml:id="paragrafo5_2_trattato">
+                     <s>
+                        <lb n="121"/><orgName type="political">verno austro-ungarico</orgName>, fu dato sollecito appagamento.
+                     </s>
+                     <s>
+                        Era
+                        <lb n="122"/>
+                        utile di rianndare adesso su quell&#8217;incidente?
+                     </s>
+                     <s>
+                        Il pubblico sar&#224;
+                        <lb n="123"/>condotto a credere che si tratti di un caso grosso; invece 
+                        <lb n="124"/>la <term type="economic">produzione di zucchero indigeno</term> in <placeName type="country">Italia</placeName> essendo insi-
+                        <lb n="125" break="no"/>gnificante, la differenza tra la riscossione in carta <choice><orig>od</orig><reg>o</reg></choice> in 
+                        <lb n="126"/>oro della <term type="economic">tassa interna</term> non sarebbe giunta a un migliaio 
+                        <lb n="127"/>di lire.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo6_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="128"/>Nella pubblicazione che abbiamo sott&#8217;occhio si parla 
+                        <lb n="129"/><choice><orig>eziandio</orig><reg>anche</reg></choice> del <term type="economic">dazio</term> sui tessuti di cotone graticolati (mussole 
+                        <lb n="130"/>e altri simili prodotti) e, meno male, si dichiara che l&#8217;<placeName type="country">Italia</placeName>
+                        <lb n="131"/>ha assecondato i <choice><sic>desiderii</sic><corr>desideri</corr></choice> del <orgName type="political">governo austro-ungarico</orgName>.
+                     </s>
+                     <s>
+                        Ma 
+                        <lb n="132"/>il lettore sospetta che, in questo caso <choice><orig>altres&#236;</orig><reg>anche</reg></choice>, si sia discusso 
+                        <lb n="133"/>sulla interpretazione del <term type="legal">trattato</term>, mentre questo tace inte-
+                        <lb n="134" break="no"/>ramente <choice><orig>de&#8217;</orig><reg> dei </reg></choice> filati e <choice><orig>de&#8217;</orig><reg> dei </reg></choice> tessuti di cotone.
+                     </s>
+                     <s>
+                        Il <orgName type="political">governo italiano</orgName>, 
+                        <lb n="135"/>per fare atto di buon vicinato e anche perch&#232; altre conside-
+                        <lb n="136" break="no"/>razioni lo confortavano, ha modificato la <term type="economic">tariffa</term> in una 
+                        <lb n="137"/>parte in cui &#232; libero di applicarla <choice><orig>a suo talento</orig><reg>come meglio crede</reg></choice>; ed ecco 
+                        <lb n="138"/>che la cosa &#232; esposta in modo da far dubitare che dapprima 
+                        <lb n="139"/>avesse offeso il buon <term type="legal">diritto</term> nascente<choice><orig>da&#8217;</orig><reg>dai</reg></choice> <term type="legal">trattati</term>..
+                     </s>
+                     <s>
+                        Un favore 
+                        <lb n="140"/>diventa il pagamento di un <term type="economic">debito</term>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo7_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="141"/>Meno fondati ancora sono i lamenti mossi contro le re-
+                        <lb n="142" break="no"/>strizioni del <term type="economic">commercio</term>, che hanno radice nel dovere di im-
+                        <lb n="143" break="no"/>pedire o almeno di ritardare l&#8217;invasione della <term type="scientific" rend="italic"><foreign xml:lang="la">philloxera</foreign></term> e  
+                        <lb n="144"/>della <term type="scientific" rend="italic"><foreign xml:lang="la">doriphora</foreign></term>.
+                     </s>
+                     <s>
+                        Il <orgName type="political">governo austriaco</orgName> vorrebbe che gli agrumi 
+                        <lb n="145"/>siciliani giunti sul <term type="economic">mercato</term> di <placeName type="city">Trieste</placeName> e col&#224; divisi in varie 
+                        <lb n="146"/>categorie, alcune delle quali vanno sui <term type="economic">mercati</term> dell&#8217;<placeName type="country">Austria</placeName>, 
+                        <lb n="147"/>della <placeName type="country">Germania</placeName> e della <placeName type="country">Russia</placeName>, mentre altre (le pi&#249; cattive) 
+                        <lb n="148"/>tornano in <placeName type="country">Italia</placeName>, vorrebbe almeno che questi agrumi non 
+                        <lb n="149"/>fossero respinti.
+                     </s>
+                     <s>
+                        Invano le fu detto che le <term type="economic">merci</term>, la quale 
+                        <lb n="150"/>&#232; stata manipolata in un <placeName type="place">porto estero</placeName>, perde la <term type="identity">nazionalit&#224;</term> e 
+                        <lb n="151"/>che le <term type="legal">leggi austriache</term> sono, a tal riguardo, molto pi&#249; se-
+                        <lb n="152" break="no"/>vere delle nostre; invano si avvert&#236; che, per togliere ogni 
+                        <lb n="153"/>dubbio sulla efficacia delle riserve fatte intorno ai casi <choice><orig>ne&#8217;</orig><reg> nei </reg></choice>  quali 
+                        <lb n="154"/>la libert&#224; del <term type="economic">commercio</term> pu&#242; esser ristretta, nel <term type="legal">protocollo</term>  
+                        <lb n="155"/>finale del <term type="legal">trattato</term> fu detto che <choice><orig>coteste</orig><reg>quelle</reg></choice> riserve si estendono 
+                        <lb n="156"/><quote>&#171; <choice><orig>egualmente</orig><corr>ugualmente</corr></choice> alle <term type="legal">misure proibitive</term> prese allo scopo d&#8217;im-
+                        <lb n="157" break="no"/>pedire nell&#8217;interesse dell&#8217;agricoltura la propagazione di in-
+                        <lb n="158" break="no"/>setti o di altri organismi nocivi. &#187;</quote>
+                     </s>
+                     <s>
+                        Ma ora che la <term type="scientific" rend="italic"><foreign xml:lang="la">philloxera</foreign></term> 
+                        <lb n="159"/>infierisce nell&#8217;<placeName type="country">Italia</placeName> stessa e il <orgName type="political">governo austriaco</orgName>, dopo lungo 
+                        <lb n="160"/>e dannoso temporeggiamento, s&#8217;&#232; finalmente deciso ad imi-
+                        <lb n="161" break="no"/>tare il <orgName type="political">governo italiano</orgName> nella severit&#224; delle cautele rivolte a 
+                        <lb n="162"/><term type="metaphorical">distruggere il male</term> dove si manifesta e a impedirne la pro-
+                        <lb n="163" break="no"/>pagazione, non pare sia conveniente mantenere un reclamo 
+                        <lb n="164"/>di tal natura.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo8_trattato" rend="first-line-indent justify">
+                     <s>
+                        <lb n="165"/>Ecco esposte brevemente le ragioni per le quali sembra 
+                        <lb n="166"/>a noi che l&#8217;<title type="main" level="m" rend="italic">Annuario</title> austriaco avrebbe dovuto lasciare in 
+                        <lb n="167"/>disparte il tema delle difficolt&#224; che s&#8217;incontrarono nell&#8217;ap-
+                        <lb n="168" break="no"/>plicazione del <term type="legal">trattato</term> del <date when="1878">1878</date>. 
+                     </s>
+                     <s>
+                        Se la stampa austriaca, 
+                        <lb n="169"/>come fa la <title level="j" type="periodical" rend="italic">Deutsche Zeitung</title>, ne prender&#224; argomento per 
+                        <lb n="170"/>accusarci di non avere rettamente adempiuto gli obblighi 
+                        <lb n="171"/>assunti, mostreremo alla stregua <choice><orig>de&#8217;</orig><reg> dei </reg></choice> fatti che tale <choice><orig>rampo-
+                        <lb n="172" break="no"/>gna</orig><reg>rimprovero</reg></choice> pu&#242; giustamente ritorcersi contro l&#8217;<placeName type="historicalCountry">Austria-Ungheria</placeName>.
+                     </s>
+                  </p>
+               </div>
+            </body>
+
+         </text>
+
+         <!-- Secondo articolo -->
+         <text xml:id="CORRISPONDENZA_DA_PRATO">
+
+            <front>
+               <div type="main" xml:id="tit_secondobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="173" />CORRISPONDENZA DA PRATO.
+                  </head>
+               </div>
+               <div type="subtitle" xml:id="subtit_secondobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="174" />A PROPOSITO DELLA LEGGE SUL LAVORO DEI FANCIULLI.
+                  </head>
+               </div>
+            </front>
+
+            <body>
+               <div type="section" xml:id="corrispondenza_pg1_colDX">
+                  <p xml:id="paragrafo1_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="175" />Fra tutti gli argomenti addotti per combattere la <term type="legal">legge</term>
+                        <lb n="176" />sul <rs type="theme">lavoro dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice></rs>, quello sul quale si &#232; fatto pi&#249; chiasso
+                        <lb n="177" />&#232; che in <placeName type="country">Italia</placeName> non esistono quei <rs type="verbum">mali</rs> che con la <term type="legal">legge</term> si
+                        <lb n="178" />vorrebbero impedire.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo2_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="179" />Questo argomento, a vero dire, non mi fece mai grande
+                        <lb n="180" />impressione, perch&#232; lo <rs type="verbum">strazio</rs> che si fa dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice> nelle
+                        <lb n="181" /><term type="theme">zolfare</term> di <choice><orig><placeName type="city" subtype="historical">Girgenti</placeName></orig><reg><placeName type="city">Agrigento</placeName></reg></choice> e di <placeName type="city">Caltanissetta</placeName>, e il <rs type="theme">lavoro este-
+                        <lb n="182" break="no" />nuante</rs> cui nelle <term type="theme">filature</term> lombarde sono condannati oltre
+                        <lb n="183" /><num type="cardinal" value="5600">56 mila</num> <choice><orig>fanciulli</orig><reg>bambini</reg></choice>, dei quali non pochi <choice><orig>al disotto</orig><reg>al di sotto</reg></choice> di <num type="cardinal">9</num> anni, <ref ana="#nota1_prato">*</ref>
+                        <lb n="184" />mi sono sempre sembrati due fatti che giustificano piena-
+                        <lb n="185" break="no" />mente l&#8217;intervento diretto ed efficace dello <orgName type="political">Stato</orgName> a tutela
+                        <lb n="186" />delle <term type="theme">giovani generazioni lavoratrici</term>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo3_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="187" />Ma poich&#233; sempre si insiste sulla inutilit&#224; di una <term type="legal">legge</term>
+                        <lb n="188" />che regoli il <rs type="theme">lavoro dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice></rs> e si vuole che <choice><orig>codesti</orig><reg>questi</reg></choice> due
+                        <lb n="189" />fatti non siano sufficienti a giustificarla, cos&#236; penso che sia
+                        <lb n="190" />dovere di tutti coloro che sentono il bisogno di una simile
+                        <lb n="191" /><term type="legal">legge</term>, di raccogliere, ognuno nella propria cerchia, dati e
+                        <lb n="192" />notizie sul <term type="theme">lavoro dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice></term> e di renderli di pubblica ra-
+                        <lb n="193" break="no" />gione.
+                     </s>
+                     <s>
+                        In tal modo si verrebbe a formare una specie di
+                        <lb n="194" />inchiesta che sarebbe ben altrimenti autorevole di quella
+                        <lb n="195" />del <date when="1877">1877</date> eseguita per mezzo delle <orgName type="government">Prefetture</orgName> e di quella
+                        <lb n="196" />del <date when="1879">1879</date> eseguita per mezzo delle <orgName type="government">Deputazioni Provinciali</orgName>,
+                        <lb n="197" />dei <orgName type="government">Consigli Sanitari</orgName>, delle <orgName type="economic">Camere di Commercio</orgName>, degli
+                        <lb n="198" /><orgName type="economic">Industriali</orgName> e degli <rs type="occupation">Ingegneri di miniere</rs>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo4_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="199" />Per parte mia, che sono fra i <rs type="role">fautori della legge</rs>, poich&#233;
+                        <lb n="200" /><choice><orig>veggo</orig><reg>vedo</reg></choice>  il <rs type="verbum">male</rs> e non comprendo la ragione per la quale lo
+                        <lb n="201" /><orgName type="political">Stato</orgName> non debba moversi per guarirlo, sento vivamente <choice><orig>co-
+                        <lb n="202" break="no" />desto</orig><reg>questo</reg></choice> dovere, e in soddisfazione del medesimo credo di do-
+                        <lb n="203" />ver portare a notizia del pubblico ci&#242; che, <choice><orig>non son</orig><reg>non sono</reg></choice> molti
+                        <lb n="204" />giorni, ho potuto constatare in quel di <placeName type="city">Prato</placeName>. <ref ana="#nota2_prato">**</ref>
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo5_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="205" />Nei pressi di questa florida citt&#224;, esempio alle altre di
+                        <lb n="206" /><placeName type="region">Toscana</placeName> per <term type="theme"><choice><orig>attività produttrice</orig><reg>attività produttiva</reg></choice></term>, scorrono, discendendo dal
+                        <lb n="207" />prossimo <placeName>Appennino</placeName>, frequenti <placeName type="natural">corsi d&#8217;acqua</placeName>, che alimentano
+                        <lb n="208" />la forza motrice a molti <term type="theme">opifici</term> nei quali si esercita l&#8217;<term type="theme">in-
+                        <lb n="209" break="no" />dustria della lana</term>.
+                     </s>
+                     <s>
+                        Da qualche tempo questi <term type="theme">lanifici</term> hanno
+                        <lb n="210" />assunto per numero vaste proporzioni. 
+                     </s>
+                     <s>   
+                        Non sono in grado
+                        <lb n="211" />di indicare, nemmeno approssimativamente, il numero dei
+                        <lb n="212" />fusi che contengono.
+                     </s>
+                     <s>
+                        Ma che questo sia rilevante e vada
+                        <lb n="213" />di continuo crescendo <choice><sic>apparisce</sic><corr>appare</corr></choice> dal fatto che molti <rs type="social">pro-
+                        <lb n="214" break="no" />prietari</rs> hanno convertito in <term type="theme">lanifici</term> i loro mulini!
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo6_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="215" />In questi <term type="theme">lanifici</term> la lavorazione &#232; continua di settimana
+                        <lb n="216" />in settimana.
+                     </s>
+                     <s>
+                        Il <term type="theme">lavoro</term> &#232; diviso fra due <term type="social">mute</term> di <rs type="occupation">operai</rs>,
+                        <lb n="217" />delle quali una lavora di giorno e l&#8217;altra di notte; ogni
+                        <lb n="218" />luned&#236;, dopo un giorno di riposo, le due <term type="social">mute</term> si danno il
+                        <lb n="219" />cambio, alternandosi settimanalmente al <term type="theme">lavoro</term> notturno.
+                     </s>
+                     <s>
+                        <lb n="220" />Ogni <rs type="occupation">operaio</rs> presiede a una filatrice che mette in moto
+                        <lb n="221" />dai <num type="cardinal" value="100">100</num> ai <num type="cardinal" value="300">300</num> fusi; o ognuno di questi <rs type="occupation">operai</rs> &#232; coadiu-
+                        <lb n="222" break="no" />vato da <num type="cardinal" value="2">2</num> o da <num type="cardinal" value="4">4</num> <choice><orig>fanciulli</orig><reg>bambini</reg></choice> che hanno l&#8217;incombenza di riat-
+                        <lb n="223" break="no" />taccare i fili che si strappano.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo7_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="224" />Fin qui, come si vede, nulla di male; ma invece argo-
+                        <lb n="225" break="no" />mento di lode a quegli avveduti <rs type="social">proprietari</rs>, a quegli arditi
+                        <lb n="226" /><rs type="social">capitalisti</rs>, a quei forti <rs type="social">lavoratori</rs>.
+                     </s>
+                     <s>
+                        Qui per&#242; comincia il <rs type="verbum">male</rs>;
+                        <lb n="227" />e il <rs type="verbum">male</rs>, come il lettore si &#232; gi&#224; immaginato, sta tutto
+                        <lb n="228" />nel modo col quale quei <rs type="verbum">fanciulli</rs> sono impiegati.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo8_1_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="229" />
+                        L&#8217;impiego di quei <choice><orig>fanciulli</orig><reg>bambini</reg></choice> si fa senza alcun riguardo
+                        <lb n="230" />
+                        alla loro <rs type="verbum">tenera et&#224;</rs>, ai bisogni dell&#8217;animo loro.
+                     </s>
+                     <s>
+                        Nessuna
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="corrispondenza_pg2_colSX">
+                  <p xml:id="paragrafo8_2_corrispondenza">
+                     <s>
+                        <lb n="231"/><term type="legal">norma</term> presiede alla loro scelta: ve ne sono di <num type="cardinal" value="12">12</num> anni,
+                        <lb n="232" />di <num type="cardinal" value="10">10</num>, e non pochi anche di <num type="cardinal" value="7">7</num> anni.
+                     </s>
+                     <s>
+                        Nessuna <term type="legal">norma</term> pre-
+                        <lb n="233" break="no" />siede al modo del loro <term type="theme">lavoro</term>: hanno lo stesso orario degli
+                        <lb n="234" />adulti, per cui, senza contare le ore di riposo, hanno un
+                        <lb n="235" /><rs type="theme">lavoro che varia dalle <num type="cardinal" value="10">10</num> e mezzo alle <num type="cardinal" value="12">12</num> ore, giungendo
+                        <lb n="236" />nell&#8217;estate anche alle <num type="cardinal" value="14">14</num> ore</rs>.
+                     </s>
+                     <s>
+                        Nessuna <term type="legal">norma</term> infine tutela
+                        <lb n="237" />il loro riposo notturno: seguono la <term type="social">muta</term> degli adulti e
+                        <lb n="238" />lavorano alternativamente una settimana di giorno e una
+                        <lb n="239" />di notte.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo9_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="240" />Queste cifre e queste notizie non hanno bisogno di com-
+                        <lb n="241" break="no" />menti; come non hanno bisogno di enumerazione i danni
+                        <lb n="242" />che in quelle <rs type="verbum">povere creature</rs>, che hanno il <rs type="verbum">corpo teneris-
+                        <lb n="243" break="no" />simo e l&#8217;animo aperto</rs> ad ogni pi&#249; lieve impressione, de-
+                        <lb n="244" break="no" />vono produrre il <rs type="theme">lavoro prolungato</rs>, e intenso, il contatto
+                        <lb n="245" />continuo con adulti, l&#8217;<rs type="theme">abbandono della vita di famiglia e
+                        <lb n="246" />della scuola</rs>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo10_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="247" />Il <rs type="verbum">male</rs> del modo di impiego dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice> non &#232; limi-
+                        <lb n="248" break="no" />tato, come si vede, ai casi ormai classici delle <term type="theme">zolfare</term> e
+                        <lb n="249" />delle <term type="theme">filature</term> lombarde.
+                     </s>
+                     <s>
+                        Il <rs type="verbum">male</rs>, anche in <placeName type="country">Italia</placeName>, esiste
+                        <lb n="250" />ovunque la <term type="theme">vita industriale</term> tende a manifestarsi.
+                     </s>
+                     <s>
+                        La sua
+                        <lb n="251" />entit&#224; non &#232;, nemmeno da noi, cos&#236; lieve da poter essere
+                        <lb n="252" />trascurato.
+                     </s>
+                     <s>
+                        Lo <orgName type="political">Stato</orgName> ha i modi per poterlo guarire o, al-
+                        <lb n="253" break="no" />meno, ridurlo alle minime proporzioni: dunque ha il dovere
+                        <lb n="254" />di farlo.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo11_corrispondenza" rend="first-line-indent justify">
+                     <s>
+                        <lb n="255" />So che contro la <term type="legal">legge</term> sul <rs type="theme">lavoro dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice></rs> &#232; stata
+                        <lb n="256" />una gara nel trovare argomenti.
+                     </s>
+                     <s>
+                        Ma questi argomenti mi
+                        <lb n="257" />sono apparsi tutti di tal natura che ho sempre pensato
+                        <lb n="258" />che nella fretta di architettarli si &#232; badato pi&#249; alla quan-
+                        <lb n="259" break="no" />tit&#224; che alla qualit&#224;, e che furono escogitati pi&#249; presto
+                        <lb n="260" />dall&#8217;interesse dei <rs type="occupation">fabbricanti</rs> e dallo spirito di scuola che dal
+                        <lb n="261" />desiderio sincero o spregiudicato di giovare alle nostre
+                        <lb n="262" /><term type="theme">classi lavoratrici</term>.
+                     </s>
+                     <s>
+                        Infatti chi ha seguito lo svolgimento della
+                        <lb n="263" />questione sa che di tutti questi argomenti, sia che fossero
+                        <lb n="264" />forniti dal vecchio arsenale della <term type="theme">economia dottrinaria</term>, sia
+                        <lb n="265" />che fossero proposti nel nome del <term type="theme">tecnicismo industriale</term>,
+                        <lb n="266" />neppure uno &#232; rimasto in piedi, neppure uno pot&#232; resistere
+                        <lb n="267" />all&#8217;analisi dell&#8217;osservatore spassionato.
+                     </s>
+                     <s>
+                        Per cui, dopo tanta
+                        <lb n="268" /><term type="theme">guerra</term>, ci&#242; che &#232; rimasto &#232; questo: la certezza che anche
+                        <lb n="269" />in <placeName type="country">Italia</placeName> esiste il <rs type="theme">male del lavoro eccessivo dei <choice><orig>fanciulli</orig><reg>bambini</reg></choice></rs>;
+                        <lb n="270" />che il solo rimedio, poich&#233; non ne sono stati suggeriti altri,
+                        <lb n="271" />&#232; l&#8217;intervento dello <orgName type="political">Stato</orgName>; che una strana coalizione di in-
+                        <lb n="272" break="no" />teressi materiali e di pregiudizi scientifici impedisce tut-
+                        <lb n="273" break="no" />tavia che a quel <rs type="verbum">male</rs> questo rimedio venga applicato.
+                     </s>
+                  </p>
+               </div>
+            </body>
+
+         </text>
+
+         <!-- Terzo articolo -->
+         <text xml:id="ORIGINI_SCHOPENHAUER">
+
+            <front>
+               <div type="main" xml:id="tit_terzobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="274"/>
+                     LE ORIGINI DELLA FILOSOFIA
+                  </head>
+               </div>
+               <div type="subtitle" xml:id="subtit_terzobrano">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="275"/>
+                     DI ARTURO SCHOPENHAUER.
+                  </head>
+               </div>
+            </front>
+
+            <body>
+               <div type="section" xml:id="schopenhauer_pg1_colSX">
+                  <p xml:id="paragrafo1_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="276"/>Ai lettori della <choice><abbr><title type="main" level="j">Rassegna</title></abbr><expan><title type="main" level="j" ref="#La_Rassegna_Settimanale"> Rassegna Settimanale</title></expan></choice> &#232; <choice><orig>occorso</orig><reg>capitato</reg></choice>  gi&#224; pi&#249; volte <ref ana="#nota1_shopen">*</ref> in
+                        <lb n="277"/>queste stesse pagine il nome di <persName ref="#Arturo_Schopenhauer">Arturo Schopenhauer</persName> e
+                        <lb n="278"/>della <rs type="verbum">sua filosofia</rs>, che <choice><orig>a pena</orig><reg>appena</reg></choice>  nota <num type="cardinal" value="30">trent&#8217;</num>anni fa anche in
+                        <lb n="279"/><placeName type="country">Germania</placeName>, poco prima della morte del <rs type="occupation">filosofo</rs> (<date when="1860">1860</date>) vi si
+                        <lb n="280"/>propag&#242; da un piccolo cerchio di lettori e d&#8217;ammiratori
+                        <lb n="281"/>alla parte pi&#249; colta della societ&#224; tedesca, e oggi ha <choice><sic>un&#8217;</sic><corr>un</corr></choice>
+                        <lb n="282"/>sempre crescente per tutta l&#8217;<placeName type="continent">Europa</placeName>.
+                     </s>
+                     <s> 
+                        Questo rivolgersi che
+                        <lb n="283"/>fa ovunque l&#8217;attenzione del pubblico all&#8217;ultimo di tempo tra i
+                        <lb n="284"/>grandi <term type="philosophy">sistemi metafisici</term> del secolo, che nelle scuole parevano
+                        <lb n="285"/>ormai condannati per sempre dalla <term type="philosophy">critica</term> e dalle <term type="philosophy">dottrine</term>
+                        <lb n="286"/>positive, &#232; un fatto dei pi&#249; notevoli, e ha, secondo me, due
+                        <lb n="287"/>motivi principali: uno; comune al <term type="philosophy">pensiero filosofico</term> e scien-
+                        <lb n="288" break="no"/>tifico di tutti i tempi, ed &#232; la curiosit&#224;, innata inestingui-
+                        <lb n="289" break="no"/>bile in noi, di tentare gli ultimi perch&#233; delle cose; l&#8217;altro
+                        <lb n="290"/>pi&#249; proprio di quelle et&#224;, come la nostra, in cui col pre-
+                        <lb n="291" break="no"/>valere dello <term type="philosophy">spirito critico</term> la <term type="religion">fede religiosa</term> va mancando
+                        <lb n="292"/>ogni giorno pi&#249; ai fondamenti e alle norme della <term type="philosophy">condotta
+                        <lb n="293"/>morale</term>, ed &#232; l&#8217;intimo bisogno di cercare queste norme in
+                        <lb n="294"/>un <term type="philosophy">concetto filosofico</term> del valore e dei fini della vita e di
+                        <lb n="295"/>fare della <term type="philosophy">filosofia</term> e della <term type="scientific">scienza</term> quasi una <term type="religion">religione</term>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo2_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="296"/>Ora, la <term type="philosophy">dottrina</term> dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  &#232; tra quelle, che,
+                        <lb n="297"/>ricercando intimamente l&#8217;animo umano, vi aprono spiragli
+                        <lb n="298"/>profondi all&#8217;occhio del pensatore e del moralista,
+                        <lb n="299"/>e se non soddisfa del tutto a <choice><orig>cotesto</orig><reg>questo</reg></choice> grande bisogno dei nostri tempi,
+                        <lb n="300"/>ha per&#242; sulle altre il vantaggio di rendere intera in s&#233;
+                        <lb n="301"/>l&#8217;ispirazione geniale della mente d&#8217;uno <rs type="occupation">scrittore</rs> che ne fu
+                        <lb n="302"/>dominato per tutta la vita, e a cui il <term type="philosophy">pensiero filosofico</term>
+                        <lb n="303"/>era, come ai pi&#249; grandi tra gli antichi, non un mero arti-
+                        <lb n="304" break="no"/>fizio di scuola, ma una <term type="theme">vocazione</term>, e, sto per dire, un&#8217;<term type="theme">azione</term>
+                        <lb n="305"/>di tutto l&#8217;uomo.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo3_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="306"/>Qui sta, a parer mio, la causa vera di questa efficacia cre-
+                        <lb n="307" break="no"/>scente che lo <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName> ha sui lettori contemporanei.
+                     </s>
+                     <s>
+                        <lb n="308"/>Noi siamo stanchi <rs type="rhetorical">fino alla nausea</rs> di tutto ci&#242; che &#232; con-
+                        <lb n="309" break="no"/>venzione, maniera, forma senza sostanza, cos&#236; del pensiero
+                        <lb n="310"/>come dell&#8217;arte.
+                     </s>
+                     <s>
+                        Ora, nel linguaggio che la filosofia dello
+                        <lb n="311"/><persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  parla alla mente e al cuore di chi <choice><orig>da vero</orig><reg>davvero</reg></choice>
+                        <lb n="312"/>la comprende, ricorrono spesso idee, parole, e (ben pi&#249; di
+                        <lb n="313"/>rado, per&#242;, che in ogni altro <rs type="occupation">filosofo</rs> tedesco) termini tec-
+                        <lb n="314" break="no"/>nici presi dalle scuole dei suoi tempi, in specie da quella
+                        <lb n="315"/>del <persName ref="#Immanuel_Kant">Kant</persName>; ma l&#8217;accento che ci d&#224; quasi l&#8217;intimo senso, indi-
+                        <lb n="316" break="no"/>viduale, a un tempo, ed umano, di <choice><orig>cotesto</orig><reg>questo</reg></choice> linguaggio del
+                        <lb n="317"/>pensiero, autore ce lo mette tutto di suo, perch&#233; lo deriva
+                        <lb n="318"/>da sentimenti e da motivi propri della nostra mente in
+                        <lb n="319"/>tutte le et&#224; e in tutti i luoghi.
+                     </s>
+                     <s>
+                        <rs type="verbum">Idealista critico</rs>, e <choice><orig>de&#8217;</orig><reg> dei </reg></choice> pi&#249;
+                        <lb n="320"/>rigorosi, egli sta col <persName ref="#George_Berkeley">Berkeley</persName> e col <persName ref="#Immanuel_Kant">Kant</persName> nell&#8217;aftermare la
+                        <lb n="321"/><rs type="verbum">natura relativa</rs> d&#8217;ogni nostra cognizione e nell&#8217;attribuirla
+                        <lb n="322"/>all&#8217;apparirci che fanno le cose quali le apprendono, <hi rend="italic">secondo
+                        <lb n="323"/>le proprie leggi</hi>, il senso e il pensiero, e non quali esse sono
+                        <lb n="324"/>nella loro essenza; mentre, procedendo oltre il <persName ref="#Immanuel_Kant">Kant</persName> per
+                        <lb n="325"/>la sola via che la sua <choice><abbr><title type="main" level="m">Critica</title></abbr> <expan><title type="main" level="m" ref="#Critica_della_ragion_pura"> Critica della ragion pura</title></expan></choice> aveva lasciata aperta alla
+                        <lb n="326"/>ricerca di <choice><orig>cotesta</orig><reg>questa</reg></choice> essenza delle cose, lo <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  la
+                        <lb n="327"/>vuol ravvisare in una <term type="philosophy"><hi rend="italic">Volont&#224; assoluta</hi></term>, non per&#242; cosciente,
+                        <lb n="328"/>razionale e benefica, come l&#8217;aveano concepita il <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName> e lo
+                        <lb n="329"/><persName ref="#Friedrich_Schelling">Schelling</persName>, ma inconsapevole, cieca, fatalmente autrice del
+                        <lb n="330"/><rs type="verbum">male</rs> e del dolore, inerente all&#8217;essere della natura e della
+                        <lb n="331"/><rs type="verbum">Vita</rs>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo4_1_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="332"/>In ciascuno dei punti principali, a cui pu&#242; ridursi il
+                        <lb n="333"/>sistema de <title type="main" level="m" rend="italic">Mondo come volont&#224; e come rappresentazione</title>, noi
+                        <lb n="334"/>troviamo, dunque, un elemento storico, un principio che gli
+                        <lb n="335"/>viene dalla <term type="literary_movement">filosofia contemporanea</term>, e ch&#8217;&#232;, per dir cos&#236;, la
+                        <lb n="336"/>forma, in cui si stampa di proprio moto il getto originale
+                        <lb n="337"/>del pensiero del <rs type="occupation">filosofo</rs>.
+                     </s>
+                     <s>
+                        Ma appunto per ci&#242;, a voler ben
+                        <lb n="338"/>misurarne l&#8217;originalit&#224;, bisogna aver l&#8217;occhio all&#8217;intima vita
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="schopenhauer_pg1_colDX">
+                  <p xml:id="paragrafo4_2_schopenhauer">
+                     <s>
+                        <lb n="339"/>di <choice><orig>cotesto</orig><reg>questo</reg></choice> pensiero e cercare com&#8217;esso sappia far suo e muti
+                        <lb n="340"/>in proprio <term type="metaphorical">sugo e sangue</term> ci&#242; che gli presta l&#8217;ambiente in-
+                        <lb n="341" break="no"/>tellettuale e morale in cui vive.
+                     </s>
+                     <s>
+                        Poich&#233;, <rs type="occupation">filosofo</rs> e <rs type="occupation">scrittore</rs>
+                        <lb n="342"/>nato, egli &#232;, al tempo stesso, un grande <rs type="appellative">grande artista</rs>.
+                     </s>
+                     <s>
+                        La filoso-
+                        <lb n="343" break="no"/>fia &#232; per lui (cos&#236; la definisce egli stesso) arte, non scienza,
+                        <lb n="344"/>&#232; <rs type="verbum">l&#8217;interpretazione geniale</rs> dell&#8217;<rs type="verbum"><hi rend="italic">enimma delle cose</hi></rs>, e non sta
+                        <lb n="345"/>nel ridurlo a una <rs type="verbum">fredda algebra di concetti astratti</rs>, ma
+                        <lb n="346"/>nel porsi in vivo contatto con esse, nell&#8217;intuirle e nel me-
+                        <lb n="347" break="no"/>ditarle, lasciandole parlare alla mente nel loro linguaggio
+                        <lb n="348"/>pi&#249; <hi rend="italic">immediato</hi>: &#232; la vera <foreign xml:lang="la">philosophia</foreign>, quale la voleva <persName ref="#Francesco_Bacone">Bacone</persName>,
+                        <lb n="349"/><quote rend="italic"><foreign xml:lang="la">quae mundi totius voces fidelissime reddit et, veluti dictante
+                        <lb n="350"/>mundo, conscripta est.</foreign></quote>
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo5_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="351"/>Con queste disposizioni d&#8217;ingegno, gi&#224; deste in lui fino
+                        <lb n="352"/>nella prima giovent&#249;, egli ide&#242; e compose il suo sistema
+                        <lb n="353"/>tra il <date when="1813">1813</date> e il <date when="1818">1818</date>, proprio in quegli anni, in cui <term type="literary_movement">l&#8217;idea-
+                        <lb n="354" break="no"/>lismo assoluto astrattissimo</term> iniziato dal <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName>, era al colmo,
+                        <lb n="355"/>e lo <persName ref="#Friedrich_Schelling">Schelling</persName> gi&#224; regnava, e l&#8217;<persName ref="#Georg_Wilhelm_Friedrich_Hegel">Hegel</persName> stava per succedergli.
+                     </s>
+                     <s>
+                        <lb n="356"/>A <placeName type="city">Gottinga</placeName>, il pi&#249; celebre tra gli avversari del <persName ref="#Immanuel_Kant">Kant</persName>, lo
+                        <lb n="357"/><persName ref="#Gottlob_Schulze">Schulze</persName>, lo aveva educato al culto di <persName ref="#Platone">Platone</persName> e del grande
+                        <lb n="358"/><rs type="occupation">filosofo</rs> di <placeName type="city">K&#246;nigsberg</placeName>, la cui <term type="philosophy"><hi rend="italic">dottrina della conoscenza</hi></term> egli
+                        <lb n="359"/>profess&#242; poi sempre, e cerc&#242; di trarre alle sue conseguenze
+                        <lb n="360"/>estreme nel primo dei suoi lavori, nella <title type="main" level="m">Tesi <hi rend="italic">sulla quadru-
+                        <lb n="361" break="no"/>plice radice del principio di ragion sufficiente</hi></title> 
+                     </s>
+                     <s>
+                        Questa disserta-
+                        <lb n="362" break="no"/>zione, scritta nel <date when="1813">1813</date> nel suo esame di dottorato, divenne
+                        <lb n="363"/>poi, come dice egli stesso, la base del suo sistema, e n&#8217;e-
+                        <lb n="364" break="no"/>sprime la parte <rs type="verbum">critica</rs> e <rs type="verbum"> idealistica</rs>, che pu&#242; riassumersi
+                        <lb n="365"/>tutta cos&#236;: il mondo, in quanto noi lo conosciamo per via
+                        <lb n="366"/>dei sensi e del pensiero, non &#232; che un ordine di fenomeni,
+                        <lb n="367"/>una rappresentazione, un <hi rend="italic"><term type="philosophy">obbietto</term> per il <term type="philosophy">subbietto</term></hi>.
+                     </s>
+                     <s>
+                        Ma gi&#224;
+                        <lb n="368"/>negli anni <date when="1812">1812</date> e <date when="1813">1813</date>, passati a <placeName type="city">Berlino</placeName>, ove ud&#236; il <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName>,
+                        <lb n="369"/>che esponeva la seconda forma della sua <title type="main" level="m" rend="italic">Dottrina della
+                        <lb n="370"/>scienza</title>, o ove allora la <term type="philosophy">Metafisica</term> dominava assoluta, il
+                        <lb n="371"/>bisogno di affrontarne gli alti problemi gli s&#8217;era fatto sen-
+                        <lb n="372" break="no"/>tire sempre pi&#249; vivo, e aveva dato ai primi tentativi del suo
+                        <lb n="373"/>pensiero, che ci son noti dai <rs type="genre">Manoscritti</rs> pubblicati poi dai
+                        <lb n="374"/>suoi <rs type="role">biografi</rs>, un che di quel <term type="literary_movement">Platonismo</term> <rs type="verbum">vago e un po&#8217;
+                        <lb n="375"/> mistico</rs>, a cui s&#8217;ispiravano i <term type="literary_movement"><hi rend="italic">Romantici</hi></term>.
+                     </s>
+                     <s>
+                        Il <rs type="verbum">principio</rs>, del resto,
+                        <lb n="376"/>divenuto quasi un assioma in tutta la scuola del <persName ref="#Immanuel_Kant">Kant</persName>, che
+                        <lb n="377"/>cio&#232;, il passaggio dalla <choice><abbr><title type="main" level="m">Critica</title></abbr> <expan><title type="main" level="m" ref="#Critica_della_ragion_pura"> Critica della ragion pura</title></expan> </choice> alla <term type="philosophy">Metafisica</term>, dal <term type="philosophy">fenomeno</term>
+                        <lb n="378"/><rs type="verbum">intimo essere delle cose</rs> potesse cercarsi solo in noi, nella
+                        <lb n="379"/>coscienza che l&#8217;uomo ha di s&#233;, non come pensante, ma come
+                        <lb n="380"/><rs type="verbum">agente morale</rs> e come <rs type="verbum">volont&#224; libera</rs>, <choice><sic>apparisce</sic><corr>appare</corr></choice> gi&#224; chiaro
+                        <lb n="381"/>fin da principio nella mente del <rs type="appellative">giovino filosofo</rs>, insieme
+                        <lb n="382"/>coll&#8217;altro, da cui poi moveranno, come da loro punto co-
+                        <lb n="383" break="no"/>mune, la sua <choice><abbr><title type="main" level="m">Estetica</title></abbr> <expan><title type="main" level="m" ref="#Critica_del_giudizio"> Critica del giudizio</title></expan></choice>, e la sua <choice><abbr><title type="main" level="m">Morale</title></abbr><expan><title type="main" level="m" ref="#Critica_della_ragion_pratica"> Critica della ragion pratica</title></expan></choice>, e che consiste nel
+                        <lb n="384"/>porre il supremo dell&#8217;<rs type="verbum">arte</rs> e della <rs type="verbum">virt&#249;</rs>, il <rs type="verbum">genio</rs> e la <rs type="verbum">san-
+                        <lb n="385" break="no"/>tit&#224;</rs>, in una <rs type="verbum">liberazione dell&#8217;intelletto e del volere</rs> dalle con-
+                        <lb n="386" break="no"/>dizioni <term type="philosophy">subiettive della conoscenza</term> e dai fini e dai motivi
+                        <lb n="387"/>individuali, quasi in un <rs type="verbum">pieno avveramento dell&#8217;ideale</rs> nel
+                        <lb n="388"/>pensiero e nella vita.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo6_1_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="389"/>Questa <rs type="verbum">materia prima</rs>, ancora informe del sistema, da
+                        <lb n="390"/>cui lo <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  trasse poi le pi&#249; belle pagine della
+                        <lb n="391"/>sua opera principale, &#232; gi&#224; tutta ne&#8217; suoi <title type="main" level="m" rend="italic">Manoscritti</title> e <title type="main" level="m" rend="italic">Ap-
+                        <lb n="392" break="no"/>punti</title> di studente e prende un disegno sempre pi&#249; definito
+                        <lb n="393"/>man mano ch&#8217;egli la vien facendo sempre pi&#249; propria ed
+                        <lb n="394"/>intima al suo pensiero.
+                     </s>
+                     <s>
+                        <term type="philosophy"> concetto <rs type="attribute" ref="#Immanuel_Kant">kantiano</rs></term> d&#8217;una <term type="philosophy"><hi rend="italic">libert&#224;
+                        <lb n="395"/>assoluta e intelligibile</hi></term>, pensata com&#8217;essenziale all&#8217;esser nostro,
+                        <lb n="396"/>egli l&#8217;ha comune col <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName> o, al pari di lui, vi cerca un
+                        <lb n="397"/>primo sostegno alla sua <term type="philosophy">Metafisica</term>.
+                     </s>
+                     <s>
+                        Ma nel <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName> <choice><orig>cotesto</orig><reg>questo</reg></choice>
+                        <lb n="398"/>concetto &#232; sin da principio e rimane poi sempre quel ch&#8217;era
+                        <lb n="399"/>nel <persName ref="#Immanuel_Kant">Kant</persName>, un prodotto della <term type="philosophy">coscienza morale</term> sottentrata,
+                        <lb n="400"/>per opera dei due grandi <term type="literary_movement">idealisti</term>, in luogo di quel <rs type="verbum">mondo
+                        <lb n="401"/>d&#8217;entit&#224; oltrasensibili</rs> che la <term type="religion">fede religiosa</term> avea creato e che
+                        <lb n="402"/>la critica distruggeva.
+                     </s>
+                     <s>
+                        Nello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  quel <term type="philosophy">concetto</term>
+                        <lb n="403"/><rs type="verbum">diviene subito tutt&#8217;altro</rs>.
+                     </s>
+                     <s>
+                        Egli vi presuppone un che essen-
+                        <lb n="404" break="no"/>zialmente opposto all&#8217;<term type="philosophy">intelligenza</term> e alla <term type="philosophy">ragione</term>, e dopo
+                        <lb n="405"/>aver voluto ravvisare in ci&#242; ch&#8217;egli chiama volont&#224; il primo
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="schopenhauer_pg2_colSX">
+                  <p xml:id="paragrafo6_2_schopenhauer" >
+                     <s>
+                        <lb n="406"/><rs type="verbum">impulso generatore d&#8217;ogni nostro atto interno</rs>, persino d&#8217;o-
+                        <lb n="407" break="no"/>gni moto spontaneo, ne fa tutt&#8217;una cosa con quell&#8217;intima
+                        <lb n="408"/>forza che opera in mille forme nei fenomeni della natura
+                        <lb n="409"/>sensibile esterna, dal gravitare di tutti i corpi intorno ai
+                        <lb n="410"/>loro centri d&#8217;attrazione sino alle affinit&#224; chimiche, all&#8217;elet-
+                        <lb n="411" break="no"/>tricit&#224;, al magnetismo e alle manifestazioni pi&#249; alte della
+                        <lb n="412"/>vita nelle piante e negli animali.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo7_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="413"/>L&#8217;aver cos&#236; dato a tutte le forze dell&#8217;universo il nome
+                        <lb n="414"/>di <term type="philosophy"><hi rend="italic">volont&#224;</hi></term>, proprio di una sola e della pi&#249; alta tra le specie
+                        <lb n="415"/>che le comprendono in s&#233;, &#232;, per&#242;, nello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  qual-
+                        <lb n="416" break="no"/>cosa pi&#249; che un eccesso, una temerit&#224; d&#8217;argomentazione
+                        <lb n="417"/>per analogia; &#232; l&#8217;ultimo estremo, a cui giunge con lui <term type="literary_movement">l&#8217;idea-
+                        <lb n="418" break="no"/>lismo metafisico</term> posteriore al <persName ref="#Immanuel_Kant">Kant</persName>, costretto, per esser
+                        <lb n="419"/>fedele alle conclusioni della <choice><abbr><title type="main" level="m">Critica</title></abbr><expan><title type="main" level="m" ref="#Critica_della_ragion_pura"> Critica della ragion pura</title></expan></choice>, a tentare di aprirsi una
+                        <lb n="420"/>via da noi stessi all&#8217;intimo essere delle cose, interpretan-
+                        <lb n="421" break="no"/>done il senso arcano coi soli dati della coscienza e dell&#8217;os-
+                        <lb n="422" break="no"/>servazione interiore.
+                     </s>
+                     <s>
+                        Questo audace <rs type="verbum">audace moto speculativo</rs> del
+                        <lb n="423"/><term type="literary_movement">pensiero tedesco</term> non &#232; altro che una sublime traduzione
+                        <lb n="424"/>del <rs type="verbum"><hi rend="italic">gran libro dell&#8217;universo</hi></rs> nel linguaggio dello spirito umano,
+                        <lb n="425"/>e procede per due direzioni e quasi per due correnti op-
+                        <lb n="426" break="no"/>poste tra loro: una, dalla <title type="main" level="m" rend="italic">Filosofia elementare</title> del <persName ref="#Karl_Leonhard_Reinhold">Reinhold</persName>
+                        <lb n="427"/>e dalla <title type="main" level="m" rend="italic">Dottrina della scienza</title> del <persName ref="#Johann_Gottlieb_Fichte">Fichte</persName> sale alla <title type="main" level="m" rend="italic">Filosofia
+                        <lb n="428"/>della natura</title> dello <persName ref="#Friedrich_Schelling">Schelling</persName> e fa capo all&#8217;<persName ref="#Georg_Wilhelm_Friedrich_Hegel">Hegel</persName>;l&#8217;altra s&#8217;ac-
+                        <lb n="429" break="no"/>cenna fino dal <date when="1800">1800</date> nella seconda forma del sistema del
+                        <lb n="430"/><persName ref="#Johann_Gottlieb_Fichte">Fichte</persName>, ed &#232; un&#8217;antitesi risoluta al <term type="philosophy">metodo dialettico</term>, di cui
+                        <lb n="431"/>rinnega il principio: <rs type="verbum">l&#8217;identit&#224; del pensiero assoluto e dell&#8217;i-
+                        <lb n="432" break="no"/>dea coll&#8217;essere delle cose</rs>.
+                     </s>
+                     <s>
+                        Il punto culminante di questo se-
+                        <lb n="433" break="no"/>condo periodo della <term type="philosophy">Metafisica tedesca</term> posteriore al <persName ref="#Immanuel_Kant">Kant</persName>
+                        <lb n="434"/>lo tiene <persName ref="#Arturo_Schopenhauer">Arturo Schopenhauer</persName> fino dal primo apparire della
+                        <lb n="435"/>sua opera principale: <title type="main" level="m" rend="italic">Il mondo come volont&#224; e come rappre-
+                        <lb n="436" break="no"/>sentazione</title>, edita nel <date when="1818">1818</date>, l&#8217;anno in cui l&#8217;<persName ref="#Georg_Wilhelm_Friedrich_Hegel">l&#8217;Hegel</persName> dava prin-
+                        <lb n="437" break="no"/>cipio alle sue lezioni nell&#8217;<orgName type="academic">Universit&#224; di Berlino</orgName> e, con esse,
+                        <lb n="438"/>al regno della sua filosofia in <placeName type="country">Germania</placeName>.
+                     </s>
+                     <s>
+                        Tra <rs type="appellative">il grande idea-
+                        <lb n="439" break="no"/>lista</rs>, che vedeva nell&#8217;universo la <term type="philosophy">manifestazione sensibile</term>
+                        <lb n="440"/>di una <term type="philosophy">ragione eterna, assoluta e quasi una <rs type="verbum">Logica divina</rs></term>,
+                        <lb n="441"/>e <rs type="epithet">l&#8217;autore del <term type="philosophy">Pessimismo filosofico</term></rs>, per cui l&#8217;ordine delle
+                        <lb n="442"/>cose &#232; un immenso assurdo, opera del <quote>&#171; <hi rend="italic">brutto
+                        <lb n="443"/>poter che ascoso a comun danno impera.</hi>&#187;</quote>
+                        <lb n="444"/>sta, come ben dimostr&#242; <persName ref="#Odoardo_Hartmann">Odoardo Hartmann</persName>, lo <persName ref="#Friedrich_Schelling">Schelling</persName>,
+                        <lb n="445"/>autore della <title type="main" level="m" rend="italic">Filosofia positiva</title>, ove per ispiegare l&#8217;esistenza
+                        <lb n="446"/>delle cose finite e del <rs type="verbum">male</rs> egli ricorre al <term type="theme">concetto cristiano
+                        <lb n="447"/>di una colpa e di una <hi rend="italic">ca</hi> originale</term> ispirandosi alle dot-
+                        <lb n="448" break="no"/>trine del <persName ref="#Jakob_Boehme">Boehme</persName> e degli altri <term type="literary_movement">Mistici medievali</term>.
+                     </s>
+                     <s>
+                        La <title type="main" level="m" rend="italic">Filo-
+                        <lb n="449" break="no"/>sofia positiva</title> dello <persName ref="#Friedrich_Schelling">Schelling</persName> rimase per&#242; a pena un abbozzo
+                        <lb n="450"/>e non altro che un tentativo impotente della vecchiaia del
+                        <lb n="451"/><rs type="occupation">filosofo</rs>.
+                     </s>
+                     <s>
+                        Il sistema dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  non principi&#242; ad
+                        <lb n="452"/>operare sulle menti tedesche se non dopo il <date when="1850">1850</date>, quando
+                        <lb n="453"/>l&#8217;esito infelice dei recenti <term type="theme">moti politici</term> aveva prostrato l&#8217;a-
+                        <lb n="454" break="no"/>nimo della <term type="theme">giovent&#249;</term>, l&#8217;<term type="philosophy">egelianismo</term> era caduto, e, passata
+                        <lb n="455"/>ormai la voga delle <term type="theme">grette teorie empiriche</term> che gli erano
+                        <lb n="456"/>succedute, si faceva gi&#224; sentire vivo il bisogno di una <term type="philosophy">dot-
+                        <lb n="457" break="no"/>trina</term> fondata sull&#8217;esperienza interna ed esterna e sul mo-
+                        <lb n="458" break="no"/>derno concetto della natura e penetrata dalle tendenze
+                        <lb n="459"/>morali e religiose dell&#8217;<term type="philosophy">idealismo</term> del <persName ref="#Immanuel_Kant">Kant</persName>.
+                     </s>
+                     <s>
+                        Tale parve allora
+                        <lb n="460"/>e pare tuttavia a molti il <term type="philosophy">Pessimismo</term> dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName> ,
+                        <lb n="461"/>ispirato com&#8217;&#232; da un alto sentimento delle cose morali e
+                        <lb n="462"/>dal grande <rs type="verbum">problema del male</rs>, e volto a cercarne la solu-
+                        <lb n="463" break="no"/>zione nel concetto di quella <term type="theme">natura inesorabile, cieca</term>, (can-
+                        <lb n="464" break="no"/>tata dal nostro <persName ref="#Giacomo_Leopardi">Leopardi</persName>), innanzi alla quale il vivente,
+                        <lb n="465"/>l&#8217;uomo, travolto da lei in una perpetua <term type="theme"><hi rend="italic">lotta per l&#8217;esistenza</hi></term>,
+                        <lb n="466"/>&#232; un nulla, &#232;, per dirlo con <persName ref="#Pindaro">Pindaro</persName>, <quote><hi rend="italic">il sogno d&#8217;un&#8217;ombra</hi></quote>;
+                        <lb n="467"/>e la <rs type="verbum">ragione</rs>, che lo distingue dai bruti, non gli vale che
+                        <lb n="468"/>a riconoscere inutilmente la propria <term type="theme">miseria</term> e la <term type="theme">vanit&#224; del
+                        <lb n="469"/>tutto</term>, o, al pi&#249;, a temperare il <term type="theme">dolore della vita</term> col sopirne
+                        <lb n="470"/>e coll&#8217;estinguerne in s&#233; stesso i <rs type="verbum">desideri</rs> e le <rs type="verbum">aspirazioni</rs>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo8_1_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="471"/>&#232; facile il vedere come in tale sistema il luogo e l&#8217;uf-
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="schopenhauer_pg2_colDX">
+                  <p xml:id="paragrafo8_2_schopenhauer">
+                     <s>
+                        <lb n="472" break="no"/>ficio, tenuto dalla <rs type="verbum">ragione</rs> e dalla <rs type="verbum">coscienza</rs> nell&#8217;economia
+                        <lb n="473"/>delle cose, quale essa <choice><sic>apparisce</sic><corr>appare</corr></choice> alla mente del <rs type="occupation">filosofo</rs>, siano,
+                        <lb n="474"/>in certo modo, gi&#224; dati sin da principio in un sentimento
+                        <lb n="475"/>che lo domina tutto, e ch&#8217;&#232;, ce lo dice egli stesso, lo <persName ref="#Arturo_Schopenhauer">Scho-
+                        <lb n="476" break="no"/>penhauer</persName>, il <rs type="epithet"><hi rend="italic">Musagete</hi> della filosofia</rs>: nel <rs type="theme">sentimento</rs>, che
+                        <lb n="477"/>certe <rs type="social">anime</rs> e certe <rs type="social">razze</rs>, pi&#249; che certe altre, hanno del
+                        <lb n="478"/><rs type="verbum">male</rs>, del <rs type="verbum">dolore</rs> e della <rs type="verbum">colpa</rs>, quasi d&#8217;un&#8217;intima disso-
+                        <lb n="479" break="no"/>nanza che rompe e turba da cima a fondo l&#8217;<rs type="verbum">armonia esterna
+                        <lb n="480"/>dell&#8217;universo</rs>.
+                     </s>
+                     <s>
+                        Qui &#232; l&#8217;origine vera d&#8217;ogni <term type="philosophy">Pessimismo filosofico</term>.
+                     </s>
+                     <s>
+                        <lb n="481"/>La disposizione d&#8217;animo e di mente, che lo ha in s&#232; in
+                        <lb n="482"/>germe, &#232; l&#8217;<term type="philosophy">antitesi</term> di quell&#8217;altra da cui deriva l&#8217;<term type="philosophy">Ottimismo</term>
+                        <lb n="483"/>e, con esso, ogni <term type="philosophy">filosofia</term> e ogni <term type="religion">religione</term> regolarmente
+                        <lb n="484"/><term type="religion">teistica</term>.
+                     </s>
+                     <s>
+                        <term type="religion">Dio</term> o gli <term type="religion">Dei</term>, pensati come <rs type="verbum">ragione suprema</rs> e
+                        <lb n="485"/><rs type="verbum">mente ordinatrice del mondo</rs> del mondo, furono il tacito <term type="philosophy">postulato</term>
+                        <lb n="486"/>del primo ragionamento che <placeName type="ethnic">armeno</placeName>, il <placeName type="ethnic">greco</placeName>, l&#8217;<placeName type="ethnic">italico</placeName>
+                        <lb n="487"/>fecero inconsapevolmente guardando intorno a s&#232; la natura
+                        <lb n="488"/>bella e fiorente.
+                     </s>
+                     <s>
+                        <term type="religion">Dio</term> fu per loro innanzi a tutto una <term type="philosophy">con-
+                        <lb n="489" break="no"/>cezione estetica</term>.
+                     </s>
+                     <s>
+                        <quote>&#171;Tutte queste cose (della natura) sono
+                        <lb n="490"/><hi rend="italic">belle e sacre</hi>; &#187;</quote> fa dire <persName ref="#Bione_di_Boristene">Bione</persName> ad un suo <rs type="fictional">pastore</rs>.
+                     </s>
+                     <s>
+                        <rs type="verbum">L&#8217;intelli-
+                        <lb n="491" break="no"/>genza umana</rs>, contemplando cos&#236; l&#8217;ordine e la proporzione
+                        <lb n="492"/>della <term type="philosophy">natura sensibile</term>, vi pensa un che simile o analogo a
+                        <lb n="493"/>s&#232; stessa; e in questo vedere che fa al di fuori di s&#232; riflesse
+                        <lb n="494"/><term type="philosophy">le proprie leggi</term>, e in questo <rs type="verbum">sentirsi quasi in intima co-
+                        <lb n="495" break="no"/>munione di spirito con ogni cosa bella e benefica</rs>, si esalta
+                        <lb n="496"/>e gioisce giovanilmente.
+                     </s>
+                     <s>
+                        Quanto diversa da quella del <rs type="fictional">pa-
+                        <lb n="497" break="no"/>store</rs> di <persName ref="#Bione_di_Boristene">Bione</persName> la contemplazione notturna del <rs type="fictional"><hi rend="italic">pastore er-
+                        <lb n="498" break="no"/>rante</hi></rs> dell&#8217;asia di <persName ref="#Giacomo_Leopardi">Giacomo Leopardi</persName>, ispirata dallo <rs type="theme">spetta-
+                        <lb n="499"/>colo della miseria della vita</rs>, e dal <rs type="theme">sentimento di una soli-
+                        <lb n="500" break="no"/>tudine immensa</rs>, in cui la <rs type="verbum">mente umana</rs> si sente come per-
+                        <lb n="501" break="no"/>duta l&#224; innanzi alla <rs type="verbum">natura sterminata, deserta!</rs>
+                     </s>
+                     <s>
+                        In quel
+                        <lb n="502"/><rs type="fictional">pastore</rs> ti sembra che parli il <rs type="verbum">genio della filosofia e delle
+                        <lb n="503"/>religioni orientali</rs>, passato per&#242; per la greca fantasia del
+                        <lb n="504"/><persName ref="#Giacomo_Leopardi">Leopardi</persName>.
+                     </s>
+                     <s>
+                        A volere sentirne la voce e l&#8217;accento originale
+                        <lb n="505"/>bisogna udir parlare <persName ref="#Buddha">&#199;&#224;kyamuni Buddha</persName> sulle <rs type="religion"><hi rend="italic">quattro
+                        <lb n="506"/>grandi verit&#224;</hi></rs> della <term type="religion">religione del dolore</term> fondata da lui e pro-
+                        <lb n="507" break="no"/>fessata anche oggi da quattrocento milioni d&#8217;uomini.
+                     </s>
+                     <s>
+                        Nel-
+                        <lb n="508" break="no"/>l&#8217;uomo greco, nel <persName ref="#Giacomo_Leopardi">Leopardi</persName> stesso, la <term type="philosophy">contemplazione este-
+                        <lb n="509"/>tica dell&#8217;universo</term>, per s&#232; stessa <rs type="verbum">serena</rs> e <rs type="verbum">pregna di poesia</rs>,
+                        <lb n="510"/>&#232; interrotta dal <term type="philosophy">dubbio filosofico</term> e va a finire in una elegia
+                        <lb n="511"/>o in un <term type="philosophy">ragionamento</term>, ove senti ancora <rs type="verbum">commuoversi il
+                        <lb n="512"/>cuore del poeta</rs>.
+                     </s>
+                     <s>
+                        In <persName ref="#Buddha">Buddha</persName> essa &#232; impedita o turbata dallo
+                        <lb n="513"/><rs type="philosophy">spettacolo di una natura mostruosa</rs>, qual&#8217;&#232; <placeName type="region">l&#8217;asiatica</placeName>, piena
+                        <lb n="514"/>di pericoli e di minacce per l&#8217;uomo, e, sopra tutto, dal-
+                        <lb n="515" break="no"/><rs type="verbum">l&#8217;aprirsi dell&#8217;occhio interiore</rs> del <rs type="occupation">filosofo</rs> sull&#8217;<hi rend="italic">altro</hi> aspetto
+                        <lb n="516"/>delle cose, sul <rs type="philosophy">mondo della coscienza</rs> e sul maggiore <choice><orig>de&#8217;</orig><reg> dei </reg></choice> suoi
+                        <lb n="517"/><term type="philosophy">misteri</term>, sul <term type="philosophy">mistero del male morale</term>, della <term type="philosophy">colpa</term>.
+                     </s>
+                     <s>
+                        Il con-
+                        <lb n="518" break="no"/>cetto della <term type="religion">divinit&#224;</term>, se pure si affaccia a menti cos&#236; atter-
+                        <lb n="519"/>rite e prostrate sotto il peso del <rs type="philosophy"><hi rend="italic">grande arcano delle cose</hi></rs>,
+                        <lb n="520"/>&#232; l&#8217;opposto di quello <term type="philosophy">essenzialmente estetico</term>, che sorgeva
+                        <lb n="521"/>dalla serena fantasia greca; esprime <rs type="verbum">l&#8217;ideale del terribile</rs>,
+                        <lb n="522"/>del <rs type="philosophy">mostruoso fisico e morale</rs>, raffigurato nelle immagini o
+                        <lb n="523"/>negli attributi di quasi tutti gli <term type="religion">Dei dell&#8217;Indostan</term>.
+                     </s>
+                     <s>
+                        Questa,
+                        <lb n="524"/>secondo me, &#232; la <rs type="philosophy">ragione <hi rend="italic">pi&#249; intima</hi></rs> per cui <choice><orig>cotesti</orig><reg>quei</reg></choice> popoli,
+                        <lb n="525"/><rs type="verbum">maestri di religione e di filosofia</rs>, non ebbero vera e pro-
+                        <lb n="526" break="no"/>pria arte figurativa.
+                     </s>
+                     <s>
+                        Ma in una <term type="religion">religione filosofica</term>, qual&#8217;&#232;
+                        <lb n="527"/>il <term type="religion">Buddismo</term>, nata nel <num type="ordinal" value="6">sesto</num> secolo avanti Cristo, ultimo pro-
+                        <lb n="528" break="no"/>dotto di una <rs type="social">civilt&#224;</rs> e di una <choice><sic><rs type="philosophy">riflessione raffinate</rs></sic><corr><rs type="philosophy">riflessione raffinata</rs></corr></choice>, il <term type="religion">concetto
+                        <lb n="529"/>della divinit&#224;</term> manca del tutto; conseguenza estrema che il
+                        <lb n="530"/><term type="philosophy">Pessimismo</term> gi&#224; presupponeva nelle sue premesse, facendo
+                        <lb n="531"/>del <rs type="verbum">male</rs>, inerente, per lui, all&#8217;<rs type="verbum">essere delle cose</rs>, un principio
+                        <lb n="532"/>che non lasciava in esse parte alcuna all&#8217;opera cosciente
+                        <lb n="533"/>d&#8217;un&#8217;<rs type="verbum">intelligenza ordinatrice</rs>.
+                     </s>
+                  </p>
+                  <p xml:id="paragrafo9_1_schopenhauer" rend="first-line-indent justify">
+                     <s>
+                        <lb n="534"/>E tale &#232; pure la conseguenza a cui riesce, com&#8217;&#232; noto,
+                        <lb n="535"/>la dottrina dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName> . Il suo <term type="religion">Ateismo</term> non esprime
+                        <lb n="536"/>se non quell&#8217;<rs type="philosophy">intima opposizione e separazione</rs>, ch&#8217;egli, <rs type="appellative">Pes-
+                        <lb n="537" break="no"/>simista assoluto</rs>, &#232; costretto a presupporre tra la <term type="philosophy"><hi rend="italic">Volont&#224;</hi></term>,
+                        <lb n="538"/>pensata da lui come <rs type="philosophy">essenza e <hi rend="italic">forza</hi> del mondo</rs>, e l&#8217;<rs type="philosophy"><hi rend="italic">Intelligenza</hi></rs>,
+                     </s>
+                  </p>
+               </div>
+               <div type="section" xml:id="schopenhauer_pg3_colSX">
+                  <p xml:id="paragrafo9_2_schopenhauer">
+                     <s>
+                        <lb n="539"/>che vi <choice><sic>apparisce</sic><corr>appare</corr></choice>,  <rs type="verbum">spettatrice del dolore universale</rs> e sua
+                        <lb n="540"/><rs type="verbum">consolatrice per mezzo dell&#8217;arte e della Virt&#249;</rs>.
+                     </s>
+                     <s>
+                        Il concetto
+                        <lb n="541"/>di <choice><orig>cotesta</orig><reg>quella</reg></choice> opposizione tra la  <rs type="philosophy"><hi rend="italic">Volont&#224;</hi> e l&#8217;<hi rend="italic">Intelligenza</hi></rs> ha,
+                        <lb n="542"/>dunque, la sua vera origine nel <term type="philosophy">Pessimismo</term>; per quanto lo
+                        <lb n="543"/><persName ref="#Arturo_Schopenhauer">Schopenhauer</persName> ci dica d&#8217;averne &#171;trovato la conferma psicolo-
+                        <lb n="544" break="no"/>gica e fisiologica nella dottrina, con cui il <persName ref="#Xavier_Bichat">Bichat</persName> deri-
+                        <lb n="545" break="no"/>vava la distinzione dell&#8217;uno dall&#8217;altro di quei due fattori dello
+                        <lb n="546"/>spirito umano dal divario profondo ch&#8217;egli <choice><sic>cred&#232;</sic> <corr>credette</corr></choice> <choice><sic>scuoprire</sic> <corr>scoprire</corr> </choice>
+                        <lb n="547"/>tra la <rs type="verbum">vita organica</rs> e la <rs type="verbum">vita animale</rs>.
+                     </s>
+                     <s>
+                        Ci&#242; basta a met-
+                        <lb n="548" break="no"/>tere fuor di dubbio l&#8217;efficacia che il <persName ref="#Xavier_Bichat">Bichat</persName>, e con lui il
+                        <lb n="549"/><persName ref="#Pierre_Jean_Georges_Cabanis">Cabanis</persName>, ebbero sulla <term type="philosophy">filosofia</term> dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName> ; non
+                        <lb n="550"/>basta, mi pare, a provarne le <hi rend="italic">origini francesi</hi>, n&#232; anche
+                        <lb n="551"/>sotto quel rispetto e dentro quei limiti in cui le afferma
+                        <lb n="552"/>e vorrebbe dimostrarle <persName ref="#Paul_Janet">Paolo Janet</persName> nella <title level="j" rend="italic">Revue des deux
+                        <lb n="553" break="no"/>Mondes</title> del <date when="1879-05-01">1&#176; maggio di quest&#8217;anno</date>.
+                     </s>
+                     <s>
+                        Egli dimentica, che
+                        <lb n="554"/>la <term type="philosophy">Metafisica</term> dello <persName ref="#Arturo_Schopenhauer">Schopenhauer</persName>  &#232; singolare fra le altre
+                        <lb n="555"/>in ci&#242;, che esce tutta quanta dalla <term type="philosophy">Morale pessimistica</term> del
+                        <lb n="556"/><rs type="occupation">filosofo</rs>, e dall&#8217;attitudine che il suo pensiero giovanile vi
+                        <lb n="557"/>prese sin da principio di contro a quello del <persName ref="#Immanuel_Kant">Kant</persName> e alle
+                        <lb n="558"/><rs type="philosophy">altre dottrine tedesche contemporanee</rs>.
+                     </s>
+                     </p>
+                     <p rend="align(right)" xml:id="Barzellotti_firma">
+                        <lb n="559"/> <persName xml:id="persName_Barzellotti_firma">GIACOMO BARZELLOTTI</persName>.
+                  </p>
+               </div>
+            </body>
+
+         </text>
+
+         <text xml:id="Bibliografia">
+
+            <front>
+               <div type="main" xml:id="tit_bibl">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="560"/>BIBLIOGRAFIA
+                  </head>
+               </div>
+            </front>
+
+            <group>
+               <!-- Prima bibliografia: Carducci -->
+               <text xml:id="bibl_carducci">
+                  <body>
+                     <div type="section" xml:id="carducci_pg1_colSX">
+                        <p xml:id="paragrafo1_bib_carducci" rend="justify">
+                           <bibl xml:id="JUV">
+                              <lb n="561"/>
+                              <author>
+                                 <persName ref="#GC">
+                                 <forename>Giosu&#232;</forename>
+                                 <surname>Carducci</surname>
+                                 </persName>
+                              </author>.
+                              <title type="full">
+                                 <title type="main" level="m" rend="italic">Juvenilia; edizione definitiva</title>
+                              </title>
+                              &#x2014;
+                              <pubPlace>
+                                 <settlement type="city">Bologna</settlement>
+                              </pubPlace>,
+                              <lb n="562"/>
+                              <publisher>
+                                 <orgName type="editorial">Zanichelli</orgName>
+                              </publisher>,
+                              <date when="1880">1880</date>.
+                           </bibl>
+                        </p>
+                        <p xml:id="paragrafo2_bib_carducci" rend="first-line-indent justify">
+                           <s>
+                              <lb n="563"/>Non esitiamo a dichiarare esagerata la modestia <choice><sic>del&#8217;</sic><corr>dell&#8217;</corr></choice><rs type="role"><choice><abbr>A.</abbr><expan> Autore</expan></choice></rs>:
+                              <lb n="564"/>che giudica molto severamente queste prime prove del
+                              <lb n="565"/>suo ingegno, nella <title level="m" rend="italic">Prefazione</title>. 
+                           </s>
+                           <s>   
+                              Certo, dopo le <title type="main" level="m" rend="italic" ref="#Rime_Nuove">Primavere El-
+                              <lb n="566" break="no"/>leniche</title> e le <title type="main" level="m" rend="italic" ref="#Odi_Barbare">Odi Barbare</title>, a voltarsi indietro, si trova aver
+                              <lb n="567"/>percorso un lungo cammino ed essere saliti a grande al-
+                              <lb n="568" break="no"/>tezza rispetto <choice><orig>a&#8217;</orig><reg>ai</reg></choice> versi per la <title type="main" level="m" ref="#Juvenilia">Croce di Savoia</title> o all&#8217;<rs type="poetic">inno a
+                              <lb n="569"/>Febo</rs>. 
+                           </s>
+                           <s>
+                              Ma chi vuole rendersi ragione di questo progresso, chi
+                              <lb n="570"/>vuole spiegarsi le qualit&#224; presenti della poesia del <persName ref="Giosue_Craducci">Carducci</persName>,
+                              <lb n="571"/>bisogna che cominci dalla lettura e dall&#8217;esame <choice><orig>de&#8217;</orig><reg> dei </reg></choice> <title type="main" level="m" rend="italic" xml:id="Decennalia">Decen-
+                              <lb n="572" break="no"/>nalia</title> e <choice><orig>de&#8217;</orig><reg> dei </reg></choice> <title type="main" level="m" rend="italic" ref="#Levia_Gravia">Levia Gravia</title>. 
+                           </s>
+                           <s>   
+                              Anzi gli si deve esser grati se,
+                              <lb n="573"/>vincendo la naturale ritrosia, ha raccolto in questo volume
+                              <lb n="574"/>anche alcune composizioni, che a buon diritto avrebbe po-
+                              <lb n="575" break="no"/>tuto lasciare da parte, come umili e informi tentativi.
+                           </s>
+                        </p>
+                        <p xml:id="paragrafo3_bib_carducci" rend="first-line-indent justify">
+                           <s>  
+                              <lb n="576"/><choice><sic>N&#233;</sic><corr>N&#232;</corr></choice> il lettore, <choice><sic>n&#233;</sic><corr>n&#232;</corr></choice> il <persName ref="Giosue_Craducci">Carducci</persName>, certo, si aspetteranno da
+                              <lb n="577"/>tutti conoscono. 
+                           </s>  
+                           <s>
+                              Diremo solo, che anche a non esser critici
+                              <lb n="578" break="no"/>noi un giudizio sopra poesie di data non recente, &#233; che
+                              <lb n="579" break="no"/>di professione, si segue con grande interesse in questo vo-
+                              <lb n="580"/>lume l&#8217;evoluzione dell&#8217;ingegno del poeta e il progresso con-
+                              <lb n="581" break="no"/>tinuo della forma.
+                           </s>
+                        </p>
+                        <p xml:id="paragrafo4_bib_carducci" rend="first-line-indent justify">
+                           <s>
+                              <lb n="582"/>La <title level="m" rend="italic">Prefazione</title>. &#232; una bella pagina autobiografica, alla
+                              <lb n="583"/>quale non scema pregio il tono polemico che assume.
+                           </s>
+                        </p>
+                     </div>
+                  </body>
+               </text>
+
+               <!-- Seconda bibliografia: Zonghi -->
+               <text xml:id="bibl_zonghi">
+                  <body>
+                     <div type="section" xml:id="zonghi_pg1_colDX">
+                        <p xml:id="paragrafo1_bib_zonghi" rend="justify">
+                           <bibl xml:id="ZONGHI">
+                              <lb n="584"/>
+                              <author>
+                                 <persName ref="#AZ">
+                                 <forename>Aurelio</forename>
+                                 <surname>Zonghi</surname>
+                                 </persName>
+                              </author>.
+                              <title type="full">
+                                 <title type="main" level="m" rend="italic">Documenti storici fabrianesi — Statuta artis 
+                                 <lb n="585"/>lanae terrae Fabriani</title>
+                              </title>.
+                              &#x2014;
+                              <pubPlace>
+                                 <settlement type="city">Roma</settlement>
+                              </pubPlace>,
+                              <publisher>
+                                 <orgName type="editorial">Dario Rossi</orgName>
+                              </publisher>,
+                              <date when="1880">1880</date>.
+                           </bibl>
+                        </p>
+                        <p xml:id="paragrafo2_bib_zonghi" rend="first-line-indent justify">
+                           <s>
+                              <lb n="586"/>I <orgName type="government">comuni</orgName> cominciano in generale a capire l&#8217;importanza 
+                              <lb n="587"/>di aver i loro <orgName type="cultural">archivi</orgName> ben ordinati.
+                           </s>
+                           <s>
+                              L&#8217;aver perdute liti per
+                              <lb n="588"/>non aver più trovato i <term type="legal">documenti</term> comprovanti i loro <term type="legal">di-
+                              <lb n="589" break="no"/>ritti</term> li consigli&#242; <choice><sic>a</sic><corr>di</corr></choice> provvedersi di buoni <rs type="occupation">archivisti</rs>. 
+                           </s>
+                           <s>
+                              Sfortu-
+                              <lb n="590" break="no"/>natamente questi sono molto rari, poich&#233;, oltre molta eru-
+                              <lb n="591"/>dizione e pratica, &#232; necessario nell&#8217;<rs type="occupation">archivista</rs> l&#8217;amore alle
+                              <lb n="592"/><rs type="verbum">memorie vetuste</rs>. 
+                           </s>
+                           <s>
+                              Il  <orgName type="government">Municipio di <placeName type="city">Fabriano</placeName></orgName> ha trovato un
+                              <lb n="593"/>ottimo <rs type="occupation">archivista</rs> nel <choice><abbr>can.</abbr><expan> canonico</expan></choice> <persName ref="#AZ">Zonghi</persName>, come ne fanno prova le
+                              <lb n="594"/>varie sue <term type="culturale">pubblicazioni archivistiche</term> e specialmente questa
+                              <lb n="595"/>di cui parliamo, or ora venuta in luce.
+                           </s>
+                        </p>
+                        <p xml:id="paragrafo3_1_bib_zonghi" rend="first-line-indent justify">
+                           <s>
+                              <lb n="596"/>L&#8217;<rs type="occupation">archivista</rs> di <placeName type="city">Fabriano</placeName> non si <choice><orig>contenta</orig><corr>accontenta</corr></choice>, come spesso
+                              <lb n="597"/>si verifica negli <rs type="occupation">editori</rs> di <term type="legal">statuti</term>, di pubblicare gli <term type="legal">statuti
+                              <lb n="598"/>dell&#8217;arte della lana</term> senza alcun commento; ma li f&#224; pre-
+                              <lb n="599" break="no"/>cedere da una <rs type="verbum">sugosa e pregievole prefazione</rs>, e seguire da
+                              <lb n="600"/>un ottimo glossario.
+                           </s>
+                           <s>
+                              <placeName type="city">Fabriano</placeName> ebbe rinomanza principal-
+                              <lb n="601" break="no"/>mente per le <orgName type="corporativa">arti della carta e della lana</orgName>; se sfortunata-
+                              <lb n="602" break="no"/>mente gli <term type="legal">statuti</term> della prima andarono perduti, restarono
+                              <lb n="603"/>quelli della seconda. 
+                           </s>
+                           <s>
+                           Contengono questi tutte la vicissitu-
+                              <lb n="604" break="no"/>dini dell&#8217;<orgName type="corporativa">arte lanifera</orgName> in <placeName type="city">Fabriano</placeName>, dando soggetto a più
+                              <lb n="605"/>vasti studi sulla medesima in <placeName type="country">Italia</placeName>.
+                           </s>
+                           <s>
+                              I più antichi <term type="legal">statuti</term>
+                              <lb n="606"/>in discorso datano dal <date when="1369">1369</date>, i più moderni sono del <date when="1674">1674</date>;
+                              <lb n="607"/>così ci presentano un buon periodo storico dell&#8217;<orgName type="corporativa">arte laniera</orgName>.
+                           </s>
+                           <s>
+                              <lb n="608"/>Sono <term type="legal">documenti</term> preziosi per chi assumesse il compito di ri-
+                              <lb n="609" break="no"/>fare la <term type="cultural">storia della civilt&#224; italiana</term> nel <term type="historicalPeriod"><choice><sic>medio-evo</sic><corr>medioevo</corr></choice></term>, che ben
+                              <lb n="610"/>pu&#224; esser misurata dallo stato più o meno florido e perfe-
+                              <lb n="611" break="no"/>zionato delle <orgName type="corporativa">arti</orgName>indispensabili ai primi bisogni della vita.
+                           </s>
+                           <s>
+                              <lb n="612"/>&#171;E fu per questo fine &#8212; osserva l&#8217; <rs type="role"><choice><abbr>A.</abbr><expan> Autore</expan></choice></rs> &#8212; che io volli ren-
+                              <lb n="613" break="no"/>der noto ci&#224; che in gran parte non era, confortato dal pen-
+                              <lb n="614"  break="no"/>siero che anche il mio paese natale, siccome primeggi&#224;
+                              <lb n="615"/>sempre e primeggia tuttora su molti per la industria delle
+                              <lb n="616"/>sue carte a mano, non abbia a tener l&#8217;ultimo posto nella
+                              <lb n="617"/>storia generale <choice><orig>de&#8217;</orig><reg> dei </reg></choice> <term type="theme">lanifici italiani</term> nei secoli di mezzo.&#187;
+                           </s>
+                           <s>
+                              Si
+                           </s>
+                        </p>
+                     </div>
+                     <div type="section" xml:id="zonghi_pg2_colSX">
+                        <p xml:id="paragrafo3_2_bib_zonghi">
+                           <s>
+                              <lb n="618"/>potrebbe osservare che con tale ultima conclusione rim-
+                              <lb n="619" break="no"/>piccolisce lo scopo delle sue pubblicazioni ; ma qualunque
+                              <lb n="620"/>sia il sentimento che ha spinto lo <persName ref="#AZ">Zonghi</persName>, la sua &#232; un&#8217;uti-
+                              <lb n="621" break="no"/>lissima pubblicazione.
+                           </s>
+                        </p>
+                     </div> 
+                  </body>
+               </text>
+            </group>
+
+         </text> 
+
+         <text xml:id="notizie">
+
+            <front>
+               <div type="main" xml:id="tit_not">
+                  <head rend="align(center) case(allcaps)">
+                     <lb n="622"/>NOTIZIE
+                  </head>
+               </div>
+            </front>
+
+            <body>
+               <div type="section" xml:id="notizie_pg1_colDX"></div>
+                  <!-- Prima entrata notizie -->
+                  <div xml:id="primauscita_not">
+                     <p xml:id="primauscita">
+                        <s>
+                           <lb n="623"/><pc>&#x2014;</pc>A <placeName type="city">Washington</placeName>
+                           <persName ref="#Giorgio_Bancroft"><forename>Giorgio</forename> <surname>Bancroft</surname></persName>
+                           sta per pubblicare la sua &#171;<title type="main" level="m">Sto-
+                           <lb n="624" break="no"/>ria degli Stati Uniti&#187;</title>, che incominci&#242; fin dal <date when="1825">1825</date>.
+                        </s>
+                     </p>
+                     <p xml:id="sunday_firma" rend="align(right)">
+                        <s>
+                           <lb n="625"/> (<title>Sunday Journal</title>)
+                        </s>
+                     </p>
+               </div>
+            
+               <!-- Seconda entrata notizie -->
+               <div xml:id="secondauscita_not">
+                  <p xml:id="secondauscita">
+                     <s>
+                        <lb n="626"/><pc>&#x2014;</pc>&#200; imminente la pubblicazione di un volumetto di versi di
+                        <persName ref="Swinburne">
+                           <surname>Swin-
+                              <lb n="627" break="no"/>burne
+                           </surname>
+                        </persName>, tra i quali vi sar&#224; anche un canto per il centenario di
+                        <persName ref="Walter_Landor">
+                           <forename>Walter</forename>
+                           <lb n="628"/>
+                           <surname>Savage Landor</surname>
+                        </persName>.
+                     </s>
+                  </p>
+                  <p xml:id="atheneaum_firma"  rend="align(right)">
+                     <s>
+                        <lb n="726"/>(<title>Athenaeum</title>)
+                     </s>
+                  </p>
+               </div>
+            </body>
+         </text>
+
+      </group>
+   </text>
+
+</TEI>
