@@ -1,1 +1,2 @@
 # Progetto_CdT_Risaliti_Pratelli
+Questa repository contiene i file relativi al progetto finale richiesto per l'esame di Codifica di Testi del corso triennale di Informatica Umanistica presso l'Università di Pisa. Il progetto è stato sviluppato da Elisa Pratelli (mat. 656783) e Sara Risaliti (mat. 656783) ed è stato validato utilizzando i seguenti comandi:  java -cp "C:\Users\sara\Desktop\Progetto_Codifica\xerces-2_12_2-xml-schema-1.1\*" dom.Counter -v "C:\Users\sara\Desktop\Progetto_Codifica\Progetto_CdT_Pratelli_Risaliti.xml" 
